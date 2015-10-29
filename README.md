@@ -42,6 +42,6 @@ Group 6
     ├── _styles
     │   ├── config.rb
     │   ├── sass
-    │   │   └── style.scsss     # sass file for styles of the whole project
+    │   │   └── style.scss      # sass file for styles of the whole project
     │   └── ...
     └── index.html
