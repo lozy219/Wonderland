@@ -93,25 +93,32 @@ Alice couldn’t make out what he was trying to tell her.</h2>
   	<script>
   		$(document).ready(function() {
 	  		$('.panel-wrapper').click(function() {
+	  			// Panel shall only be clickable if there isnt any explicit choices in it
+	  			// So we first check whether there are any explicit choices
 	  			var currentPanelWrapper = $(this);
-	  			var currentChapter = currentPanelWrapper.parent();
+	  			if (currentPanelWrapper.find('.choice-button').length == 0) {
+		  			var currentChapter = currentPanelWrapper.parent();
 
-	  			if (currentPanelWrapper.next('.panel-wrapper').length > 0) {
-		  			var nextPanelWrapper = currentPanelWrapper.next('.panel-wrapper');
+		  			// Check if it is NOT the last panel in the chapter
+		  			if (currentPanelWrapper.next('.panel-wrapper').length > 0) {
+			  			var nextPanelWrapper = currentPanelWrapper.next('.panel-wrapper');
 
-		  			currentPanelWrapper.removeClass('shown');
-		  			nextPanelWrapper.addClass('shown');
-	  			} else {
-	  				alert("end of chapter!");
-	  				if (currentChapter.next('.chapter-wrapper').length > 0) {
-	  					var nextChapter = currentChapter.next('.chapter-wrapper');
-	  					var nextPanelWrapper = nextChapter.children('.panel-wrapper').first();
+			  			currentPanelWrapper.removeClass('shown');
+			  			nextPanelWrapper.addClass('shown');
+		  			} else { // If it is the last panel in the chapter
+		  				alert("end of chapter!");
+		  				// Find the next panel in the next chapter
+		  				// First check if the current chapter is NOT the last chapter
+		  				if (currentChapter.next('.chapter-wrapper').length > 0) {
+		  					var nextChapter = currentChapter.next('.chapter-wrapper');
+		  					var nextPanelWrapper = nextChapter.children('.panel-wrapper').first();
 
-	  					currentPanelWrapper.removeClass('shown');
-	  					nextPanelWrapper.addClass('shown');
-	  				} else {
-	  					alert("End of story!");
-	  				}
+		  					currentPanelWrapper.removeClass('shown');
+		  					nextPanelWrapper.addClass('shown');
+		  				} else { // If it is the last chapter and last panel, we can end the story
+		  					alert("End of story!");
+		  				}
+		  			}
 	  			}
 	  		});
 
