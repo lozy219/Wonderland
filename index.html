@@ -1,9 +1,10 @@
-<!doctype html>
+	<!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>rabbit in Wonderland</title>
   <link rel="stylesheet" type="text/css" href="_styles/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Laila' rel='stylesheet' type='text/css'>
   <script language="javascript" type="text/javascript" src="_scripts/jquery-2.1.4.min.js"></script>
 
   <meta name="title" content="rabbit in Wonderland" />
@@ -12,6 +13,7 @@
 <body>
   <!-- containers here -->
   <div class="wonderland-wrapper">
+  	<img id="wonderland-word" src="_images/wonderland-word.png"/>
   	<div id="alice-chapter" class="chapter-wrapper">
   		<div id="alice-1" class="panel-wrapper shown">
   			<h2>This is Alice. She eats everything sweet.</h2>
@@ -19,21 +21,19 @@
   		</div>
   		<div id="alice-2" class="panel-wrapper">
   			<h2>There’s no better time to eat all the candy you want than on Halloween
-	[Alice seen chugging candy as her eyes starts to close]</h2>
+			[Alice seen chugging candy as her eyes starts to close]</h2>
   			<img src="_images/alice/alice-2.PNG" alt="test"/>
   		</div>
   		<div id="alice-3" class="panel-wrapper">
-  			<h2>She takes a stroll in the nearby woods to wear off the effects of the sugar rush
-[Alice enters Wonderland]</h2>
+  			<h2>She takes a stroll in the nearby woods to wear off the effects of the sugar rush</h2>
   			<img src="_images/alice/alice-3.PNG" alt="test"/>
   		</div>
   	</div>
 
 	<div id="rabbit-chapter" class="chapter-wrapper">
   		<div id="rabbit-1" class="panel-wrapper">
-  			<h2>[White rabbit dragging a huge clock at a painfully slow pace]
-Out of nowhere, she spots a peculiar white rabbit. What should she do?
-CHOICE I [Help him goto #5] [Follow him! goto #13]</h2>
+  			<h2>Out of nowhere, she spots a peculiar white rabbit. What should she do?</h2>
+  			<div class="sound">tchht</div>
   			<img src="_images/rabbit/rabbit-1.PNG" alt="test"/>
   			<div data-value="rabbit-2" class="choice-button">Help Him</div>
   			<div data-value="rabbit-10" class="choice-button">Follow Him</div> 

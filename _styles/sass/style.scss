@@ -1,16 +1,41 @@
-* {
-  background-color: red;
+body {
+  background-color: black;
+}
+
+.wonderland-wrapper {
+  width: 100%;
+
+  font-family: 'Laila', serif;
+}
+
+#wonderland-word {
+  display: block;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .panel-wrapper {
+  position: relative;
   width: 1000px;
   height: 640px;
+
+  margin: 0 auto 0 auto;
+
+  border-radius: 5px;
+  overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
   }
 
+  h2 {
+    background-color: grey;
+    text-align: center;
+    color: white;
+    margin: 0 0 0 0;
+  }
 
   display: none;
 }
@@ -28,12 +53,30 @@
 }
 
 .choice-button {
-  width: 100px;
-  height: 50px;
-  background-color: green;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
 }
 
 .choice-button:hover {
   cursor: pointer;
   background-color: grey;
+}
+
+#rabbit-1 {
+  .choice-button:nth-child(even) {
+    top: 0;
+  }
+
+  .choice-button:nth-child(odd) {
+    top: 0;
+    right: 0;
+  }
+
+  .sound {
+    color: black;
+    font-size: 3em;
+    position: absolute;
+    bottom: 20%;
+    left: -5%;
+  }
 }
