@@ -1,3 +1,39 @@
 * {
   background-color: red;
 }
+
+.panel-wrapper {
+  width: 1000px;
+  height: 640px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  display: none;
+}
+
+.panel-wrapper:nth-child(even) {
+  background-color: blue;
+}
+
+.panel-wrapper:nth-child(odd) {
+  background-color: yellow;
+}
+
+.panel-wrapper.shown {
+  display: block;
+}
+
+.choice-button {
+  width: 100px;
+  height: 50px;
+  background-color: green;
+}
+
+.choice-button:hover {
+  cursor: pointer;
+  background-color: grey;
+}
