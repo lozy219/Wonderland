@@ -2,28 +2,163 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Alice in Wonderland</title>
+  <title>rabbit in Wonderland</title>
   <link rel="stylesheet" type="text/css" href="_styles/style.css">
-  <meta name="title" content="Alice in Wonderland" />
+  <script language="javascript" type="text/javascript" src="_scripts/jquery-2.1.4.min.js"></script>
+
+  <meta name="title" content="rabbit in Wonderland" />
   <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
 </head>
 <body>
   <!-- containers here -->
   <div class="wonderland-wrapper">
-  	<div class="alice-wrapper">
-  		<div id="alice-1">
+  	<div id="alice-chapter" class="chapter-wrapper">
+  		<div id="alice-1" class="panel-wrapper shown">
+  			<h2>This is Alice. She eats everything sweet.</h2>
   			<img src="_images/alice-1.png" alt="test"/>
   		</div>
-  		<div id="alice-2">
+  		<div id="alice-2" class="panel-wrapper">
+  			<h2>There’s no better time to eat all the candy you want than on Halloween
+	[Alice seen chugging candy as her eyes starts to close]</h2>
   			<img src="_images/alice-2.png" alt="test"/>
   		</div>
-  		<div id="alice-3">
+  		<div id="alice-3" class="panel-wrapper">
+  			<h2>She takes a stroll in the nearby woods to wear off the effects of the sugar rush
+[Alice enters Wonderland]</h2>
   			<img src="_images/alice-3.png" alt="test"/>
   		</div>
-  		<div id="alice-4">
-  			<img src="_images/alice-4.png" alt="test"/>
-  		</div>
   	</div>
-  </div>
+
+	<div id="rabbit-chapter" class="chapter-wrapper">
+  		<div id="rabbit-1" class="panel-wrapper">
+  			<h2>[White rabbit dragging a huge clock at a painfully slow pace]
+Out of nowhere, she spots a peculiar white rabbit. What should she do?
+CHOICE I [Help him goto #5] [Follow him! goto #13]</h2>
+  			<img src="_images/rabbit-1.png" alt="test"/>
+  			<div data-value="rabbit-2" class="choice-button">Help Him</div>
+  			<div data-value="rabbit-10" class="choice-button">Follow Him</div> 
+  		</div>
+
+	  		<div id="rabbit-2" class="panel-wrapper">
+	  			<h2>[Alice cuts his path]
+Alice: “Wait! I want to help you!”</h2>
+	  			<img src="_images/rabbit-2.png" alt="test"/>
+	  		</div>
+	  		<div id="rabbit-3" class="panel-wrapper">
+	  			<h2>WR: “Gniod uoy era tahw, pots!”
+[White rabbit backs away in fear]</h2>
+	  			<img src="_images/rabbit-3.png" alt="test"/>
+	  		</div>
+	  		<div id="rabbit-4" class="panel-wrapper">
+	  			<h2>WR: “Em eerf tonnac ouy, Nueeq eht yb desruc neeb evah I !” </h2>
+	  			<img src="_images/rabbit-4.png" alt="test"/>
+	  		</div>
+	  		<div id="rabbit-5" class="panel-wrapper">
+	  			<h2>Alice: “Don’t worry Mr Rabbit, I’ll save you!”
+Alice couldn’t make out what he was trying to tell her.</h2>
+	  			<img src="_images/rabbit-5.png" alt="test"/>
+	  		</div>
+	  		<div id="rabbit-6" class="panel-wrapper">
+	  			<h2>[Alice frees the rabbit from the chains]</h2>
+	  			<img src="_images/rabbit-6.png" alt="test"/>
+	  		</div>
+	  		<div id="rabbit-7" class="panel-wrapper">
+	  			<h2>WR: “Ooooooooon!”
+[White rabbit ages rapidly and crumbles into a pile of ashes and chains]</h2>
+	  			<img src="_images/rabbit-7.png" alt="test"/>
+	  		</div>
+	  		<div id="rabbit-8" class="panel-wrapper">
+	  			<h2>[Alice takes a step back clock face springs open to reveal a hidden passage]</h2>
+	  			<img src="_images/rabbit-8.png" alt="test"/>
+	  		</div>
+	  		<div id="rabbit-9" class="panel-wrapper">
+	  			<h2>[Alice enters the clock][goto #18]</h2>
+	  			<img src="_images/rabbit-9.png" alt="test"/>
+	  			<div data-value="rabbit-15" class="choice-button">Follow Him</div> 
+	  		</div>
+	  		<div id="rabbit-10" class="panel-wrapper">
+	  			<h2>Alice decides to follow the white rabbit quietly as he passed.</h2>
+	  			<img src="_images/rabbit-10.png" alt="test"/>
+	  		</div>
+	  		<div id="rabbit-11" class="panel-wrapper">
+	  			<h2>But no matter how hard she tried, she couldn't keep up. That mysterious rabbit was causing a disturbance in time-space.</h2>
+	  			<img src="_images/rabbit-10.png" alt="test"/>
+	  		</div>
+	  		<div id="rabbit-12" class="panel-wrapper">
+	  			<h2>Time was slowing down for her. [Alice runs in slow motion]</h2>
+	  			<img src="_images/rabbit-10.png" alt="test"/>
+	  		</div>
+	</div>
+</div>
+
+  	<style>
+  		.panel-wrapper {
+  			width: 1000px;
+  			height: 640px;
+
+
+  			display: none;
+  		}
+
+  		.panel-wrapper:nth-child(even) {
+  			background-color: blue;
+  		}
+
+  		.panel-wrapper:nth-child(odd) {
+  			background-color: yellow;
+  		}
+
+  		.panel-wrapper.shown {
+  			display: block;
+  		}
+
+  		.choice-button {
+  			width: 100px;
+  			height: 50px;
+  			background-color: green;
+  		}
+
+  		.choice-button:hover {
+  			cursor: pointer;
+  			background-color: grey;
+  		}
+  	</style>
+
+  	<script>
+  		$(document).ready(function() {
+	  		$('.panel-wrapper').click(function() {
+	  			var currentPanelWrapper = $(this);
+	  			var currentChapter = currentPanelWrapper.parent();
+
+	  			if (currentPanelWrapper.next('.panel-wrapper').length > 0) {
+		  			var nextPanelWrapper = currentPanelWrapper.next('.panel-wrapper');
+
+		  			currentPanelWrapper.removeClass('shown');
+		  			nextPanelWrapper.addClass('shown');
+	  			} else {
+	  				alert("end of chapter!");
+	  				if (currentChapter.next('.chapter-wrapper').length > 0) {
+	  					var nextChapter = currentChapter.next('.chapter-wrapper');
+	  					var nextPanelWrapper = nextChapter.children('.panel-wrapper').first();
+
+	  					currentPanelWrapper.removeClass('shown');
+	  					nextPanelWrapper.addClass('shown');
+	  				} else {
+	  					alert("End of story!");
+	  				}
+	  			}
+	  		});
+
+	  		$('.choice-button').click(function() {
+	  			var currentPanelWrapper = $(this).parent();
+	  			var panelIdOfLink = $(this).data('value');
+
+	  			var nextPanelWrapper = $("#" + panelIdOfLink);
+
+	  			currentPanelWrapper.removeClass('shown');
+	  			nextPanelWrapper.addClass('shown');
+	  		});
+  		});
+  	</script>
 </body>
 </html>
