@@ -53,18 +53,55 @@ body {
 }
 
 .choice-button {
-  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
+
 }
 
 .choice-button:hover {
   cursor: pointer;
-  background-color: grey;
 }
 
 #rabbit-1 {
-  .choice-button:nth-child(even) {
-    top: 0;
+  #rabit-1-choice-1 {
+    width: 20%;
+    top: 8%;
+    left: 4%;
+    
+    .wrapper { 
+      position: relative;
+      img {
+        width:100%;
+      }
+
+      h3 {
+        font-size: 1.5em;
+        margin: 0;
+        position: absolute;
+        top: 25%;
+        left: 22%;
+      }
+    }
+  }
+
+  #rabit-1-choice-2 {
+    width: 20%;
+    top: 6%;
+    left: 30%;
+    
+    .wrapper { 
+      position: relative;
+      img {
+        width:100%;
+      }
+
+      h3 {
+        font-size: 1.5em;
+        margin: 0;
+        position: absolute;
+        top: 25%;
+        left: 22%;
+      }
+    }
   }
 
   .choice-button:nth-child(odd) {

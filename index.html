@@ -14,7 +14,7 @@
   <!-- containers here -->
   <div class="wonderland-wrapper">
   	<img id="wonderland-word" src="_images/wonderland-word.png"/>
-  	<div id="alice-chapter" class="chapter-wrapper">
+  	<div id="alice" class="chapter-wrapper">
   		<div id="alice-1" class="panel-wrapper shown">
   			<h2>This is Alice. She eats everything sweet.</h2>
   			<img src="_images/alice/alice-1.PNG" alt="test"/>
@@ -30,64 +30,82 @@
   		</div>
   	</div>
 
-	<div id="rabbit-chapter" class="chapter-wrapper">
+	<div id="rabbit" class="chapter-wrapper">
   		<div id="rabbit-1" class="panel-wrapper">
   			<h2>Out of nowhere, she spots a peculiar white rabbit. What should she do?</h2>
   			<div class="sound">tchht</div>
   			<img src="_images/rabbit/rabbit-1.PNG" alt="test"/>
-  			<div data-value="rabbit-2" class="choice-button">Help Him</div>
-  			<div data-value="rabbit-10" class="choice-button">Follow Him</div> 
+  			<div id="rabit-1-choice-1" data-value="rabbit-2" class="choice-button"><div class="wrapper"><img src="_images/rabbit/rabit-1-choice-1.PNG"/><h3>Help Him</h3></div></div>
+  			<div id="rabit-1-choice-2" data-value="rabbit-2" class="choice-button"><div class="wrapper"><img src="_images/rabbit/rabit-1-choice-2.PNG"/><h3>Follow Him</h3></div></div>
   		</div>
 
-	  		<div id="rabbit-2" class="panel-wrapper">
-	  			<h2>[Alice cuts his path]
-Alice: “Wait! I want to help you!”</h2>
-	  			<img src="_images/rabbit/rabbit-2.PNG" alt="test"/>
-	  		</div>
-	  		<div id="rabbit-3" class="panel-wrapper">
-	  			<h2>WR: “Gniod uoy era tahw, pots!”
-[White rabbit backs away in fear]</h2>
-	  			<img src="_images/rabbit/rabbit-3.PNG" alt="test"/>
-	  		</div>
-	  		<div id="rabbit-4" class="panel-wrapper">
-	  			<h2>WR: “Em eerf tonnac ouy, Nueeq eht yb desruc neeb evah I !” </h2>
-	  			<img src="_images/rabbit/rabbit-4.PNG" alt="test"/>
-	  		</div>
-	  		<div id="rabbit-5" class="panel-wrapper">
-	  			<h2>Alice: “Don’t worry Mr Rabbit, I’ll save you!”
-Alice couldn’t make out what he was trying to tell her.</h2>
-	  			<img src="_images/rabbit/rabbit-5.PNG" alt="test"/>
-	  		</div>
-	  		<div id="rabbit-6" class="panel-wrapper">
-	  			<h2>[Alice frees the rabbit from the chains]</h2>
-	  			<img src="_images/rabbit/rabbit-6.PNG" alt="test"/>
-	  		</div>
-	  		<div id="rabbit-7" class="panel-wrapper">
-	  			<h2>WR: “Ooooooooon!”
-[White rabbit ages rapidly and crumbles into a pile of ashes and chains]</h2>
-	  			<img src="_images/rabbit/rabbit-7.PNG" alt="test"/>
-	  		</div>
-	  		<div id="rabbit-8" class="panel-wrapper">
-	  			<h2>[Alice takes a step back clock face springs open to reveal a hidden passage]</h2>
-	  			<img src="_images/rabbit/rabbit-8.PNG" alt="test"/>
-	  		</div>
-	  		<div id="rabbit-9" class="panel-wrapper">
-	  			<h2>[Alice enters the clock][goto #18]</h2>
-	  			<img src="_images/rabbit/rabbit-9.PNG" alt="test"/>
-	  			<div data-value="rabbit-15" class="choice-button">Follow Him</div> 
-	  		</div>
-	  		<div id="rabbit-10" class="panel-wrapper">
-	  			<h2>Alice decides to follow the white rabbit quietly as he passed.</h2>
-	  			<img src="_images/rabbit/rabbit-10.PNG" alt="test"/>
-	  		</div>
-	  		<div id="rabbit-11" class="panel-wrapper">
-	  			<h2>But no matter how hard she tried, she couldn't keep up. That mysterious rabbit was causing a disturbance in time-space.</h2>
-	  			<img src="_images/rabbit/rabbit-10.PNG" alt="test"/>
-	  		</div>
-	  		<div id="rabbit-12" class="panel-wrapper">
-	  			<h2>Time was slowing down for her. [Alice runs in slow motion]</h2>
-	  			<img src="_images/rabbit/rabbit-10.PNG" alt="test"/>
-	  		</div>
+	  	<div id="rabbit-2" class="panel-wrapper">
+	  		<h2>Alice: “Wait! I want to help you!”</h2>
+			<img src="_images/rabbit/rabbit-2.PNG" alt="test"/>
+	  	</div>
+
+		<div id="rabbit-3" class="panel-wrapper">
+	 		<h2>WR: “Gniod uoy era tahw, pots!”</h2>
+ 			<img src="_images/rabbit/rabbit-3.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-4" class="panel-wrapper">
+	  		<h2>WR: “Em eerf tonnac ouy, Nueeq eht yb desruc neeb evah I !” </h2>
+	  		<img src="_images/rabbit/rabbit-4.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-5" class="panel-wrapper">
+	  		<h2>Alice: “Don’t worry Mr Rabbit, I’ll save you!” Alice couldn’t make out what he was trying to tell her.</h2>
+	  		<img src="_images/rabbit/rabbit-5.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-6" class="panel-wrapper">
+	  		<img src="_images/rabbit/rabbit-6.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-7" class="panel-wrapper">
+	  		<h2>WR: “Ooooooooon!”</h2>
+	  		<img src="_images/rabbit/rabbit-7.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-8" class="panel-wrapper">
+	  		<img src="_images/rabbit/rabbit-8.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-9" data-value="rabbit-15" class="panel-wrapper">
+	  		<h2>[Alice enters the clock][goto #18]</h2>
+	  		<img src="_images/rabbit/rabbit-9.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-10" class="panel-wrapper">
+	  		<h2>Alice decides to follow the white rabbit quietly as he passed.</h2>
+	  		<img src="_images/rabbit/rabbit-10.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-11" class="panel-wrapper">
+	  		<h2>But no matter how hard she tried, she couldn't keep up. That mysterious rabbit was causing a disturbance in time-space.</h2>
+	  		<img src="_images/rabbit/rabbit-11.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-12" class="panel-wrapper">
+	  		<h2>Time was slowing down for her.</h2>
+	  		<img src="_images/rabbit/rabbit-12.PNG" alt="test"/>
+	  	</div>
+
+	  	<div id="rabbit-13" class="panel-wrapper">
+	  		<h2>Alice loses sight of the white rabbit and finds herself lost in the middle of nowhere.</h2>
+	  		<img src="_images/rabbit/rabbit-13.PNG"/>
+	  	</div>
+
+	  	<div id="rabbit-14" class="panel-wrapper">
+	  		<h2>She started to panic and took a few steps back.</h2>
+	  		<img src="_images/rabbit/rabbit-14.PNG"/>
+	  	</div>
+
+	  	<div id="rabbit-15" class="panel-wrapper">
+	  		<h2>She slipped and fell into a hole in a tree [goto cheshire]</h2>
+	  		<img src="_images/rabbit/rabbit-15.PNG"/>
+	  	</div>
 	</div>
 </div>
   	<script>
@@ -96,7 +114,16 @@ Alice couldn’t make out what he was trying to tell her.</h2>
 	  			// Panel shall only be clickable if there isnt any explicit choices in it
 	  			// So we first check whether there are any explicit choices
 	  			var currentPanelWrapper = $(this);
-	  			if (currentPanelWrapper.find('.choice-button').length == 0) {
+
+	  			// In some cases, some panel transition doesnt occur sequentially, and a direct link is applied to it
+	  			// so that on click, it jumps to the direct link as specified in the data-value attribute of the div
+	  			var directLink = currentPanelWrapper.data('value');
+	  			if (directLink != null) { //Check if panel is directly linked into another panel
+	  				var nextPanelWrapper = $('#' + directLink);
+
+		  			currentPanelWrapper.removeClass('shown');
+		  			nextPanelWrapper.addClass('shown');
+	  			} else if (currentPanelWrapper.find('.choice-button').length == 0) {
 		  			var currentChapter = currentPanelWrapper.parent();
 
 		  			// Check if it is NOT the last panel in the chapter
@@ -106,7 +133,7 @@ Alice couldn’t make out what he was trying to tell her.</h2>
 			  			currentPanelWrapper.removeClass('shown');
 			  			nextPanelWrapper.addClass('shown');
 		  			} else { // If it is the last panel in the chapter
-		  				alert("end of chapter!");
+		  				// alert("end of chapter!");
 		  				// Find the next panel in the next chapter
 		  				// First check if the current chapter is NOT the last chapter
 		  				if (currentChapter.next('.chapter-wrapper').length > 0) {
@@ -116,7 +143,7 @@ Alice couldn’t make out what he was trying to tell her.</h2>
 		  					currentPanelWrapper.removeClass('shown');
 		  					nextPanelWrapper.addClass('shown');
 		  				} else { // If it is the last chapter and last panel, we can end the story
-		  					alert("End of story!");
+		  					// alert("End of story!");
 		  				}
 		  			}
 	  			}
@@ -130,6 +157,18 @@ Alice couldn’t make out what he was trying to tell her.</h2>
 
 	  			currentPanelWrapper.removeClass('shown');
 	  			nextPanelWrapper.addClass('shown');
+	  		});
+
+	  		$('.choice-button').mouseover(function() {
+	  			var chapterWrapper = $(this).parent().parent();
+	  			var rolloverImageURL = '_images/' + chapterWrapper.attr('id') + '/' + $(this).attr('id') + "-rollover.PNG";
+	  			$(this).find('img').attr('src', rolloverImageURL);
+	  		});
+
+	  		$('.choice-button').mouseleave(function() {
+	  			var chapterWrapper = $(this).parent().parent();
+	  			var imageURL = '_images/' + chapterWrapper.attr('id') + '/' + $(this).attr('id') + ".PNG";
+	  			$(this).find('img').attr('src', imageURL);
 	  		});
   		});
   	</script>
