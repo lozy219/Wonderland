@@ -104,16 +104,25 @@ body {
     }
   }
 
-  .choice-button:nth-child(odd) {
-    top: 0;
-    right: 0;
-  }
-
   .sound {
     color: black;
     font-size: 3em;
     position: absolute;
     bottom: 20%;
     left: -5%;
+  }
+}
+
+#hallway-1 {
+  #hallway-1-choice-1 {
+    top: 20%;
+    background-color: white;
+    padding: 1%;
+    border: solid 1px black;
+  }
+
+  #hallway-1-choice-1:hover {
+    background-color: black;
+    color: white;
   }
 }
