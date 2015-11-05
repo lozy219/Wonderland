@@ -163,13 +163,10 @@
 						[walk forward goto #19(slightly different doors) after 6 clicks goto #21][Alice enters a door]
 					</h2>
 					<img src="_images/hallway/hallway-1.png"/>
-					<div id="hallway-1-choice-1" data-value="hallway-3" class="choice-button">
-						<div class="wrapper">
-							<h3>
-								Go Forward
-							</h3>
-						</div>
-					</div>
+					<div id="hallway-1-choice-1" data-value="hallway-2" class="choice-hover"></div>
+					<div id="hallway-1-choice-2" data-value="hallway-2" class="choice-hover"></div>
+					<div id="hallway-1-choice-3" data-value="hallway-2" class="choice-hover"></div>
+					<div id="hallway-1-choice-4" data-value="hallway-2" class="choice-hover"></div>
 				</div>
 
 				<div id="hallway-2" data-value="hallway-1" class="panel-wrapper">
@@ -737,7 +734,7 @@
 							currentPanelWrapper.removeClass('shown');
 							nextPanelWrapper.addClass('shown');
 						}
-					} else if (currentPanelWrapper.find('.choice-button').length == 0) {
+					} else if (currentPanelWrapper.find('.choice-button').length == 0 && currentPanelWrapper.find('.choice-hover').length == 0) {
 						var currentChapter = currentPanelWrapper.parent();
 
 						// Check if it is NOT the last panel in the chapter
@@ -773,6 +770,28 @@
 				});
 
 				$('.choice-button').click(function() {
+					var currentPanelWrapper = $(this).parent();
+					var panelIdOfLink = $(this).data('value');
+
+					var nextPanelWrapper = $("#" + panelIdOfLink);
+
+					if (debugMode) {
+						location.hash = panelIdOfLink;
+					} else {
+						currentPanelWrapper.removeClass('shown');
+						nextPanelWrapper.addClass('shown');
+					}
+				});
+
+				$('.choice-hover').click(function() {
+					if (countOfClicksInHallway > 4) {
+						$(this).data('value','hallway-3');
+					}
+
+					if ($(this).attr('id') == "hallway-1-choice-4") {
+						countOfClicksInHallway++;
+					}
+
 					var currentPanelWrapper = $(this).parent();
 					var panelIdOfLink = $(this).data('value');
 

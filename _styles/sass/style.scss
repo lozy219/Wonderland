@@ -114,15 +114,45 @@ body {
 }
 
 #hallway-1 {
+  .choice-hover {
+    position: absolute;
+  }
+
   #hallway-1-choice-1 {
-    top: 20%;
-    background-color: white;
-    padding: 1%;
-    border: solid 1px black;
+    height: 50%;
+    width: 18%;
+    left: 20%;
+    top: 25%;
+    cursor: url('../_images/hallway/hallway-1-choice-1.ico'), default;
+  }
+
+  #hallway-1-choice-2 {
+    height: 35%;
+    width: 10%;
+    left: 43%;
+    top: 26%;
+
+    cursor: url('../_images/hallway/hallway-1-choice-2.ico'), default;
+  }
+
+  #hallway-1-choice-3 {
+    height: 21%;
+    width: 6%;
+    left: 56%;
+    top: 30%;
+    cursor: url('../_images/hallway/hallway-1-choice-3.ico'), default;
+  }
+
+ #hallway-1-choice-4 {
+    height: 60%;
+    width: 5%;
+    left: 58%;
+    bottom: 0%;
+    cursor: url('../_images/hallway/hallway-1-choice-4.ico'), default;
+    transform: rotate(35deg);
   }
 
   #hallway-1-choice-1:hover {
-    background-color: black;
     color: white;
   }
 }
