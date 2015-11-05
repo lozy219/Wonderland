@@ -716,6 +716,8 @@
 			</section>
 		</div>
 		<script>
+			var debugMode = true;
+
 			var countOfClicksInHallway = 0;
 			$(document).ready(function() {
 				$('.panel-wrapper').click(function() {
@@ -727,10 +729,14 @@
 					// so that on click, it jumps to the direct link as specified in the data-value attribute of the div
 					var directLink = currentPanelWrapper.data('value');
 					if (directLink != null) { //Check if panel is directly linked into another panel
-						var nextPanelWrapper = $('#' + directLink);
+						if (debugMode) {
+							location.hash = directLink;
+						} else {
+							var nextPanelWrapper = $('#' + directLink);
 
-						currentPanelWrapper.removeClass('shown');
-						nextPanelWrapper.addClass('shown');
+							currentPanelWrapper.removeClass('shown');
+							nextPanelWrapper.addClass('shown');
+						}
 					} else if (currentPanelWrapper.find('.choice-button').length == 0) {
 						var currentChapter = currentPanelWrapper.parent();
 
@@ -738,8 +744,13 @@
 						if (currentPanelWrapper.next('.panel-wrapper').length > 0) {
 							var nextPanelWrapper = currentPanelWrapper.next('.panel-wrapper');
 
-							currentPanelWrapper.removeClass('shown');
-							nextPanelWrapper.addClass('shown');
+							if (debugMode) {
+								location.hash = nextPanelWrapper.attr('id');
+							} else {
+
+								currentPanelWrapper.removeClass('shown');
+								nextPanelWrapper.addClass('shown');
+							}
 						} else { // If it is the last panel in the chapter
 							// alert("end of chapter!");
 							// Find the next panel in the next chapter
@@ -748,8 +759,12 @@
 								var nextChapter = currentChapter.next('.chapter-wrapper');
 								var nextPanelWrapper = nextChapter.children('.panel-wrapper').first();
 
-								currentPanelWrapper.removeClass('shown');
-								nextPanelWrapper.addClass('shown');
+								if (debugMode) {
+									location.hash = nextPanelWrapper.attr('id');
+								} else {
+									currentPanelWrapper.removeClass('shown');
+									nextPanelWrapper.addClass('shown');
+								}
 							} else { // If it is the last chapter and last panel, we can end the story
 								// alert("End of story!");
 							}
@@ -763,8 +778,12 @@
 
 					var nextPanelWrapper = $("#" + panelIdOfLink);
 
-					currentPanelWrapper.removeClass('shown');
-					nextPanelWrapper.addClass('shown');
+					if (debugMode) {
+						location.hash = panelIdOfLink;
+					} else {
+						currentPanelWrapper.removeClass('shown');
+						nextPanelWrapper.addClass('shown');
+					}
 				});
 
 				$('.choice-button').mouseover(function() {
@@ -778,6 +797,26 @@
 					var imageURL = '_images/' + chapterWrapper.attr('id') + '/' + $(this).attr('id') + ".png";
 					$(this).find('img').attr('src', imageURL);
 				});
+
+				if (debugMode) {
+					window.onload = changePageBasedOnLocationHash();
+
+					window.onhashchange = changePageBasedOnLocationHash;
+
+					function changePageBasedOnLocationHash() {
+						var jumpToId = location.hash;
+						// var jumpToId =  rawHashValue.substring(1);
+						if (jumpToId == '') {
+							jumpToId = "#alice-1";
+						}
+
+						$('.panel-wrapper').each(function() {
+							$(this).removeClass('shown');
+						});
+
+						$(jumpToId).addClass('shown');
+					}
+				}
 			});
 		</script>
 	</body>
