@@ -21,7 +21,7 @@ body {
 .panel-wrapper {
   position: relative;
   width: 1000px;
-  height: 640px;
+  height: auto;
   margin: 0 auto 0 auto;
   border-radius: 5px;
   overflow: hidden;
