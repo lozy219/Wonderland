@@ -716,10 +716,28 @@
 			</section>
 		</div>
 		<script>
-			var debugMode = true;
-
+			var audio;
+			var debugMode = false;
 			var countOfClicksInHallway = 0;
+
+			var hideAndShow = function(wrapperToHide, wrapperToShow) {
+				wrapperToHide.removeClass('shown');
+				wrapperToShow.addClass('shown');
+
+				if (wrapperToHide.parent()[0].id !== wrapperToShow.parent()[0].id) {
+					audio.pause();
+				}
+
+				if ((wrapperToShow.parent()[0].id === 'alice') && (wrapperToHide.parent()[0].id !== 'alice')) {
+					audio = new Audio('_sounds/fireplace.m4a');
+					audio.play();
+				}
+			};
+
 			$(document).ready(function() {
+				audio = new Audio('_sounds/fireplace.m4a');
+				audio.play();
+
 				$('.panel-wrapper').click(function() {
 					// Panel shall only be clickable if there isnt any explicit choices in it
 					// So we first check whether there are any explicit choices
@@ -734,8 +752,7 @@
 						} else {
 							var nextPanelWrapper = $('#' + directLink);
 
-							currentPanelWrapper.removeClass('shown');
-							nextPanelWrapper.addClass('shown');
+							hideAndShow(currentPanelWrapper, nextPanelWrapper);
 						}
 					} else if (currentPanelWrapper.find('.choice-button').length == 0) {
 						var currentChapter = currentPanelWrapper.parent();
@@ -748,8 +765,7 @@
 								location.hash = nextPanelWrapper.attr('id');
 							} else {
 
-								currentPanelWrapper.removeClass('shown');
-								nextPanelWrapper.addClass('shown');
+								hideAndShow(currentPanelWrapper, nextPanelWrapper);
 							}
 						} else { // If it is the last panel in the chapter
 							// alert("end of chapter!");
@@ -762,8 +778,7 @@
 								if (debugMode) {
 									location.hash = nextPanelWrapper.attr('id');
 								} else {
-									currentPanelWrapper.removeClass('shown');
-									nextPanelWrapper.addClass('shown');
+									hideAndShow(currentPanelWrapper, nextPanelWrapper);
 								}
 							} else { // If it is the last chapter and last panel, we can end the story
 								// alert("End of story!");
@@ -781,8 +796,7 @@
 					if (debugMode) {
 						location.hash = panelIdOfLink;
 					} else {
-						currentPanelWrapper.removeClass('shown');
-						nextPanelWrapper.addClass('shown');
+						hideAndShow(currentPanelWrapper, nextPanelWrapper);
 					}
 				});
 
