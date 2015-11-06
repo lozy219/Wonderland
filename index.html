@@ -34,7 +34,7 @@
 
 			<!-- RABBIT CHAPTER -->
 			<section id="rabbit" class="chapter-wrapper">
-				<div id="rabbit-1" class="panel-wrapper">
+				<div id="rabbit-1" class="panel-wrapper contains-choices">
 					<h2>
 						Out of nowhere, she spots a peculiar white rabbit. What should she do?
 					</h2>
@@ -50,7 +50,7 @@
 							</h3>
 						</div>
 					</div>
-					<div id="rabit-1-choice-2" data-value="rabbit-2" class="choice-button">
+					<div id="rabit-1-choice-2" data-value="rabbit-10" class="choice-button">
 						<div class="wrapper">
 							<img src="_images/rabbit/rabit-1-choice-2.png"/>
 							<h3>
@@ -155,7 +155,7 @@
 
 			<!-- HALLWAY CHAPTER -->
 			<section id="hallway" class="chapter-wrapper">
-				<div id="hallway-1" class="panel-wrapper">
+				<div id="hallway-1" class="panel-wrapper contains-choices">
 					<h2>
 						Alice enters a hallway of infinite doors.<br>
 						CHOICE II
@@ -163,10 +163,10 @@
 						[walk forward goto #19(slightly different doors) after 6 clicks goto #21][Alice enters a door]
 					</h2>
 					<img src="_images/hallway/hallway-1.png"/>
-					<div id="hallway-1-choice-1" data-value="hallway-2" class="choice-hover"></div>
-					<div id="hallway-1-choice-2" data-value="hallway-2" class="choice-hover"></div>
-					<div id="hallway-1-choice-3" data-value="hallway-2" class="choice-hover"></div>
-					<div id="hallway-1-choice-4" data-value="hallway-2" class="choice-hover"></div>
+					<div id="hallway-1-choice-1" data-value="hallway-2" class="choice-cursor"></div>
+					<div id="hallway-1-choice-2" data-value="hallway-2" class="choice-cursor"></div>
+					<div id="hallway-1-choice-3" data-value="hallway-2" class="choice-cursor"></div>
+					<div id="hallway-1-choice-4" data-value="hallway-2" class="choice-cursor"></div>
 				</div>
 
 				<div id="hallway-2" data-value="hallway-1" class="panel-wrapper">
@@ -183,7 +183,7 @@
 					<img src="_images/hallway/hallway-3.png"/>
 				</div>
 
-				<div id="hallway-4" class="panel-wrapper">
+				<div id="hallway-4" class="panel-wrapper contains-choices">
 					<h2>
 						[Alice approaches the table]<br>
 						CHOICE III
@@ -192,6 +192,9 @@
 						[Hover over door: Alice: “I’m too huge to fit through that door!”]
 					</h2>
 					<img src="_images/hallway/hallway-4.png"/>
+					<div id="hallway-4-choice-1" data-value="hallway-7" class="choice-hover"></div>
+					<div id="hallway-4-choice-2" data-value="hallway-5" class="choice-hover"></div>
+					<div id="hallway-4-choice-3" data-value="" class="choice-hover"></div>
 				</div>
 
 				<div id="hallway-5" class="panel-wrapper">
@@ -751,7 +754,7 @@
 
 							hideAndShow(currentPanelWrapper, nextPanelWrapper);
 						}
-					} else if (currentPanelWrapper.find('.choice-button').length == 0 && currentPanelWrapper.find('.choice-hover').length == 0) {
+					} else if (!currentPanelWrapper.hasClass('contains-choices')) {
 						var currentChapter = currentPanelWrapper.parent();
 
 						// Check if it is NOT the last panel in the chapter
@@ -797,7 +800,7 @@
 					}
 				});
 
-				$('.choice-hover').click(function() {
+				$('.choice-cursor').click(function() {
 					if (countOfClicksInHallway > 4) {
 						$(this).data('value','hallway-3');
 					}
@@ -818,6 +821,52 @@
 						nextPanelWrapper.addClass('shown');
 					}
 				});
+
+				// HALLWAY 4 SCENE CHOICES SCRIPT //
+				$('.choice-hover').click(function() {
+					var currentPanelWrapper = $(this).parent();
+					var panelIdOfLink = $(this).data('value');
+
+					var nextPanelWrapper = $("#" + panelIdOfLink);
+
+					if (debugMode) {
+						location.hash = panelIdOfLink;
+					} else {
+						currentPanelWrapper.removeClass('shown');
+						nextPanelWrapper.addClass('shown');
+					}
+				});
+
+				$('#hallway-4-choice-1').mouseover(function() {
+					var panelWrapper = $(this).parent();
+					var image = panelWrapper.find('img');
+
+					image.attr('src', '_images/hallway/hallway-4-1.png');
+				});
+
+				$('#hallway-4-choice-1').mouseleave(function() {
+					var panelWrapper = $(this).parent();
+					var image = panelWrapper.find('img');
+
+					image.attr('src', '_images/hallway/hallway-4.png');
+				});
+
+				$('#hallway-4-choice-2').mouseover(function() {
+					var panelWrapper = $(this).parent();
+					var image = panelWrapper.find('img');
+
+					image.attr('src', '_images/hallway/hallway-4-2.png');
+				});
+
+				$('#hallway-4-choice-2').mouseleave(function() {
+					var panelWrapper = $(this).parent();
+					var image = panelWrapper.find('img');
+
+					image.attr('src', '_images/hallway/hallway-4.png');
+				});
+
+				//////////////////////////////////////////////////////////
+
 
 				$('.choice-button').mouseover(function() {
 					var chapterWrapper = $(this).parent().parent();

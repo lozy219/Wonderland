@@ -41,45 +41,35 @@ body {
 }
 
 /* line 43, sass/style.scss */
-.panel-wrapper:nth-child(even) {
-  background-color: blue;
-}
-
-/* line 47, sass/style.scss */
-.panel-wrapper:nth-child(odd) {
-  background-color: yellow;
-}
-
-/* line 51, sass/style.scss */
 .panel-wrapper.shown {
   display: block;
 }
 
-/* line 55, sass/style.scss */
+/* line 47, sass/style.scss */
 .choice-button {
   position: absolute;
 }
 
-/* line 60, sass/style.scss */
+/* line 52, sass/style.scss */
 .choice-button:hover {
   cursor: pointer;
 }
 
-/* line 65, sass/style.scss */
+/* line 57, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 {
   width: 20%;
   top: 8%;
   left: 4%;
 }
-/* line 70, sass/style.scss */
+/* line 62, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 .wrapper {
   position: relative;
 }
-/* line 72, sass/style.scss */
+/* line 64, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 .wrapper img {
   width: 100%;
 }
-/* line 76, sass/style.scss */
+/* line 68, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 .wrapper h3 {
   font-size: 1.5em;
   margin: 0;
@@ -87,21 +77,21 @@ body {
   top: 25%;
   left: 22%;
 }
-/* line 86, sass/style.scss */
+/* line 78, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 {
   width: 20%;
   top: 6%;
   left: 30%;
 }
-/* line 91, sass/style.scss */
+/* line 83, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 .wrapper {
   position: relative;
 }
-/* line 93, sass/style.scss */
+/* line 85, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 .wrapper img {
   width: 100%;
 }
-/* line 97, sass/style.scss */
+/* line 89, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 .wrapper h3 {
   font-size: 1.5em;
   margin: 0;
@@ -109,7 +99,7 @@ body {
   top: 25%;
   left: 22%;
 }
-/* line 107, sass/style.scss */
+/* line 99, sass/style.scss */
 #rabbit-1 .sound {
   color: black;
   font-size: 3em;
@@ -118,11 +108,11 @@ body {
   left: -5%;
 }
 
-/* line 117, sass/style.scss */
-#hallway-1 .choice-hover {
+/* line 109, sass/style.scss */
+#hallway-1 .choice-cursor {
   position: absolute;
 }
-/* line 121, sass/style.scss */
+/* line 113, sass/style.scss */
 #hallway-1 #hallway-1-choice-1 {
   height: 50%;
   width: 18%;
@@ -130,7 +120,7 @@ body {
   top: 25%;
   cursor: url("../_images/hallway/hallway-1-choice-1.ico"), default;
 }
-/* line 129, sass/style.scss */
+/* line 121, sass/style.scss */
 #hallway-1 #hallway-1-choice-2 {
   height: 35%;
   width: 10%;
@@ -138,7 +128,7 @@ body {
   top: 26%;
   cursor: url("../_images/hallway/hallway-1-choice-2.ico"), default;
 }
-/* line 138, sass/style.scss */
+/* line 130, sass/style.scss */
 #hallway-1 #hallway-1-choice-3 {
   height: 21%;
   width: 6%;
@@ -146,7 +136,7 @@ body {
   top: 30%;
   cursor: url("../_images/hallway/hallway-1-choice-3.ico"), default;
 }
-/* line 146, sass/style.scss */
+/* line 138, sass/style.scss */
 #hallway-1 #hallway-1-choice-4 {
   height: 60%;
   width: 5%;
@@ -155,7 +145,30 @@ body {
   cursor: url("../_images/hallway/hallway-1-choice-4.ico"), default;
   transform: rotate(35deg);
 }
-/* line 155, sass/style.scss */
+/* line 147, sass/style.scss */
 #hallway-1 #hallway-1-choice-1:hover {
   color: white;
+}
+
+/* line 153, sass/style.scss */
+#hallway-4 .choice-hover {
+  position: absolute;
+}
+/* line 157, sass/style.scss */
+#hallway-4 .choice-hover:hover {
+  cursor: pointer;
+}
+/* line 161, sass/style.scss */
+#hallway-4 #hallway-4-choice-1 {
+  width: 20%;
+  height: 15%;
+  bottom: 4%;
+  left: 27%;
+}
+/* line 168, sass/style.scss */
+#hallway-4 #hallway-4-choice-2 {
+  width: 10%;
+  height: 30%;
+  bottom: 7%;
+  left: 63%;
 }

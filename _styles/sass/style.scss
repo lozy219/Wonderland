@@ -40,14 +40,6 @@ body {
   display: none;
 }
 
-.panel-wrapper:nth-child(even) {
-  background-color: blue;
-}
-
-.panel-wrapper:nth-child(odd) {
-  background-color: yellow;
-}
-
 .panel-wrapper.shown {
   display: block;
 }
@@ -114,7 +106,7 @@ body {
 }
 
 #hallway-1 {
-  .choice-hover {
+  .choice-cursor {
     position: absolute;
   }
 
@@ -154,5 +146,29 @@ body {
 
   #hallway-1-choice-1:hover {
     color: white;
+  }
+}
+
+#hallway-4 {
+  .choice-hover {
+    position: absolute;
+  }
+
+ .choice-hover:hover {
+    cursor: pointer;
+  }
+
+  #hallway-4-choice-1 {
+    width: 20%;
+    height: 15%;
+    bottom: 4%;
+    left: 27%;
+  }
+
+  #hallway-4-choice-2 {
+    width: 10%;
+    height: 30%;
+    bottom: 7%;
+    left: 63%;
   }
 }
