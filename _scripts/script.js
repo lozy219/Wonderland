@@ -158,20 +158,21 @@ $(document).ready(function() {
     image.attr('src', '_images/hallway/hallway-4.png');
   });
 
-  $('#rabbit-16').on('mousewheel', function(event) {
+  $('#rabbit-16').bind('mousewheel DOMMouseScroll', function(event) {
     console.log(event);
-    if (event.deltaY < 0) {
+    var deltaY = -(event.originalEvent.deltaY / 4);
+    if (deltaY < 0) {
       var currentY = parseInt($('#rabbit-16').css('background-position-y'));
       if (currentY > -600) {
-        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY / 15) + 'px');
+        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 15) + 'px');
       } else if (currentY > -2000) {
-        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY / 5) + 'px');
+        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 5) + 'px');
       } else if (currentY > -6000) {
-        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY) + 'px');
+        $('#rabbit-16').css('background-position-y', (currentY + deltaY) + 'px');
       } else if (currentY > -15000) {
-        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY * 3) + 'px');
+        $('#rabbit-16').css('background-position-y', (currentY + deltaY * 3) + 'px');
       } else if (currentY > -50000) {
-        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY * 5) + 'px');
+        $('#rabbit-16').css('background-position-y', (currentY + deltaY * 5) + 'px');
       } else {
         hideAndShow($('#rabbit-16'), $('#cheshire-1'));
       }
