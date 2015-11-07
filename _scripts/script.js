@@ -159,6 +159,7 @@ $(document).ready(function() {
   });
 
   $('#rabbit-16').on('mousewheel', function(event) {
+    console.log(event);
     if (event.deltaY < 0) {
       var currentY = parseInt($('#rabbit-16').css('background-position-y'));
       if (currentY > -600) {
