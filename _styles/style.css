@@ -108,11 +108,17 @@ body {
   left: -5%;
 }
 
-/* line 109, sass/style.scss */
+/* line 108, sass/style.scss */
+#rabbit-16 {
+  background-image: url("../_images/rabbit/rabbit-falling.png");
+  background-size: 1000px auto;
+}
+
+/* line 114, sass/style.scss */
 #hallway-1 .choice-cursor {
   position: absolute;
 }
-/* line 113, sass/style.scss */
+/* line 118, sass/style.scss */
 #hallway-1 #hallway-1-choice-1 {
   height: 50%;
   width: 18%;
@@ -120,7 +126,7 @@ body {
   top: 25%;
   cursor: url("../_images/hallway/hallway-1-choice-1.ico"), default;
 }
-/* line 121, sass/style.scss */
+/* line 126, sass/style.scss */
 #hallway-1 #hallway-1-choice-2 {
   height: 35%;
   width: 10%;
@@ -128,7 +134,7 @@ body {
   top: 26%;
   cursor: url("../_images/hallway/hallway-1-choice-2.ico"), default;
 }
-/* line 130, sass/style.scss */
+/* line 135, sass/style.scss */
 #hallway-1 #hallway-1-choice-3 {
   height: 21%;
   width: 6%;
@@ -136,7 +142,7 @@ body {
   top: 30%;
   cursor: url("../_images/hallway/hallway-1-choice-3.ico"), default;
 }
-/* line 138, sass/style.scss */
+/* line 143, sass/style.scss */
 #hallway-1 #hallway-1-choice-4 {
   height: 60%;
   width: 5%;
@@ -145,30 +151,43 @@ body {
   cursor: url("../_images/hallway/hallway-1-choice-4.ico"), default;
   transform: rotate(35deg);
 }
-/* line 147, sass/style.scss */
+/* line 152, sass/style.scss */
 #hallway-1 #hallway-1-choice-1:hover {
   color: white;
 }
 
-/* line 153, sass/style.scss */
+/* line 158, sass/style.scss */
 #hallway-4 .choice-hover {
   position: absolute;
 }
-/* line 157, sass/style.scss */
+/* line 162, sass/style.scss */
 #hallway-4 .choice-hover:hover {
   cursor: pointer;
 }
-/* line 161, sass/style.scss */
+/* line 166, sass/style.scss */
 #hallway-4 #hallway-4-choice-1 {
   width: 20%;
   height: 15%;
   bottom: 4%;
   left: 27%;
 }
-/* line 168, sass/style.scss */
+/* line 173, sass/style.scss */
 #hallway-4 #hallway-4-choice-2 {
   width: 10%;
   height: 30%;
   bottom: 7%;
   left: 63%;
+}
+
+@keyframes shaking {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    top: 0px;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    top: 90px;
+  }
+}
+/* line 191, sass/style.scss */
+#cheshire-1 {
+  animation: shaking 0.3s linear forwards;
 }
