@@ -177,3 +177,17 @@ body {
     left: 63%;
   }
 }
+
+@keyframes shaking {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    top: 0px;
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    top: 90px;
+  }
+}
+
+#cheshire-1 {
+  animation: shaking 0.3s linear forwards;
+}
