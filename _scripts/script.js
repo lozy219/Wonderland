@@ -6,10 +6,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   wrapperToHide.removeClass('shown');
   wrapperToShow.addClass('shown');
 
-  console.log(wrapperToHide.parent()[0].id);
-  console.log(wrapperToShow.parent()[0].id);
   if (wrapperToHide.parent()[0].id !== wrapperToShow.parent()[0].id) {
-    console.log('aa');
     audio.pause();
   }
 
@@ -17,6 +14,17 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     audio = new Audio('_sounds/fireplace.m4a');
     audio.play();
   }
+
+  if (wrapperToShow.id === 'rabbit-16') {
+    // Reset the background position for rabbit-16 falling scene,
+    $('#rabbit-16').css('background-position-y', '0px');
+  }
+
+  if (wrapperToShow[0].id === 'cheshire-1') {
+    // pia
+    audio = new Audio('_sounds/hitting.wav');
+    audio.play();
+  }  
 };
 
 $(document).ready(function() {
@@ -24,10 +32,6 @@ $(document).ready(function() {
   audio.play();
 
   $('.panel-wrapper').click(function() {
-    // Reset the background position for rabbit-16 falling scene,
-    // actually only need to do this when entering that particular panel
-    $('#rabbit-16').css('background-position-y', '0px');
-
     // Panel shall only be clickable if there isnt any explicit choices in it
     // So we first check whether there are any explicit choices
     var currentPanelWrapper = $(this);
