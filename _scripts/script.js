@@ -159,7 +159,6 @@ $(document).ready(function() {
   });
 
   $('#rabbit-16').bind('mousewheel DOMMouseScroll', function(event) {
-    console.log(event);
     var deltaY = -(event.originalEvent.deltaY * event.deltaFactor / 16);
     if (deltaY < 0) {
       var currentY = parseInt($('#rabbit-16').css('background-position-y'));
