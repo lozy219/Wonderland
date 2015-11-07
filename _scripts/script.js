@@ -6,7 +6,10 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   wrapperToHide.removeClass('shown');
   wrapperToShow.addClass('shown');
 
+  console.log(wrapperToHide.parent()[0].id);
+  console.log(wrapperToShow.parent()[0].id);
   if (wrapperToHide.parent()[0].id !== wrapperToShow.parent()[0].id) {
+    console.log('aa');
     audio.pause();
   }
 
@@ -21,6 +24,10 @@ $(document).ready(function() {
   audio.play();
 
   $('.panel-wrapper').click(function() {
+    // Reset the background position for rabbit-16 falling scene,
+    // actually only need to do this when entering that particular panel
+    $('#rabbit-16').css('background-position-y', '0px');
+
     // Panel shall only be clickable if there isnt any explicit choices in it
     // So we first check whether there are any explicit choices
     var currentPanelWrapper = $(this);
@@ -46,7 +53,6 @@ $(document).ready(function() {
         if (debugMode) {
           location.hash = nextPanelWrapper.attr('id');
         } else {
-
           hideAndShow(currentPanelWrapper, nextPanelWrapper);
         }
       } else { 
@@ -146,6 +152,25 @@ $(document).ready(function() {
     var image = panelWrapper.find('img');
 
     image.attr('src', '_images/hallway/hallway-4.png');
+  });
+
+  $('#rabbit-16').on('mousewheel', function(event) {
+    if (event.deltaY < 0) {
+      var currentY = parseInt($('#rabbit-16').css('background-position-y'));
+      if (currentY > -600) {
+        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY / 15) + 'px');
+      } else if (currentY > -2000) {
+        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY / 5) + 'px');
+      } else if (currentY > -6000) {
+        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY) + 'px');
+      } else if (currentY > -15000) {
+        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY * 3) + 'px');
+      } else if (currentY > -50000) {
+        $('#rabbit-16').css('background-position-y', (currentY + event.deltaY * 5) + 'px');
+      } else {
+        hideAndShow($('#rabbit-16'), $('#cheshire-1'));
+      }
+    }
   });
 
   //////////////////////////////////////////////////////////
