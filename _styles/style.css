@@ -167,17 +167,6 @@ body {
   left: 63%;
 }
 
-/* line 169, sass/style.scss */
-#morpheus-6 .choice {
-  background-color: white;
-  border: 1px solid black;
-  padding: 1%;
-}
-/* line 175, sass/style.scss */
-#morpheus-6 .choice:hover {
-  background-color: black;
-  color: white;
-}
 /* line 179, sass/style.scss */
 #morpheus-6 #morpheus-6-choice-1 {
   top: 60%;
