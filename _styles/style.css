@@ -243,45 +243,45 @@ body {
 }
 
 /* line 248, sass/style.scss */
-#queen-8 .choice {
+#queen-9 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
 /* line 254, sass/style.scss */
-#queen-8 .choice:hover {
+#queen-9 .choice:hover {
   background-color: black;
   color: white;
 }
 /* line 258, sass/style.scss */
-#queen-8 #queen-8-choice-1 {
+#queen-9 #queen-9-choice-1 {
   top: 20%;
   left: 0;
 }
 /* line 263, sass/style.scss */
-#queen-8 #queen-8-choice-2 {
+#queen-9 #queen-9-choice-2 {
   top: 20%;
   right: 0;
 }
 
 /* line 270, sass/style.scss */
-#queen-11 .choice {
+#queen-12 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
 /* line 276, sass/style.scss */
-#queen-11 .choice:hover {
+#queen-12 .choice:hover {
   background-color: black;
   color: white;
 }
 /* line 280, sass/style.scss */
-#queen-11 #queen-11-choice-1 {
+#queen-12 #queen-12-choice-1 {
   top: 10%;
   left: 0;
 }
 /* line 285, sass/style.scss */
-#queen-11 #queen-11-choice-2 {
+#queen-12 #queen-12-choice-2 {
   top: 10%;
   right: 0;
 }
