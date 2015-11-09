@@ -110,11 +110,29 @@ $(document).ready(function() {
 
   // HALLWAY 4 SCENE CHOICES SCRIPT //
   $('#hallway-1-choice-1').click(function() {
-    if (countOfClicksInHallway > 4) {
-      $(this).attr('href','#hallway-3');
+    if (countOfClicksInHallway > 0) {
+      if (debugMode) {
+        location.hash = "hallway-3";
+      } else {
+        var currentPanelWrapper = $(this).parent().parent();
+        var nextPanelWrapper = $('#hallway-3');
+        hideAndShow(currentPanelWrapper, nextPanelWrapper);
+      }
     }
 
     countOfClicksInHallway++;
+    var image = $(this).parent().parent().children('img').first();
+    image.attr('src', '_images/hallway/hallway-1-2.png');
+  });
+
+  $('.hallway-door').click(function() {
+    if (debugMode) {
+      location.hash = "hallway-2";
+    } else {
+      var currentPanelWrapper = $(this).parent().parent();
+      var nextPanelWrapper = $('#hallway-2');
+      hideAndShow(currentPanelWrapper, nextPanelWrapper);
+    }
   });
 
   if($('#hallway-1-map')) {
