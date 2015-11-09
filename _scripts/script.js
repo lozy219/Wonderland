@@ -292,6 +292,41 @@ $(document).ready(function() {
     ++partyOneIndex;  
   });
 
+  var partyFiveIndex = 0;
+  $('#party-5').click(function() {
+    if (partyFiveIndex == 0) {
+      $('#party-5-speech-1').addClass('shown');
+    }
+
+    if (partyFiveIndex == 1) {
+      $('#party-5-speech-1').removeClass('shown');
+      $('#party-5-speech-2').addClass('shown');
+    }
+
+    if (partyFiveIndex == 2) {
+      $('#party-5-speech-2').removeClass('shown');
+      $(this).removeClass('contains-choices');
+    }
+    ++partyFiveIndex;  
+  });
+
+  var partyNineIndex = 0;
+  $('#party-9').click(function() {
+    if (partyNineIndex == 0) {
+      $('#party-9-speech-1').addClass('shown');
+    }
+
+    if (partyNineIndex == 1) {
+      $('#party-9-speech-1').removeClass('shown');
+      $('#party-9-speech-2').addClass('shown');
+    }
+
+    if (partyNineIndex == 2) {
+      $('#party-9-speech-2').removeClass('shown');
+      $(this).removeClass('contains-choices');
+    }
+    ++partyNineIndex;  
+  });
 
   $('.queen-cell-area').click(function(event) {
     event.stopImmediatePropagation();

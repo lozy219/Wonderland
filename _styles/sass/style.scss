@@ -349,6 +349,187 @@ body {
   }
 }
 
+#party-5 {
+  .speech-bubble-wrapper {
+    display: none;
+  }
+
+  .speech-bubble-wrapper.shown {
+    display: inline;
+  }
+}
+
+#party-5-speech-1 {
+  bottom: 51%;
+  left: 18%;
+
+  h3 {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    font-size: 2.7em;
+    text-align: center;
+  }
+
+  img {
+    width: 75%;
+    height: auto;
+  }
+}
+
+#party-5-speech-2 {
+  bottom: 32%;
+  left: 55%;
+
+  h3 {
+    position: absolute;
+    top: 0%;
+    left: 6%;
+    font-size: 2.3em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-6-speech-1 {
+  bottom: 11%;
+  left: 8%;
+
+  h3 {
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-7-speech-1 {
+  bottom: 2%;
+  left: 26%;
+
+  h3 {
+    position: absolute;
+    top: 19%;
+    left: 4%;
+    font-size: 2.1em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-8-speech-1 {
+  bottom: 68%;
+  left: 0%;
+
+  h3 {
+    position: absolute;
+    top: 2%;
+    left: 4%;
+    font-size: 2.3em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-9 {
+  .speech-bubble-wrapper {
+    display: none;
+  }
+
+  .speech-bubble-wrapper.shown {
+    display: inline;
+  }
+}
+
+#party-9-speech-1 {
+  bottom: 23%;
+  left: 18%;
+
+  h3 {
+    position: absolute;
+    top: 15%;
+    left: 4%;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  img {
+    width: 75%;
+    height: auto;
+  }
+}
+
+#party-9-speech-2 {
+  bottom: 13%;
+  left: 55%;
+
+  h3 {
+    position: absolute;
+    top: 14%;
+    left: 6%;
+    font-size: 3.5em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-11-speech-1 {
+  bottom: 27%;
+  left: 8%;
+
+  h3 {
+    position: absolute;
+    top: -6%;
+    left: 1%;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-13-speech-1 {
+  bottom: 57%;
+  left: 22%;
+
+  h3 {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    font-size: 2.8em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
 @keyframes hallway-1-choice-1-arrow-anim {
     from {
       top: 40%;
