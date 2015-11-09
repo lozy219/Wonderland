@@ -231,6 +231,68 @@ $(document).ready(function() {
     ++cheshireNineIndex;  
   });
 
+  var morpheusFourIndex = 0;
+  $('#morpheus-4').click(function() {
+    if (morpheusFourIndex == 0) {
+      $('#morpheus-4-speech-1').addClass('shown');
+    }
+
+    if (morpheusFourIndex == 1) {
+      $('#morpheus-4-speech-1').removeClass('shown');
+      $('h2').addClass('shown');
+    } 
+
+    if (morpheusFourIndex == 2) {
+      $('h2').removeClass('shown');
+      $('#morpheus-4-speech-2').addClass('shown');
+    }
+
+    if (morpheusFourIndex == 3) {
+      $('#morpheus-4-speech-2').removeClass('shown');
+      $(this).removeClass('contains-choices');
+    }
+    ++morpheusFourIndex;  
+  });
+
+  var morpheusSixIndex = 0;
+  $('#morpheus-6').click(function() {
+    if (morpheusSixIndex == 0) {
+      $('#morpheus-6-speech-1').addClass('shown');
+    }
+
+    if (morpheusSixIndex == 1) {
+      $('#morpheus-6-speech-1').removeClass('shown');
+      $('#morpheus-6-speech-2').addClass('shown');
+    } 
+
+    if (morpheusSixIndex == 2) {
+      $('#morpheus-6-speech-2').removeClass('shown');
+      $(this).find('.choice').each(function() {
+        $(this).addClass('shown');
+      });
+    }
+    ++morpheusSixIndex;  
+  });
+
+  var partyOneIndex = 0;
+  $('#party-1').click(function() {
+    if (partyOneIndex == 0) {
+      $('#party-1-speech-1').addClass('shown');
+    }
+
+    if (partyOneIndex == 1) {
+      $('#party-1-speech-1').removeClass('shown');
+      $('#party-1-speech-2').addClass('shown');
+    }
+
+    if (partyOneIndex == 2) {
+      $('#party-1-speech-2').removeClass('shown');
+      $(this).removeClass('contains-choices');
+    }
+    ++partyOneIndex;  
+  });
+
+
   $('.queen-cell-area').click(function(event) {
     event.stopImmediatePropagation();
 

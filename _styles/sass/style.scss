@@ -209,6 +209,146 @@ body {
   background-size: calc((100vh - 100px) / 0.68) auto;
 }
 
+#hallway-5-speech-1 {
+  bottom: 33%;
+  left: 43%;
+
+  h3 {
+    position: absolute;
+    top: 1%;
+    left: 14%;
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+#hallway-6-speech-1 {
+  bottom: 33%;
+  left: 41%;
+
+  h3 {
+    position: absolute;
+    top: 12%;
+    left: 1%;
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#hallway-7-speech-1 {
+  bottom: 43%;
+  left: 32%;
+
+  h3 {
+    position: absolute;
+    top: 5%;
+    left: 16%;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-1 {
+  .speech-bubble-wrapper {
+    display: none;
+  }
+
+  h2.shown {
+    display: inline;
+  }
+
+  .speech-bubble-wrapper.shown {
+    display: inline;
+  }
+}
+
+#party-1-speech-1 {
+  bottom: 58%;
+  left: 48%;
+
+  h3 {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-1-speech-2 {
+  bottom: 20%;
+  left: 47%;
+
+  h3 {
+    position: absolute;
+    top: 6%;
+    left: 17%;
+    font-size: 2.3em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-2-speech-1 {
+  bottom: 27%;
+  left: 42%;
+
+  h3 {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    font-size: 2.7em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#party-3-speech-1 {
+  bottom: 12%;
+  left: 16%;
+
+  h3 {
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 @keyframes hallway-1-choice-1-arrow-anim {
     from {
       top: 40%;
@@ -553,29 +693,204 @@ body {
   }
 }
 
-#morpheus-6 {
-  // .choice {
-  //   background-color: white;
-  //   border: 1px solid black;
-  //   padding: 1%;
-  // }
+#morpheus-1-speech-1 {
+  bottom: 34%;
+  left: 41%;
 
-  // .choice:hover {
-  //   background-color: black;
-  //   color: white;
-  // }
+  h3 {
+    position: absolute;
+    top: 12%;
+    left: 17%;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#morpheus-2-speech-1 {
+  bottom: 18%;
+  left: 34%;
+
+  h3 {
+    position: absolute;
+    top: 5%;
+    left: 12%;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  img {
+    width: 93%;
+    height: auto;
+  }
+}
+
+#morpheus-3-speech-1 {
+  bottom: 77%;
+  left: 17%;
+
+  h3 {
+    position: absolute;
+    top: -12%;
+    left: 7%;
+    font-size: 2.1em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#morpheus-4 {
+  h2 {
+    display: none;
+  }
+
+  .speech-bubble-wrapper {
+    display: none;
+  }
+
+  h2.shown {
+    display: inline;
+  }
+
+  .speech-bubble-wrapper.shown {
+    display: inline;
+  }
+}
+#morpheus-4-speech-1 {
+  bottom: 8%;
+  left: 41%;
+
+  h3 {
+    position: absolute;
+    top: -16%;
+    left: 15%;
+    font-size: 4.5em;
+    text-align: center;
+  }
+
+  img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+#morpheus-4-speech-2 {
+  bottom: 20%;
+  left: 37%;
+
+  h3 {
+    position: absolute;
+    top: -6%;
+    left: 16%;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#morpheus-5-speech-1 {
+  bottom: 3%;
+  left: -1%;
+
+  h3 {
+    position: absolute;
+    top: 13%;
+    left: 6%;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  img {
+    width: 95%;
+    height: auto;
+  }
+}
+
+#morpheus-6 {
+  .speech-bubble-wrapper {
+    display: none;
+  }
+
+
+}
+#morpheus-6-speech-1 {
+  bottom: 65%;
+  left: 10%;
+
+  h3 {
+    position: absolute;
+    top: 12%;
+    left: 6%;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  img {
+    width: 88%;
+    height: auto;
+  }
+}
+
+#morpheus-6-speech-2 {
+  bottom: 68%;
+  left: 10%;
+
+  h3 {
+    position: absolute;
+    top: 10%;
+    left: 11%;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+}
+#morpheus-6 {
+  h2 {
+    display: none;
+  }
+
+  .speech-bubble-wrapper, .choice {
+    display: none;
+  }
+
+  h2.shown {
+    display: inline;
+  }
+
+  .speech-bubble-wrapper.shown, .choice.shown {
+    display: inline;
+  }
+
   #morpheus-6-choice-1 {
-    top: 60%;
-    left: 13%;
-    width: 10%;
-    height: 6%;
+    background-color: blue;
+    top: 52%;
+    left: 14%;
+    width: 12%;
+    height: 10%;
   }
 
   #morpheus-6-choice-2 {
-    top: 56%;
-    right: 16%;
-    width: 10%;
-    height: 6%;  
+    background-color: red;
+    top: 47%;
+    right: 15%;
+    width: 14%;
+    height: 11%;  
   }
 }
 
@@ -599,6 +914,24 @@ body {
     right: 0%;
     width: 20%;
     height: 86%;
+  }
+}
+
+#morpheus-8-speech-1 {
+  bottom: 31%;
+  left: 15%;
+
+  h3 {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
   }
 }
 
