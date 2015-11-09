@@ -1,7 +1,7 @@
 /* line 1, sass/style.scss */
 body {
   background-color: black;
-  overflow: auto;
+  overflow: hidden;
 }
 
 /* line 6, sass/style.scss */
@@ -21,8 +21,8 @@ body {
 /* line 19, sass/style.scss */
 .panel-wrapper {
   position: relative;
-  width: 1000px;
-  height: auto;
+  width: calc((100vh - 96px) / 0.68);
+  height: calc(100vh - 100px);
   margin: 0 auto 0 auto;
   border-radius: 5px;
   overflow: hidden;
