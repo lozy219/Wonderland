@@ -109,15 +109,37 @@ $(document).ready(function() {
   });
 
   // HALLWAY 4 SCENE CHOICES SCRIPT //
-  $('#hallway-1-choice-4').click(function() {
+  $('#hallway-1-choice-1').click(function() {
     if (countOfClicksInHallway > 4) {
-      $(this).data('value','hallway-3');
+      $(this).attr('href','#hallway-3');
     }
 
-    if ($(this).attr('id') == "hallway-1-choice-4") {
-      countOfClicksInHallway++;
-    }
+    countOfClicksInHallway++;
   });
+
+  if($('#hallway-1-map')) {
+        $('#hallway-1-map area').each(function() {
+            $(this).mouseover(function(e) {
+              e.stopImmediatePropagation();
+              var id = $(this).attr('id');
+              $('#'+id+'-arrow').addClass('shown');
+            });
+
+            $(this).mouseout(function() {
+                var id = $(this).attr('id');
+                $('#'+id+'-arrow').removeClass('shown');
+            });
+
+        });
+  }
+
+  $('.hallway-arrow').mouseover(function(e) {
+    e.preventDefault();
+    console.log('haha');
+
+    e = e.originalEvent;
+  });
+
 
   $('#hallway-4-choice-1').mouseover(function() {
     var panelWrapper = $(this).parent();
@@ -171,6 +193,25 @@ $(document).ready(function() {
 
   //////////////////////////////////////////////////////////
 
+  var cheshireNineIndex = 0;
+  $('#cheshire-9').click(function() {
+    if (cheshireNineIndex == 0) {
+      $('#cheshire-9-speech-1').addClass('shown');
+    }
+
+    if (cheshireNineIndex == 1) {
+      $('#cheshire-9-speech-1').removeClass('shown');
+      $('#cheshire-9-speech-2').addClass('shown');
+    } 
+
+    if (cheshireNineIndex == 2) {
+      $('#cheshire-9-speech-2').removeClass('shown');
+      $(this).find('.choice').each(function() {
+        $(this).addClass('shown');
+      });
+    }
+    ++cheshireNineIndex;  
+  });
 
   $('.queen-cell-area').click(function(event) {
     event.stopImmediatePropagation();

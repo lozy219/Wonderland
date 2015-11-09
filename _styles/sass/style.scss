@@ -18,8 +18,8 @@ body {
 
 .panel-wrapper {
   position: relative;
-  width: calc((100vh - 100px) / 0.68);
-  height: calc(100vh - 100px);
+  width: 1000px;
+  height: auto;
 
   margin: 0 auto 0 auto;
 
@@ -32,10 +32,15 @@ body {
   }
 
   h2 {
-    background-color: grey;
+    padding: 1.5%;
+    position: absolute;
+    width: 98.5%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     color: white;
     margin: 0 0 0 0;
+
   }
 
   display: none;
@@ -51,6 +56,10 @@ body {
 
 .choice:hover {
   cursor: pointer;
+}
+
+.speech-bubble-wrapper {
+  position: absolute;
 }
 
 #rabbit-1 {
@@ -105,49 +114,205 @@ body {
   }
 }
 
+#rabbit-2-speech-1 {
+  bottom: 59%;
+  left: 56%;
+
+  h3 {
+    position: absolute;
+    top: 3%;
+    left: 18%;
+    font-size: 2.3em;
+    text-align: center;
+  }
+
+  img {
+    width: 70%;
+    height: auto;
+  }
+}
+
+#rabbit-3-speech-1 {
+  bottom: 10%;
+  left: 34%;
+
+  h3 {
+    position: absolute;
+    top: 9%;
+    left: 18%;
+    font-size: 2.9em;
+    text-align: center;
+  }
+
+  img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+#rabbit-4-speech-1 {
+  bottom: 57%;
+  left: 3%;
+
+  h3 {
+    position: absolute;
+    top: 1%;
+    left: 9%;
+    font-size: 2.4em;
+    text-align: center;
+  }
+
+  img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+#rabbit-5-speech-1 {
+  bottom: 64%;
+  left: 12%;
+
+  h3 {
+    position: absolute;
+    top: 1%;
+    left: 19%;
+    font-size: 2.3em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#rabbit-7-speech-1 {
+  bottom: 31%;
+  left: 32%;
+
+  h3 {
+    position: absolute;
+    top: 1%;
+    left: 14%;
+    font-size: 4.5em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 #rabbit-16 {
   background-image: url('../_images/rabbit/rabbit-falling.png');
   background-size: calc((100vh - 100px) / 0.68) auto;
 }
 
-#hallway-1 {
-  #hallway-1-choice-1 {
-    height: 50%;
-    width: 18%;
-    left: 20%;
-    top: 25%;
-    cursor: url('../_images/hallway/hallway-1-choice-1.ico'), default;
+@keyframes hallway-1-choice-1-arrow-anim {
+    from {
+      top: 40%;
+      left: 46%;
+      width: 25%;
+    }
+    to {
+      top: 30%;
+      left: 57%;
+      width: 17%;
+    }
+}
+
+@keyframes hallway-1-choice-2-arrow-anim {
+    from {
+      top: 42%;
+      left: 35%;
+    }
+    to {
+      top: 46%;
+      left: 38%;
+    }
+}
+
+@keyframes hallway-1-choice-3-arrow-anim {
+    from {
+      top: 35%;
+      left: 49%;
+    }
+    to {
+      top: 38%;
+      left: 52%;
+    }
+}
+
+@keyframes hallway-1-choice-5-arrow-anim {
+    from {
+      top: 49%;
+      left: 63%;
+    }
+    to {
+      top: 49%;
+      left: 59%;
+    }
+}
+
+#hallway-1 { 
+  .hallway-arrow.shown {
+    display:block;
   }
 
-  #hallway-1-choice-2 {
-    height: 35%;
+  .hallway-arrow {
+    pointer-events: none;
+    display: none;
+  }
+
+  #hallway-1-choice-1-arrow {
+    position: absolute;
+    top: 22%;
+    left: 46%;
+    width: 25%;
+    height: auto;
+    animation-name: hallway-1-choice-1-arrow-anim;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #hallway-1-choice-2-arrow {
+    position: absolute;
+    top: 42%;
+    left: 37%;
+    width: 16%;
+    height: auto;
+    animation-name: hallway-1-choice-2-arrow-anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #hallway-1-choice-3-arrow {
+    position: absolute;
+    top: 35%;
+    left: 49%;
     width: 10%;
-    left: 43%;
-    top: 26%;
-
-    cursor: url('../_images/hallway/hallway-1-choice-2.ico'), default;
+    height: auto;
+    animation-name: hallway-1-choice-3-arrow-anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 
-  #hallway-1-choice-3 {
-    height: 21%;
-    width: 6%;
-    left: 56%;
-    top: 30%;
-    cursor: url('../_images/hallway/hallway-1-choice-3.ico'), default;
+  #hallway-1-choice-5-arrow {
+    position: absolute;
+    top: 49%;
+    left: 63%;
+    width: 22%;
+    height: auto;
+    animation-name: hallway-1-choice-5-arrow-anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 
- #hallway-1-choice-4 {
-    height: 60%;
-    width: 5%;
-    left: 58%;
-    bottom: 0%;
-    cursor: url('../_images/hallway/hallway-1-choice-4.ico'), default;
-    transform: rotate(35deg);
-  }
-
-  #hallway-1-choice-1:hover {
-    color: white;
-  }
 }
 
 #hallway-4 {
@@ -163,6 +328,228 @@ body {
     height: 30%;
     bottom: 7%;
     left: 63%;
+  }
+}
+
+#cheshire-2-speech-1 {
+  bottom: 47%;
+  right: -10%;
+
+  h3 {
+    position: absolute;
+    top: 17%;
+    left: 13%;
+    font-size: 1.5em;
+
+  }
+
+  img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+#cheshire-3-speech-1 {
+  bottom: 9%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  h3 {
+    position: absolute;
+    top: 21%;
+    left:14%;
+    font-size: 2.4em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#cheshire-4-speech-1 {
+  bottom: 33%;
+  left: 20%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: 7%;
+    left:-9%;
+    font-size: 2.4em;
+    text-align: center;
+  }
+
+  img {
+    width: 83%;
+  }
+}
+
+#cheshire-5-speech-1 {
+  bottom: -3%;
+  left: 1%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: 31%;
+    left:7%;
+    font-size: 2.1em;
+    text-align: center;
+  }
+
+  img {
+    width: 110%;
+  }
+}
+
+#cheshire-6-speech-1 {
+  bottom: 56%;
+  left: 34%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: 16%;
+    left: -2%;
+    font-size: 2.4em;
+    text-align: center;
+  }
+
+  img {
+    width: 94%;
+  }
+}
+
+#cheshire-7-speech-1 {
+  bottom: 20%;
+  left: 14%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: -1%;
+    left:-3%;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+#cheshire-8-speech-1 {
+  bottom: 34%;
+  left: 50%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: 11%;
+    left:-7%;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  img {
+    width: 85%;
+  }
+}
+
+#cheshire-9 {
+  .speech-bubble-wrapper, .choice {
+    display: none;
+  }
+
+  .shown.speech-bubble-wrapper, .shown.shown {
+  display: block;
+  } 
+}
+
+
+#cheshire-9-speech-1 {
+  bottom: 30%;
+  left: 50%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: 22%;
+    left:-19%;
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  img {
+    width: 62%;
+  }
+}
+
+#cheshire-9-speech-2 {
+  bottom: 30%;
+  left: 37%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: 11%;
+    left:-19%;
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  img {
+    width: 62%;
+  }
+}
+
+#cheshire-9-choice-1 {
+  display: none;
+  top: -2%;
+  left: 12%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: 6%;
+    left:-2%;
+    font-size: 2.6em;
+    text-align: center;
+  }
+}
+
+#cheshire-9-choice-2 {
+  display: none;
+  top: 24%;
+  left: 21%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: 11%;
+    left:15%;
+    font-size: 2.6em;
+    text-align: center;
+  }
+}
+
+#cheshire-10-speech-1 {
+  bottom: 59%;
+  left: 16%;
+
+  h3 {
+    position: absolute;
+    width: 100%;
+    top: 14%;
+    left:-21%;
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  img {
+    width: 62%;
   }
 }
 
@@ -189,28 +576,6 @@ body {
     right: 16%;
     width: 10%;
     height: 6%;  
-  }
-}
-
-#cheshire-9 {
-  .choice {
-    background-color: white;
-    border: 1px solid black;
-    padding: 1%;
-  }
-
-  .choice:hover {
-    background-color: black;
-    color: white;
-  }
-  #cheshire-9-choice-1 {
-    top: 20%;
-    left: 0;
-  }
-
-  #cheshire-9-choice-2 {
-    top: 20%;
-    right: 0;
   }
 }
 

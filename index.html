@@ -56,31 +56,46 @@
 				</div>
 
 				<div id="rabbit-2" class="panel-wrapper">
-					<h2>
-						Alice: “Wait! I want to help you!”
-					</h2>
 					<img src="_images/rabbit/rabbit-2.png" alt="test"/>
+					<div id="rabbit-2-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/rabbit/rabbit-2-speech-1.png"/>
+						<h3>
+							Wait! I <br>want <br> to help <br>you!
+						</h3>
+					</div>
 				</div>
 
 				<div id="rabbit-3" class="panel-wrapper">
-			 		<h2>
-			 			WR: “Gniod uoy era tahw, pots!”
-			 		</h2>
 		 			<img src="_images/rabbit/rabbit-3.png" alt="test"/>
+		 			<div id="rabbit-3-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/rabbit/rabbit-3-speech-1.png"/>
+						<h3>
+							Gniod uoy <br>era tahw, <br>pots!
+						</h3>
+					</div>
 				</div>
 
 				<div id="rabbit-4" class="panel-wrapper">
-					<h2>
-						WR: “Em eerf tonnac ouy, Nueeq eht yb desruc neeb evah I !”
-					</h2>
 					<img src="_images/rabbit/rabbit-4.png" alt="test"/>
+		 			<div id="rabbit-4-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/rabbit/rabbit-4-speech-1.png"/>
+						<h3>
+							Em eerf <br>tonnac ouy,<br> Nueeq eht yb <br>desruc neeb <br>evah I!
+						</h3>
+					</div>
 				</div>
 
 				<div id="rabbit-5" class="panel-wrapper">
 					<h2>
-						Alice: “Don’t worry Mr Rabbit, I’ll save you!” Alice couldn’t make out what he was trying to tell her.
+						Alice couldn’t make out what he was trying to tell her.
 					</h2>
 					<img src="_images/rabbit/rabbit-5.png" alt="test"/>
+		 			<div id="rabbit-5-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/rabbit/rabbit-5-speech-1.png"/>
+						<h3>
+							Don’t worry <br>Mr Rabbit,<br> I’ll save you!
+						</h3>
+					</div>
 				</div>
 
 				<div id="rabbit-6" class="panel-wrapper">
@@ -88,10 +103,13 @@
 				</div>
 
 				<div id="rabbit-7" class="panel-wrapper">
-					<h2>
-						WR: “Ooooooooon!”
-					</h2>
 					<img src="_images/rabbit/rabbit-7.png" alt="test"/>
+					<div id="rabbit-7-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/rabbit/rabbit-7-speech-1.png"/>
+						<h3>
+							Ooooon!
+						</h3>
+					</div>
 				</div>
 
 				<div id="rabbit-8" class="panel-wrapper">
@@ -155,12 +173,26 @@
 					<h2>
 						Alice enters a hallway of infinite doors.
 					</h2>
-					<img src="_images/hallway/hallway-1.png"/>
+					<map id="hallway-1-map" name="hallway-1-map">
+						<area id="hallway-1-choice-1" alt="" title="" href="#hallway-2" shape="poly" coords="312,469,388,419,431,387,502,336,547,308,580,290,623,261,655,236,683,223,709,209,725,203,732,200,730,267,733,306,737,343,746,372,760,420,773,455,786,500,799,531,822,567,844,590,891,638,941,676,258,677" />
+						<area id="hallway-1-choice-2" alt="" title="" href="#hallway-2" shape="poly" coords="199,65,262,69,322,78,380,86,386,170,390,239,390,310,390,346,391,383,393,404,316,448,296,451,266,436,247,407,234,403" />
+						<area id="hallway-1-choice-3" alt="" title="" href="#hallway-2" shape="poly" coords="444,100,471,104,496,109,526,114,535,258,535,301,461,349" />
+						<area id="hallway-1-choice-4" alt="" title="" href="#hallway-2" shape="poly" coords="563,122,590,127,605,133,609,136,622,249,565,281" />
+						<area id="hallway-1-choice-5" alt="" title="" href="#hallway-2" shape="poly" coords="821,104,863,95,907,87,965,77,974,77,965,326,962,459,957,596,955,643,894,597,855,555,823,513,800,483" />
+					</map>
+
+					<img usemap="#hallway-1-map" src="_images/hallway/hallway-1.png"/>
+					<img id="hallway-1-choice-1-arrow" class="hallway-arrow" src="_images/hallway/hallway-1-choice-1.png"/>
+					<img id="hallway-1-choice-2-arrow" class="hallway-arrow" src="_images/hallway/hallway-1-choice-2.png"/>
+					<img id="hallway-1-choice-3-arrow" class="hallway-arrow" src="_images/hallway/hallway-1-choice-3.png"/>
+					<img id="hallway-1-choice-5-arrow" class="hallway-arrow" src="_images/hallway/hallway-1-choice-5.png"/>
+
+
 					<!-- CHOICES -->
-					<div id="hallway-1-choice-1" data-value="hallway-2" class="on-hover-show choice"></div>
+	<!-- 				<div id="hallway-1-choice-1" data-value="hallway-2" class="on-hover-show choice"></div>
 					<div id="hallway-1-choice-2" data-value="hallway-2" class="on-hover-show choice"></div>
 					<div id="hallway-1-choice-3" data-value="hallway-2" class="on-hover-show choice"></div>
-					<div id="hallway-1-choice-4" data-value="hallway-2" class="on-hover-show choice"></div>
+					<div id="hallway-1-choice-4" data-value="hallway-2" class="on-hover-show choice"></div> -->
 				</div>
 
 				<div id="hallway-2" data-value="hallway-1" class="panel-wrapper">
@@ -231,83 +263,106 @@
 
 				<div id="cheshire-2" class="panel-wrapper">
 					<img src="_images/cheshire/cheshire-2.png"/>
-					<div class="speech-bubble-wrapper">
-						<img class="speech-bubble" src=""/>
+					<div id="cheshire-2-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-2-speech-1.png"/>
 						<h3>
-							Hello there, curious little one.
+							Hello there,<br> curious little one.
 						</h3>
 					</div>
 				</div>
 
 				<div id="cheshire-3" class="panel-wrapper">
-					<h2>
-						Cheshire: “What brings you to Wonderland?”
-					</h2>
 					<img src="_images/cheshire/cheshire-3.png"/>
-					<div class="speech-bubble-wrapper">
-						<img class="speech-bubble" src=""/>
+					<div id="cheshire-3-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-3-speech-1.png"/>
 						<h3>
-							What brings you to Wonderland?
+							What brings you <br> to Wonderland?
 						</h3>
 					</div>
 				</div>
 
 				<div id="cheshire-4" class="panel-wrapper">
-					<h2>
-						“Oh don’t tell me. You are here because you ate too much candy, of course.”
-					</h2>
 					<img src="_images/cheshire/cheshire-4.png"/>
+					<div id="cheshire-4-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-4-speech-1.png"/>
+						<h3>
+							Oh don’t tell<br> me... You are<br> here because <br>you ate too<br> much candy,<br> of course.
+						</h3>
+					</div>
 				</div>
 
 				<div id="cheshire-5" class="panel-wrapper">
-					<h2>
-						“The Queen put me here you see, I am stuck in this tree forever. How I wish I was like you child... free to go anywhere you desire”
-					</h2>
 					<img src="_images/cheshire/cheshire-5.png"/>
+					<div id="cheshire-5-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-5-speech-1.png"/>
+						<h3>
+							The Queen put me here you see, I am stuck in this tree forever. How I wish I was like you child... free to go anywhere you desire.
+						</h3>
+					</div>
 				</div>
 
 				<div id="cheshire-6" class="panel-wrapper">
-					<h2>
-						Alice: “Who is the Queen?”
-					</h2>
 					<img src="_images/cheshire/cheshire-6.png"/>
+					<div id="cheshire-6-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-6-speech-1.png"/>
+						<h3>
+							Who is the Queen?
+						</h3>
+					</div>
 				</div>
 
 				<div id="cheshire-7" class="panel-wrapper">
-					<h2>
-						Cheshire: “My silly munchkin, she’s the ruler of Wonderland! And what a terrible job she’s doing. I bet even I could rule Wonderland if I had the chance!”
-					</h2>
 					<img src="_images/cheshire/cheshire-7.png"/>
+					<div id="cheshire-7-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-7-speech-1.png"/>
+						<h3>
+							My silly munchkin, she’s the ruler<br> of Wonderland!<br> And what a <br>terrible job <br>she’s doing.<br> I bet even <br>I could rule <br>Wonderland if<br> I had the <br>chance!
+						</h3>
+					</div>
 				</div>
 
 				<div id="cheshire-8" class="panel-wrapper">
 					<h2>
 						Alice sees a door behind her and walks toward it
-						Cheshire: “Leaving so soon Alice? Don’t you wish to wake up from all this madness?”
 					</h2>
 					<img src="_images/cheshire/cheshire-8.png"/>
+					<div id="cheshire-8-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-8-speech-1.png"/>
+						<h3>
+							Leaving so<br> soon Alice? <br>Don’t you wish <br>to wake up <br>from all <br>this madness?
+						</h3>
+					</div>
 				</div>
 
 				<div id="cheshire-9" class="panel-wrapper contains-choices">
-					<h2>
-						Cheshire: “Step inside my mouth and if you wish to leave Wonderland,” “or take the door if you really want to. Who knows where The Cake really is anyway.”
-					</h2>
 					<img src="_images/cheshire/cheshire-9.png"/>
+					<div id="cheshire-9-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-9-speech-1.png"/>
+						<h3>
+							Step inside my mouth<br> and if you wish to <br>leave Wonderland
+						</h3>
+					</div>
 
+					<div id="cheshire-9-speech-2" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-9-speech-2.png"/>
+						<h3>
+							or take the door <br>if you really want to. <br>Who knows where<br> The Cake really is <br>anyway.”
+						</h3>
+					</div>
 					<!-- CHOICES -->
 					<div id="cheshire-9-choice-1" data-value="cheshire-10" class="on-hover choice">
 						<div class="wrapper">
-							<!-- <img src="_images/cheshire/cheshire-9-choice-1.png"/> -->
+							<img src="_images/cheshire/cheshire-9-choice-1.png"/>
 							<h3>
-								Enter his mouth
+								Enter his <br>mouth
 							</h3>
 						</div>
 					</div>
 					<div id="cheshire-9-choice-2" data-value="cheshire-13" class="on-hover choice">
 						<div class="wrapper">
-							<!-- <img src="_images/cheshire/cheshire-9-choice-2.png"/> -->
+							<img src="_images/cheshire/cheshire-9-choice-2.png"/>
 							<h3>
-								Enter the door
+								Enter the <br>door
 							</h3>
 						</div>
 					</div>
@@ -315,22 +370,27 @@
 
 				<div id="cheshire-10" class="panel-wrapper">
 					<h2>
-						“Ew, it smells like rotting fish in here.”
 						Alice climbs into his mouth
 					</h2>
 					<img src="_images/cheshire/cheshire-10.png"/>
+					<div id="cheshire-10-speech-1" class="speech-bubble-wrapper">
+						<img class="speech-bubble" src="_images/cheshire/cheshire-10-speech-1.png"/>
+						<h3>
+							Ew, it smells<br>like rotting<br> fish in here.
+						</h3>
+					</div>
 				</div>
 
 				<div id="cheshire-11" class="panel-wrapper">
 					<h2>
-						Alice slips and falls into a seemingly bottomless pit”
+						Alice slips and falls into a seemingly bottomless pit
 					</h2>
 					<img src="_images/cheshire/cheshire-11.png"/>
 				</div>
 
 				<div id="cheshire-12" data-value="alice-2" class="panel-wrapper">
 					<h2>
-						She awakes and finds herself back at home where she passed out from eating too much candy. (groggy Alice)
+						She awakes and finds herself back at home where she passed out from eating too much candy.
 					</h2>
 					<img src="_images/cheshire/cheshire-12.png"/>
 				</div>
