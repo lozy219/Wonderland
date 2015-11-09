@@ -44,12 +44,11 @@ body {
   display: block;
 }
 
-.choice-button {
+.choice {
   position: absolute;
-
 }
 
-.choice-button:hover {
+.choice:hover {
   cursor: pointer;
 }
 
@@ -111,10 +110,6 @@ body {
 }
 
 #hallway-1 {
-  .choice-cursor {
-    position: absolute;
-  }
-
   #hallway-1-choice-1 {
     height: 50%;
     width: 18%;
@@ -155,14 +150,6 @@ body {
 }
 
 #hallway-4 {
-  .choice-hover {
-    position: absolute;
-  }
-
- .choice-hover:hover {
-    cursor: pointer;
-  }
-
   #hallway-4-choice-1 {
     width: 20%;
     height: 15%;
@@ -175,6 +162,129 @@ body {
     height: 30%;
     bottom: 7%;
     left: 63%;
+  }
+}
+
+#morpheus-6 {
+  .choice {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1%;
+  }
+
+  .choice:hover {
+    background-color: black;
+    color: white;
+  }
+  #morpheus-6-choice-1 {
+    top: 60%;
+    left: 13%;
+    width: 10%;
+    height: 6%;
+  }
+
+  #morpheus-6-choice-2 {
+    top: 56%;
+    right: 16%;
+    width: 10%;
+    height: 6%;  
+  }
+}
+
+#cheshire-9 {
+  .choice {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1%;
+  }
+
+  .choice:hover {
+    background-color: black;
+    color: white;
+  }
+  #cheshire-9-choice-1 {
+    top: 20%;
+    left: 0;
+  }
+
+  #cheshire-9-choice-2 {
+    top: 20%;
+    right: 0;
+  }
+}
+
+#queen-2 {
+  .choice {
+  }
+
+  .choice:hover {
+    background-color: black;
+    color: white;
+  }
+
+  #area-one {
+    top: 11%;
+    left: 0%;
+    width: 20%;
+    height: 80%;
+  }
+
+  #area-two {
+    top: 11%;
+    left: 22%;
+    width: 54%;
+    height: 26%;
+  }
+
+  #area-three {
+    top: 11%;
+    right: 0%;
+    width: 20%;
+    height: 86%;
+  }
+}
+
+#queen-8 {
+  .choice {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1%;
+  }
+
+  .choice:hover {
+    background-color: black;
+    color: white;
+  }
+  #queen-8-choice-1 {
+    top: 20%;
+    left: 0;
+  }
+
+  #queen-8-choice-2 {
+    top: 20%;
+    right: 0;
+  }
+}
+
+#queen-11 {
+  .choice {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1%;
+  }
+
+  .choice:hover {
+    background-color: black;
+    color: white;
+  }
+  #queen-11-choice-1 {
+    top: 10%;
+    left: 0;
+  }
+
+  #queen-11-choice-2 {
+    top: 10%;
+    right: 0;
   }
 }
 

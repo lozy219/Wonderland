@@ -1,6 +1,7 @@
 var audio;
 var debugMode = true;
 var countOfClicksInHallway = 0;
+var visitedCellInQueenTwo = false;
 
 var hideAndShow = function(wrapperToHide, wrapperToShow) {
   wrapperToHide.removeClass('shown');
@@ -44,7 +45,6 @@ $(document).ready(function() {
         location.hash = directLink;
       } else {
         var nextPanelWrapper = $('#' + directLink);
-
         hideAndShow(currentPanelWrapper, nextPanelWrapper);
       }
     } else if ((!currentPanelWrapper.hasClass('contains-choices')) && (!currentPanelWrapper.hasClass('no-click'))) {
@@ -80,7 +80,7 @@ $(document).ready(function() {
     }
   });
 
-  $('.choice-button').click(function() {
+  $('.choice').click(function() {
     var currentPanelWrapper = $(this).parent();
     var panelIdOfLink = $(this).data('value');
 
@@ -93,40 +93,14 @@ $(document).ready(function() {
     }
   });
 
-  $('.choice-cursor').click(function() {
+  // HALLWAY 4 SCENE CHOICES SCRIPT //
+  $('#hallway-1-choice-4').click(function() {
     if (countOfClicksInHallway > 4) {
       $(this).data('value','hallway-3');
     }
 
     if ($(this).attr('id') == "hallway-1-choice-4") {
       countOfClicksInHallway++;
-    }
-
-    var currentPanelWrapper = $(this).parent();
-    var panelIdOfLink = $(this).data('value');
-
-    var nextPanelWrapper = $("#" + panelIdOfLink);
-
-    if (debugMode) {
-      location.hash = panelIdOfLink;
-    } else {
-      currentPanelWrapper.removeClass('shown');
-      nextPanelWrapper.addClass('shown');
-    }
-  });
-
-  // HALLWAY 4 SCENE CHOICES SCRIPT //
-  $('.choice-hover').click(function() {
-    var currentPanelWrapper = $(this).parent();
-    var panelIdOfLink = $(this).data('value');
-
-    var nextPanelWrapper = $("#" + panelIdOfLink);
-
-    if (debugMode) {
-      location.hash = panelIdOfLink;
-    } else {
-      currentPanelWrapper.removeClass('shown');
-      nextPanelWrapper.addClass('shown');
     }
   });
 
@@ -158,6 +132,8 @@ $(document).ready(function() {
     image.attr('src', '_images/hallway/hallway-4.png');
   });
 
+
+  // END OF HALLWAY 4 SCENE CHOICES SCRIPT //
   $('#rabbit-16').bind('mousewheel DOMMouseScroll', function(event) {
     var deltaY = -(event.originalEvent.deltaY * event.deltaFactor / 16);
     if (deltaY < 0) {
@@ -181,13 +157,22 @@ $(document).ready(function() {
   //////////////////////////////////////////////////////////
 
 
-  $('.choice-button').mouseover(function() {
+  $('.queen-cell-area').click(function(event) {
+    event.stopImmediatePropagation();
+
+    var panelWrapper = $(this).parent();
+    panelWrapper.removeClass('contains-choices');
+
+    panelWrapper.attr("data-value", "queen-4");
+  });
+
+  $('.on-hover').mouseover(function() {
     var chapterWrapper = $(this).parent().parent();
     var rolloverImageURL = '_images/' + chapterWrapper.attr('id') + '/' + $(this).attr('id') + "-rollover.png";
     $(this).find('img').attr('src', rolloverImageURL);
   });
 
-  $('.choice-button').mouseleave(function() {
+  $('.on-hover').mouseleave(function() {
     var chapterWrapper = $(this).parent().parent();
     var imageURL = '_images/' + chapterWrapper.attr('id') + '/' + $(this).attr('id') + ".png";
     $(this).find('img').attr('src', imageURL);
