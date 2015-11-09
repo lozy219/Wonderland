@@ -1,5 +1,5 @@
 var audio;
-var debugMode = true;
+var debugMode = false;
 var countOfClicksInHallway = 0;
 
 var hideAndShow = function(wrapperToHide, wrapperToShow) {
@@ -21,14 +21,18 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'cheshire-1') {
-    // pia
-    audio = new Audio('_sounds/hitting.wav');
+    audio = new Audio('_sounds/cheshire-hitting.mp3');
     audio.play();
-  }  
+  }
+
+  if ((wrapperToShow[0].id === 'rabbit-1') || (wrapperToShow[0].id === 'rabbit-10')) {
+    audio = new Audio('_sounds/rabbit-dragging.mp3');
+    audio.play();
+  }
 };
 
 $(document).ready(function() {
-  audio = new Audio('_sounds/fireplace.m4a');
+  audio = new Audio('_sounds/alice-fireplace.m4a');
   audio.play();
 
   $('.panel-wrapper').click(function() {
