@@ -139,9 +139,9 @@ $(document).ready(function() {
     if (deltaY < 0) {
       var currentY = parseInt($('#rabbit-16').css('background-position-y'));
       if (currentY > -600) {
-        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 15) + 'px');
+        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 2) + 'px');
       } else if (currentY > -2000) {
-        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 5) + 'px');
+        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 2) + 'px');
       } else if (currentY > -6000) {
         $('#rabbit-16').css('background-position-y', (currentY + deltaY) + 'px');
       } else if (currentY > -15000) {
