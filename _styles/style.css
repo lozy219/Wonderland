@@ -215,26 +215,21 @@ body {
   right: 0;
 }
 
-/* line 220, sass/style.scss */
-#queen-2 .choice:hover {
-  background-color: black;
-  color: white;
-}
-/* line 225, sass/style.scss */
+/* line 217, sass/style.scss */
 #queen-2 #area-one {
   top: 11%;
   left: 0%;
   width: 20%;
   height: 80%;
 }
-/* line 232, sass/style.scss */
+/* line 224, sass/style.scss */
 #queen-2 #area-two {
   top: 11%;
   left: 22%;
   width: 54%;
   height: 26%;
 }
-/* line 239, sass/style.scss */
+/* line 231, sass/style.scss */
 #queen-2 #area-three {
   top: 11%;
   right: 0%;
@@ -242,45 +237,45 @@ body {
   height: 86%;
 }
 
-/* line 248, sass/style.scss */
+/* line 240, sass/style.scss */
 #queen-9 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 254, sass/style.scss */
+/* line 246, sass/style.scss */
 #queen-9 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 258, sass/style.scss */
+/* line 250, sass/style.scss */
 #queen-9 #queen-9-choice-1 {
   top: 20%;
   left: 0;
 }
-/* line 263, sass/style.scss */
+/* line 255, sass/style.scss */
 #queen-9 #queen-9-choice-2 {
   top: 20%;
   right: 0;
 }
 
-/* line 270, sass/style.scss */
+/* line 262, sass/style.scss */
 #queen-12 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 276, sass/style.scss */
+/* line 268, sass/style.scss */
 #queen-12 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 280, sass/style.scss */
+/* line 272, sass/style.scss */
 #queen-12 #queen-12-choice-1 {
   top: 10%;
   left: 0;
 }
-/* line 285, sass/style.scss */
+/* line 277, sass/style.scss */
 #queen-12 #queen-12-choice-2 {
   top: 10%;
   right: 0;
@@ -294,7 +289,7 @@ body {
     top: 90px;
   }
 }
-/* line 301, sass/style.scss */
+/* line 293, sass/style.scss */
 #cheshire-1 {
   animation: shaking 0.3s linear forwards;
 }
