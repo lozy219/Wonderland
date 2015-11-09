@@ -1,5 +1,5 @@
 var audio;
-var debugMode = false;
+var debugMode = true;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
 
@@ -26,10 +26,21 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     audio.play();
   }
 
-  if ((wrapperToShow[0].id === 'rabbit-1') || (wrapperToShow[0].id === 'rabbit-10')) {
+  if (wrapperToShow[0].id === 'rabbit-1') {
     audio = new Audio('_sounds/rabbit-dragging.mp3');
     audio.play();
   }
+
+  if (wrapperToShow[0].id === 'rabbit-10') {
+    audio = new Audio('_sounds/rabbit-dragging-soft.mp3');
+    audio.play();
+  }
+
+  if (wrapperToShow[0].id === 'rabbit-11') {
+    audio = new Audio('_sounds/rabbit-dragging-super-soft.mp3');
+    audio.play();
+  }
+  
 };
 
 $(document).ready(function() {
@@ -143,7 +154,7 @@ $(document).ready(function() {
     if (deltaY < 0) {
       var currentY = parseInt($('#rabbit-16').css('background-position-y'));
       if (currentY > -600) {
-        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 2) + 'px');
+        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 3) + 'px');
       } else if (currentY > -2000) {
         $('#rabbit-16').css('background-position-y', (currentY + deltaY / 2) + 'px');
       } else if (currentY > -6000) {
