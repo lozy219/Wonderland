@@ -47,30 +47,30 @@ body {
 }
 
 /* line 48, sass/style.scss */
-.choice-button {
+.choice {
   position: absolute;
 }
 
-/* line 53, sass/style.scss */
-.choice-button:hover {
+/* line 52, sass/style.scss */
+.choice:hover {
   cursor: pointer;
 }
 
-/* line 58, sass/style.scss */
+/* line 57, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 {
   width: 20%;
   top: 8%;
   left: 4%;
 }
-/* line 63, sass/style.scss */
+/* line 62, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 .wrapper {
   position: relative;
 }
-/* line 65, sass/style.scss */
+/* line 64, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 .wrapper img {
   width: 100%;
 }
-/* line 69, sass/style.scss */
+/* line 68, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 .wrapper h3 {
   font-size: 1.5em;
   margin: 0;
@@ -78,21 +78,21 @@ body {
   top: 25%;
   left: 22%;
 }
-/* line 79, sass/style.scss */
+/* line 78, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 {
   width: 20%;
   top: 6%;
   left: 30%;
 }
-/* line 84, sass/style.scss */
+/* line 83, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 .wrapper {
   position: relative;
 }
-/* line 86, sass/style.scss */
+/* line 85, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 .wrapper img {
   width: 100%;
 }
-/* line 90, sass/style.scss */
+/* line 89, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 .wrapper h3 {
   font-size: 1.5em;
   margin: 0;
@@ -100,7 +100,7 @@ body {
   top: 25%;
   left: 22%;
 }
-/* line 100, sass/style.scss */
+/* line 99, sass/style.scss */
 #rabbit-1 .sound {
   color: black;
   font-size: 3em;
@@ -109,17 +109,13 @@ body {
   left: -5%;
 }
 
-/* line 109, sass/style.scss */
+/* line 108, sass/style.scss */
 #rabbit-16 {
   background-image: url("../_images/rabbit/rabbit-falling.png");
   background-size: 1000px auto;
 }
 
-/* line 115, sass/style.scss */
-#hallway-1 .choice-cursor {
-  position: absolute;
-}
-/* line 119, sass/style.scss */
+/* line 114, sass/style.scss */
 #hallway-1 #hallway-1-choice-1 {
   height: 50%;
   width: 18%;
@@ -127,7 +123,7 @@ body {
   top: 25%;
   cursor: url("../_images/hallway/hallway-1-choice-1.ico"), default;
 }
-/* line 127, sass/style.scss */
+/* line 122, sass/style.scss */
 #hallway-1 #hallway-1-choice-2 {
   height: 35%;
   width: 10%;
@@ -135,7 +131,7 @@ body {
   top: 26%;
   cursor: url("../_images/hallway/hallway-1-choice-2.ico"), default;
 }
-/* line 136, sass/style.scss */
+/* line 131, sass/style.scss */
 #hallway-1 #hallway-1-choice-3 {
   height: 21%;
   width: 6%;
@@ -143,7 +139,7 @@ body {
   top: 30%;
   cursor: url("../_images/hallway/hallway-1-choice-3.ico"), default;
 }
-/* line 144, sass/style.scss */
+/* line 139, sass/style.scss */
 #hallway-1 #hallway-1-choice-4 {
   height: 60%;
   width: 5%;
@@ -152,32 +148,127 @@ body {
   cursor: url("../_images/hallway/hallway-1-choice-4.ico"), default;
   transform: rotate(35deg);
 }
-/* line 153, sass/style.scss */
+/* line 148, sass/style.scss */
 #hallway-1 #hallway-1-choice-1:hover {
   color: white;
 }
 
-/* line 159, sass/style.scss */
-#hallway-4 .choice-hover {
-  position: absolute;
-}
-/* line 163, sass/style.scss */
-#hallway-4 .choice-hover:hover {
-  cursor: pointer;
-}
-/* line 167, sass/style.scss */
+/* line 154, sass/style.scss */
 #hallway-4 #hallway-4-choice-1 {
   width: 20%;
   height: 15%;
   bottom: 4%;
   left: 27%;
 }
-/* line 174, sass/style.scss */
+/* line 161, sass/style.scss */
 #hallway-4 #hallway-4-choice-2 {
   width: 10%;
   height: 30%;
   bottom: 7%;
   left: 63%;
+}
+
+/* line 180, sass/style.scss */
+#morpheus-6 #morpheus-6-choice-1 {
+  top: 60%;
+  left: 13%;
+  width: 10%;
+  height: 6%;
+}
+/* line 187, sass/style.scss */
+#morpheus-6 #morpheus-6-choice-2 {
+  top: 56%;
+  right: 16%;
+  width: 10%;
+  height: 6%;
+}
+
+/* line 196, sass/style.scss */
+#cheshire-9 .choice {
+  background-color: white;
+  border: 1px solid black;
+  padding: 1%;
+}
+/* line 202, sass/style.scss */
+#cheshire-9 .choice:hover {
+  background-color: black;
+  color: white;
+}
+/* line 206, sass/style.scss */
+#cheshire-9 #cheshire-9-choice-1 {
+  top: 20%;
+  left: 0;
+}
+/* line 211, sass/style.scss */
+#cheshire-9 #cheshire-9-choice-2 {
+  top: 20%;
+  right: 0;
+}
+
+/* line 218, sass/style.scss */
+#queen-2 #area-one {
+  top: 11%;
+  left: 0%;
+  width: 20%;
+  height: 80%;
+}
+/* line 225, sass/style.scss */
+#queen-2 #area-two {
+  top: 11%;
+  left: 22%;
+  width: 54%;
+  height: 26%;
+}
+/* line 232, sass/style.scss */
+#queen-2 #area-three {
+  top: 11%;
+  right: 0%;
+  width: 20%;
+  height: 86%;
+}
+
+/* line 241, sass/style.scss */
+#queen-9 .choice {
+  background-color: white;
+  border: 1px solid black;
+  padding: 1%;
+}
+/* line 247, sass/style.scss */
+#queen-9 .choice:hover {
+  background-color: black;
+  color: white;
+}
+/* line 251, sass/style.scss */
+#queen-9 #queen-9-choice-1 {
+  top: 20%;
+  left: 0;
+}
+/* line 256, sass/style.scss */
+#queen-9 #queen-9-choice-2 {
+  top: 20%;
+  right: 0;
+}
+
+/* line 263, sass/style.scss */
+#queen-12 .choice {
+  background-color: white;
+  border: 1px solid black;
+  padding: 1%;
+}
+/* line 269, sass/style.scss */
+#queen-12 .choice:hover {
+  background-color: black;
+  color: white;
+}
+/* line 273, sass/style.scss */
+#queen-12 #queen-12-choice-1 {
+  top: 10%;
+  left: 0;
+}
+/* line 278, sass/style.scss */
+#queen-12 #queen-12-choice-2 {
+  top: 10%;
+  right: 0;
 }
 
 @keyframes shaking {
@@ -188,7 +279,7 @@ body {
     top: 90px;
   }
 }
-/* line 192, sass/style.scss */
+/* line 294, sass/style.scss */
 #cheshire-1 {
   animation: shaking 0.3s linear forwards;
 }
