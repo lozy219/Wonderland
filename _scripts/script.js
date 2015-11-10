@@ -43,6 +43,50 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   
 };
 
+var transitToNextPanel = function(currentPanelWrapper) {
+  // In some cases, some panel transition doesnt occur sequentially, and a direct link is applied to it
+  // so that on click, it jumps to the direct link as specified in the data-value attribute of the div
+  var directLink = currentPanelWrapper.data('value');
+      if (directLink != null) { //Check if panel is directly linked into another panel
+        if (debugMode) {
+          location.hash = directLink;
+        } else {
+          var nextPanelWrapper = $('#' + directLink);
+          hideAndShow(currentPanelWrapper, nextPanelWrapper);
+        }
+      } else if ((!currentPanelWrapper.hasClass('contains-choices')) && (!currentPanelWrapper.hasClass('no-click'))) {
+        var currentChapter = currentPanelWrapper.parent();
+
+        // Check if it is NOT the last panel in the chapter
+        if (currentPanelWrapper.next('.panel-wrapper').length > 0) {
+          var nextPanelWrapper = currentPanelWrapper.next('.panel-wrapper');
+
+          if (debugMode) {
+            location.hash = nextPanelWrapper.attr('id');
+          } else {
+            hideAndShow(currentPanelWrapper, nextPanelWrapper);
+          }
+        } else { 
+          // If it is the last panel in the chapter
+          // alert("end of chapter!");
+          // Find the next panel in the next chapter
+          // First check if the current chapter is NOT the last chapter
+          if (currentChapter.next('.chapter-wrapper').length > 0) {
+            var nextChapter = currentChapter.next('.chapter-wrapper');
+            var nextPanelWrapper = nextChapter.children('.panel-wrapper').first();
+
+            if (debugMode) {
+              location.hash = nextPanelWrapper.attr('id');
+            } else {
+              hideAndShow(currentPanelWrapper, nextPanelWrapper);
+            }
+          } else { // If it is the last chapter and last panel, we can end the story
+            // alert("End of story!");
+          }
+        }
+      }
+}
+
 $(document).ready(function() {
   audio = new Audio('_sounds/alice-fireplace.m4a');
   audio.play();
@@ -51,47 +95,11 @@ $(document).ready(function() {
     // Panel shall only be clickable if there isnt any explicit choices in it
     // So we first check whether there are any explicit choices
     var currentPanelWrapper = $(this);
-
-    // In some cases, some panel transition doesnt occur sequentially, and a direct link is applied to it
-    // so that on click, it jumps to the direct link as specified in the data-value attribute of the div
-    var directLink = currentPanelWrapper.data('value');
-    if (directLink != null) { //Check if panel is directly linked into another panel
-      if (debugMode) {
-        location.hash = directLink;
-      } else {
-        var nextPanelWrapper = $('#' + directLink);
-        hideAndShow(currentPanelWrapper, nextPanelWrapper);
-      }
-    } else if ((!currentPanelWrapper.hasClass('contains-choices')) && (!currentPanelWrapper.hasClass('no-click'))) {
-      var currentChapter = currentPanelWrapper.parent();
-
-      // Check if it is NOT the last panel in the chapter
-      if (currentPanelWrapper.next('.panel-wrapper').length > 0) {
-        var nextPanelWrapper = currentPanelWrapper.next('.panel-wrapper');
-
-        if (debugMode) {
-          location.hash = nextPanelWrapper.attr('id');
-        } else {
-          hideAndShow(currentPanelWrapper, nextPanelWrapper);
-        }
-      } else { 
-        // If it is the last panel in the chapter
-        // alert("end of chapter!");
-        // Find the next panel in the next chapter
-        // First check if the current chapter is NOT the last chapter
-        if (currentChapter.next('.chapter-wrapper').length > 0) {
-          var nextChapter = currentChapter.next('.chapter-wrapper');
-          var nextPanelWrapper = nextChapter.children('.panel-wrapper').first();
-
-          if (debugMode) {
-            location.hash = nextPanelWrapper.attr('id');
-          } else {
-            hideAndShow(currentPanelWrapper, nextPanelWrapper);
-          }
-        } else { // If it is the last chapter and last panel, we can end the story
-          // alert("End of story!");
-        }
-      }
+    var speechBubbleWrapper = currentPanelWrapper.find('.speech-bubble-wrapper');
+    if (speechBubbleWrapper.length == 1 && !speechBubbleWrapper.hasClass('shown')) {
+      speechBubbleWrapper.addClass('shown');
+    } else {
+      transitToNextPanel(currentPanelWrapper);
     }
   });
 
@@ -226,9 +234,10 @@ $(document).ready(function() {
       $('#cheshire-9-speech-2').removeClass('shown');
       $(this).find('.choice').each(function() {
         $(this).addClass('shown');
+        
       });
     }
-    ++cheshireNineIndex;  
+    ++cheshireNineIndex; 
   });
 
   var morpheusFourIndex = 0;
@@ -239,17 +248,13 @@ $(document).ready(function() {
 
     if (morpheusFourIndex == 1) {
       $('#morpheus-4-speech-1').removeClass('shown');
-      $('h2').addClass('shown');
+      $('#morpheus-4-speech-2').addClass('shown');
     } 
 
     if (morpheusFourIndex == 2) {
-      $('h2').removeClass('shown');
-      $('#morpheus-4-speech-2').addClass('shown');
-    }
-
-    if (morpheusFourIndex == 3) {
-      $('#morpheus-4-speech-2').removeClass('shown');
+      // $('#morpheus-4-speech-2').removeClass('shown');
       $(this).removeClass('contains-choices');
+      transitToNextPanel($(this));
     }
     ++morpheusFourIndex;  
   });
@@ -286,8 +291,9 @@ $(document).ready(function() {
     }
 
     if (partyOneIndex == 2) {
-      $('#party-1-speech-2').removeClass('shown');
+      // $('#party-1-speech-2').removeClass('shown');
       $(this).removeClass('contains-choices');
+      transitToNextPanel($(this));
     }
     ++partyOneIndex;  
   });
@@ -304,8 +310,9 @@ $(document).ready(function() {
     }
 
     if (partyFiveIndex == 2) {
-      $('#party-5-speech-2').removeClass('shown');
+      // $('#party-5-speech-2').removeClass('shown');
       $(this).removeClass('contains-choices');
+      transitToNextPanel($(this));
     }
     ++partyFiveIndex;  
   });
@@ -322,8 +329,9 @@ $(document).ready(function() {
     }
 
     if (partyNineIndex == 2) {
-      $('#party-9-speech-2').removeClass('shown');
+      // $('#party-9-speech-2').removeClass('shown');
       $(this).removeClass('contains-choices');
+      transitToNextPanel($(this));
     }
     ++partyNineIndex;  
   });

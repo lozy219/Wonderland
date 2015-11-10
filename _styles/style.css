@@ -52,35 +52,45 @@ body {
 }
 
 /* line 53, sass/style.scss */
+.speech-bubble-wrapper {
+  display: none;
+}
+
+/* line 57, sass/style.scss */
+.speech-bubble-wrapper.shown {
+  display: inline;
+}
+
+/* line 61, sass/style.scss */
 .choice {
   position: absolute;
 }
 
-/* line 57, sass/style.scss */
+/* line 65, sass/style.scss */
 .choice:hover {
   cursor: pointer;
 }
 
-/* line 61, sass/style.scss */
+/* line 69, sass/style.scss */
 .speech-bubble-wrapper {
   position: absolute;
 }
 
-/* line 66, sass/style.scss */
+/* line 74, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 {
   width: 20%;
   top: 8%;
   left: 4%;
 }
-/* line 71, sass/style.scss */
+/* line 79, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 .wrapper {
   position: relative;
 }
-/* line 73, sass/style.scss */
+/* line 81, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 .wrapper img {
   width: 100%;
 }
-/* line 77, sass/style.scss */
+/* line 85, sass/style.scss */
 #rabbit-1 #rabit-1-choice-1 .wrapper h3 {
   font-size: 1.5em;
   margin: 0;
@@ -88,21 +98,21 @@ body {
   top: 25%;
   left: 22%;
 }
-/* line 87, sass/style.scss */
+/* line 95, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 {
   width: 20%;
   top: 6%;
   left: 30%;
 }
-/* line 92, sass/style.scss */
+/* line 100, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 .wrapper {
   position: relative;
 }
-/* line 94, sass/style.scss */
+/* line 102, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 .wrapper img {
   width: 100%;
 }
-/* line 98, sass/style.scss */
+/* line 106, sass/style.scss */
 #rabbit-1 #rabit-1-choice-2 .wrapper h3 {
   font-size: 1.5em;
   margin: 0;
@@ -110,7 +120,7 @@ body {
   top: 25%;
   left: 22%;
 }
-/* line 108, sass/style.scss */
+/* line 116, sass/style.scss */
 #rabbit-1 .sound {
   color: black;
   font-size: 3em;
@@ -119,12 +129,12 @@ body {
   left: -5%;
 }
 
-/* line 117, sass/style.scss */
+/* line 125, sass/style.scss */
 #rabbit-2-speech-1 {
   bottom: 59%;
   left: 56%;
 }
-/* line 121, sass/style.scss */
+/* line 129, sass/style.scss */
 #rabbit-2-speech-1 h3 {
   position: absolute;
   top: 3%;
@@ -132,18 +142,18 @@ body {
   font-size: 2.3em;
   text-align: center;
 }
-/* line 129, sass/style.scss */
+/* line 137, sass/style.scss */
 #rabbit-2-speech-1 img {
   width: 70%;
   height: auto;
 }
 
-/* line 135, sass/style.scss */
+/* line 143, sass/style.scss */
 #rabbit-3-speech-1 {
   bottom: 10%;
   left: 34%;
 }
-/* line 139, sass/style.scss */
+/* line 147, sass/style.scss */
 #rabbit-3-speech-1 h3 {
   position: absolute;
   top: 9%;
@@ -151,18 +161,18 @@ body {
   font-size: 2.9em;
   text-align: center;
 }
-/* line 147, sass/style.scss */
+/* line 155, sass/style.scss */
 #rabbit-3-speech-1 img {
   width: 90%;
   height: auto;
 }
 
-/* line 153, sass/style.scss */
+/* line 161, sass/style.scss */
 #rabbit-4-speech-1 {
   bottom: 57%;
   left: 3%;
 }
-/* line 157, sass/style.scss */
+/* line 165, sass/style.scss */
 #rabbit-4-speech-1 h3 {
   position: absolute;
   top: 1%;
@@ -170,18 +180,18 @@ body {
   font-size: 2.4em;
   text-align: center;
 }
-/* line 165, sass/style.scss */
+/* line 173, sass/style.scss */
 #rabbit-4-speech-1 img {
   width: 90%;
   height: auto;
 }
 
-/* line 171, sass/style.scss */
+/* line 179, sass/style.scss */
 #rabbit-5-speech-1 {
   bottom: 64%;
   left: 12%;
 }
-/* line 175, sass/style.scss */
+/* line 183, sass/style.scss */
 #rabbit-5-speech-1 h3 {
   position: absolute;
   top: 1%;
@@ -189,18 +199,18 @@ body {
   font-size: 2.3em;
   text-align: center;
 }
-/* line 183, sass/style.scss */
+/* line 191, sass/style.scss */
 #rabbit-5-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 189, sass/style.scss */
+/* line 197, sass/style.scss */
 #rabbit-7-speech-1 {
   bottom: 31%;
   left: 32%;
 }
-/* line 193, sass/style.scss */
+/* line 201, sass/style.scss */
 #rabbit-7-speech-1 h3 {
   position: absolute;
   top: 1%;
@@ -208,24 +218,24 @@ body {
   font-size: 4.5em;
   text-align: center;
 }
-/* line 201, sass/style.scss */
+/* line 209, sass/style.scss */
 #rabbit-7-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 207, sass/style.scss */
+/* line 215, sass/style.scss */
 #rabbit-16 {
   background-image: url("../_images/rabbit/rabbit-falling.png");
   background-size: calc((100vh - 100px) / 0.68) auto;
 }
 
-/* line 212, sass/style.scss */
+/* line 220, sass/style.scss */
 #hallway-5-speech-1 {
   bottom: 33%;
   left: 43%;
 }
-/* line 216, sass/style.scss */
+/* line 224, sass/style.scss */
 #hallway-5-speech-1 h3 {
   position: absolute;
   top: 1%;
@@ -233,18 +243,18 @@ body {
   font-size: 2.5em;
   text-align: center;
 }
-/* line 224, sass/style.scss */
+/* line 232, sass/style.scss */
 #hallway-5-speech-1 img {
   width: 80%;
   height: auto;
 }
 
-/* line 230, sass/style.scss */
+/* line 238, sass/style.scss */
 #hallway-6-speech-1 {
   bottom: 33%;
   left: 41%;
 }
-/* line 234, sass/style.scss */
+/* line 242, sass/style.scss */
 #hallway-6-speech-1 h3 {
   position: absolute;
   top: 12%;
@@ -252,18 +262,18 @@ body {
   font-size: 2.5em;
   text-align: center;
 }
-/* line 242, sass/style.scss */
+/* line 250, sass/style.scss */
 #hallway-6-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 248, sass/style.scss */
+/* line 256, sass/style.scss */
 #hallway-7-speech-1 {
   bottom: 43%;
   left: 32%;
 }
-/* line 252, sass/style.scss */
+/* line 260, sass/style.scss */
 #hallway-7-speech-1 h3 {
   position: absolute;
   top: 5%;
@@ -271,31 +281,31 @@ body {
   font-size: 2.2em;
   text-align: center;
 }
-/* line 260, sass/style.scss */
+/* line 268, sass/style.scss */
 #hallway-7-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 267, sass/style.scss */
+/* line 275, sass/style.scss */
 #party-1 .speech-bubble-wrapper {
   display: none;
 }
-/* line 271, sass/style.scss */
+/* line 279, sass/style.scss */
 #party-1 h2.shown {
   display: inline;
 }
-/* line 275, sass/style.scss */
+/* line 283, sass/style.scss */
 #party-1 .speech-bubble-wrapper.shown {
   display: inline;
 }
 
-/* line 280, sass/style.scss */
+/* line 288, sass/style.scss */
 #party-1-speech-1 {
   bottom: 58%;
   left: 48%;
 }
-/* line 284, sass/style.scss */
+/* line 292, sass/style.scss */
 #party-1-speech-1 h3 {
   position: absolute;
   top: 12%;
@@ -303,18 +313,18 @@ body {
   font-size: 2.5em;
   text-align: center;
 }
-/* line 292, sass/style.scss */
+/* line 300, sass/style.scss */
 #party-1-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 298, sass/style.scss */
+/* line 306, sass/style.scss */
 #party-1-speech-2 {
   bottom: 20%;
   left: 47%;
 }
-/* line 302, sass/style.scss */
+/* line 310, sass/style.scss */
 #party-1-speech-2 h3 {
   position: absolute;
   top: 6%;
@@ -322,18 +332,18 @@ body {
   font-size: 2.3em;
   text-align: center;
 }
-/* line 310, sass/style.scss */
+/* line 318, sass/style.scss */
 #party-1-speech-2 img {
   width: 100%;
   height: auto;
 }
 
-/* line 316, sass/style.scss */
+/* line 324, sass/style.scss */
 #party-2-speech-1 {
   bottom: 27%;
   left: 42%;
 }
-/* line 320, sass/style.scss */
+/* line 328, sass/style.scss */
 #party-2-speech-1 h3 {
   position: absolute;
   top: 0%;
@@ -341,18 +351,18 @@ body {
   font-size: 2.7em;
   text-align: center;
 }
-/* line 328, sass/style.scss */
+/* line 336, sass/style.scss */
 #party-2-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 334, sass/style.scss */
+/* line 342, sass/style.scss */
 #party-3-speech-1 {
   bottom: 12%;
   left: 16%;
 }
-/* line 338, sass/style.scss */
+/* line 346, sass/style.scss */
 #party-3-speech-1 h3 {
   position: absolute;
   top: 10%;
@@ -360,27 +370,27 @@ body {
   font-size: 2em;
   text-align: center;
 }
-/* line 346, sass/style.scss */
+/* line 354, sass/style.scss */
 #party-3-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 353, sass/style.scss */
+/* line 361, sass/style.scss */
 #party-5 .speech-bubble-wrapper {
   display: none;
 }
-/* line 357, sass/style.scss */
+/* line 365, sass/style.scss */
 #party-5 .speech-bubble-wrapper.shown {
   display: inline;
 }
 
-/* line 362, sass/style.scss */
+/* line 370, sass/style.scss */
 #party-5-speech-1 {
   bottom: 51%;
   left: 18%;
 }
-/* line 366, sass/style.scss */
+/* line 374, sass/style.scss */
 #party-5-speech-1 h3 {
   position: absolute;
   top: 0%;
@@ -388,18 +398,18 @@ body {
   font-size: 2.7em;
   text-align: center;
 }
-/* line 374, sass/style.scss */
+/* line 382, sass/style.scss */
 #party-5-speech-1 img {
   width: 75%;
   height: auto;
 }
 
-/* line 380, sass/style.scss */
+/* line 388, sass/style.scss */
 #party-5-speech-2 {
   bottom: 32%;
   left: 55%;
 }
-/* line 384, sass/style.scss */
+/* line 392, sass/style.scss */
 #party-5-speech-2 h3 {
   position: absolute;
   top: 0%;
@@ -407,18 +417,18 @@ body {
   font-size: 2.3em;
   text-align: center;
 }
-/* line 392, sass/style.scss */
+/* line 400, sass/style.scss */
 #party-5-speech-2 img {
   width: 100%;
   height: auto;
 }
 
-/* line 398, sass/style.scss */
+/* line 406, sass/style.scss */
 #party-6-speech-1 {
   bottom: 11%;
   left: 8%;
 }
-/* line 402, sass/style.scss */
+/* line 410, sass/style.scss */
 #party-6-speech-1 h3 {
   position: absolute;
   top: 10%;
@@ -426,18 +436,18 @@ body {
   font-size: 2.2em;
   text-align: center;
 }
-/* line 410, sass/style.scss */
+/* line 418, sass/style.scss */
 #party-6-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 416, sass/style.scss */
+/* line 424, sass/style.scss */
 #party-7-speech-1 {
   bottom: 2%;
   left: 26%;
 }
-/* line 420, sass/style.scss */
+/* line 428, sass/style.scss */
 #party-7-speech-1 h3 {
   position: absolute;
   top: 19%;
@@ -445,18 +455,18 @@ body {
   font-size: 2.1em;
   text-align: center;
 }
-/* line 428, sass/style.scss */
+/* line 436, sass/style.scss */
 #party-7-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 434, sass/style.scss */
+/* line 442, sass/style.scss */
 #party-8-speech-1 {
   bottom: 68%;
   left: 0%;
 }
-/* line 438, sass/style.scss */
+/* line 446, sass/style.scss */
 #party-8-speech-1 h3 {
   position: absolute;
   top: 2%;
@@ -464,27 +474,27 @@ body {
   font-size: 2.3em;
   text-align: center;
 }
-/* line 446, sass/style.scss */
+/* line 454, sass/style.scss */
 #party-8-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 453, sass/style.scss */
+/* line 461, sass/style.scss */
 #party-9 .speech-bubble-wrapper {
   display: none;
 }
-/* line 457, sass/style.scss */
+/* line 465, sass/style.scss */
 #party-9 .speech-bubble-wrapper.shown {
   display: inline;
 }
 
-/* line 462, sass/style.scss */
+/* line 470, sass/style.scss */
 #party-9-speech-1 {
   bottom: 23%;
   left: 18%;
 }
-/* line 466, sass/style.scss */
+/* line 474, sass/style.scss */
 #party-9-speech-1 h3 {
   position: absolute;
   top: 15%;
@@ -492,18 +502,18 @@ body {
   font-size: 2.2em;
   text-align: center;
 }
-/* line 474, sass/style.scss */
+/* line 482, sass/style.scss */
 #party-9-speech-1 img {
   width: 75%;
   height: auto;
 }
 
-/* line 480, sass/style.scss */
+/* line 488, sass/style.scss */
 #party-9-speech-2 {
   bottom: 13%;
   left: 55%;
 }
-/* line 484, sass/style.scss */
+/* line 492, sass/style.scss */
 #party-9-speech-2 h3 {
   position: absolute;
   top: 14%;
@@ -511,18 +521,18 @@ body {
   font-size: 3.5em;
   text-align: center;
 }
-/* line 492, sass/style.scss */
+/* line 500, sass/style.scss */
 #party-9-speech-2 img {
   width: 100%;
   height: auto;
 }
 
-/* line 498, sass/style.scss */
+/* line 506, sass/style.scss */
 #party-11-speech-1 {
   bottom: 27%;
   left: 8%;
 }
-/* line 502, sass/style.scss */
+/* line 510, sass/style.scss */
 #party-11-speech-1 h3 {
   position: absolute;
   top: -6%;
@@ -530,18 +540,18 @@ body {
   font-size: 2em;
   text-align: center;
 }
-/* line 510, sass/style.scss */
+/* line 518, sass/style.scss */
 #party-11-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 516, sass/style.scss */
+/* line 524, sass/style.scss */
 #party-13-speech-1 {
   bottom: 57%;
   left: 22%;
 }
-/* line 520, sass/style.scss */
+/* line 528, sass/style.scss */
 #party-13-speech-1 h3 {
   position: absolute;
   top: 8%;
@@ -549,7 +559,7 @@ body {
   font-size: 2.8em;
   text-align: center;
 }
-/* line 528, sass/style.scss */
+/* line 536, sass/style.scss */
 #party-13-speech-1 img {
   width: 100%;
   height: auto;
@@ -597,16 +607,16 @@ body {
     left: 59%;
   }
 }
-/* line 580, sass/style.scss */
+/* line 588, sass/style.scss */
 #hallway-1 .hallway-arrow.shown {
   display: block;
 }
-/* line 584, sass/style.scss */
+/* line 592, sass/style.scss */
 #hallway-1 .hallway-arrow {
   pointer-events: none;
   display: none;
 }
-/* line 589, sass/style.scss */
+/* line 597, sass/style.scss */
 #hallway-1 #hallway-1-choice-1-arrow {
   position: absolute;
   top: 22%;
@@ -618,7 +628,7 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-/* line 601, sass/style.scss */
+/* line 609, sass/style.scss */
 #hallway-1 #hallway-1-choice-2-arrow {
   position: absolute;
   top: 42%;
@@ -630,7 +640,7 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-/* line 613, sass/style.scss */
+/* line 621, sass/style.scss */
 #hallway-1 #hallway-1-choice-3-arrow {
   position: absolute;
   top: 35%;
@@ -642,7 +652,7 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-/* line 625, sass/style.scss */
+/* line 633, sass/style.scss */
 #hallway-1 #hallway-1-choice-5-arrow {
   position: absolute;
   top: 49%;
@@ -655,14 +665,14 @@ body {
   animation-direction: alternate;
 }
 
-/* line 640, sass/style.scss */
+/* line 648, sass/style.scss */
 #hallway-4 #hallway-4-choice-1 {
   width: 20%;
   height: 15%;
   bottom: 4%;
   left: 27%;
 }
-/* line 647, sass/style.scss */
+/* line 655, sass/style.scss */
 #hallway-4 #hallway-4-choice-2 {
   width: 10%;
   height: 30%;
@@ -670,31 +680,31 @@ body {
   left: 63%;
 }
 
-/* line 655, sass/style.scss */
+/* line 663, sass/style.scss */
 #cheshire-2-speech-1 {
   bottom: 47%;
   right: -4%;
 }
-/* line 659, sass/style.scss */
+/* line 667, sass/style.scss */
 #cheshire-2-speech-1 h3 {
   position: absolute;
   top: 17%;
   left: 13%;
   font-size: 1.5em;
 }
-/* line 667, sass/style.scss */
+/* line 675, sass/style.scss */
 #cheshire-2-speech-1 img {
   width: 90%;
   height: auto;
 }
 
-/* line 673, sass/style.scss */
+/* line 681, sass/style.scss */
 #cheshire-3-speech-1 {
   bottom: 9%;
   left: 50%;
   transform: translateX(-50%);
 }
-/* line 678, sass/style.scss */
+/* line 686, sass/style.scss */
 #cheshire-3-speech-1 h3 {
   position: absolute;
   top: 21%;
@@ -702,18 +712,18 @@ body {
   font-size: 2.4em;
   text-align: center;
 }
-/* line 686, sass/style.scss */
+/* line 694, sass/style.scss */
 #cheshire-3-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 692, sass/style.scss */
+/* line 700, sass/style.scss */
 #cheshire-4-speech-1 {
   bottom: 33%;
   left: 20%;
 }
-/* line 696, sass/style.scss */
+/* line 704, sass/style.scss */
 #cheshire-4-speech-1 h3 {
   position: absolute;
   width: 100%;
@@ -722,17 +732,17 @@ body {
   font-size: 2.4em;
   text-align: center;
 }
-/* line 705, sass/style.scss */
+/* line 713, sass/style.scss */
 #cheshire-4-speech-1 img {
   width: 83%;
 }
 
-/* line 710, sass/style.scss */
+/* line 718, sass/style.scss */
 #cheshire-5-speech-1 {
   bottom: -3%;
   left: 1%;
 }
-/* line 714, sass/style.scss */
+/* line 722, sass/style.scss */
 #cheshire-5-speech-1 h3 {
   position: absolute;
   width: 100%;
@@ -741,17 +751,17 @@ body {
   font-size: 2.1em;
   text-align: center;
 }
-/* line 723, sass/style.scss */
+/* line 731, sass/style.scss */
 #cheshire-5-speech-1 img {
   width: 110%;
 }
 
-/* line 728, sass/style.scss */
+/* line 736, sass/style.scss */
 #cheshire-6-speech-1 {
   bottom: 56%;
   left: 34%;
 }
-/* line 732, sass/style.scss */
+/* line 740, sass/style.scss */
 #cheshire-6-speech-1 h3 {
   position: absolute;
   width: 100%;
@@ -760,17 +770,17 @@ body {
   font-size: 2.4em;
   text-align: center;
 }
-/* line 741, sass/style.scss */
+/* line 749, sass/style.scss */
 #cheshire-6-speech-1 img {
   width: 94%;
 }
 
-/* line 746, sass/style.scss */
+/* line 754, sass/style.scss */
 #cheshire-7-speech-1 {
   bottom: 20%;
   left: 14%;
 }
-/* line 750, sass/style.scss */
+/* line 758, sass/style.scss */
 #cheshire-7-speech-1 h3 {
   position: absolute;
   width: 100%;
@@ -779,17 +789,17 @@ body {
   font-size: 2.2em;
   text-align: center;
 }
-/* line 759, sass/style.scss */
+/* line 767, sass/style.scss */
 #cheshire-7-speech-1 img {
   width: 100%;
 }
 
-/* line 764, sass/style.scss */
+/* line 772, sass/style.scss */
 #cheshire-8-speech-1 {
   bottom: 34%;
   left: 50%;
 }
-/* line 768, sass/style.scss */
+/* line 776, sass/style.scss */
 #cheshire-8-speech-1 h3 {
   position: absolute;
   width: 100%;
@@ -798,26 +808,26 @@ body {
   font-size: 2.2em;
   text-align: center;
 }
-/* line 777, sass/style.scss */
+/* line 785, sass/style.scss */
 #cheshire-8-speech-1 img {
   width: 85%;
 }
 
-/* line 783, sass/style.scss */
+/* line 791, sass/style.scss */
 #cheshire-9 .speech-bubble-wrapper, #cheshire-9 .choice {
   display: none;
 }
-/* line 787, sass/style.scss */
+/* line 795, sass/style.scss */
 #cheshire-9 .shown.speech-bubble-wrapper, #cheshire-9 .shown.shown {
   display: block;
 }
 
-/* line 793, sass/style.scss */
+/* line 801, sass/style.scss */
 #cheshire-9-speech-1 {
   bottom: 30%;
   left: 50%;
 }
-/* line 797, sass/style.scss */
+/* line 805, sass/style.scss */
 #cheshire-9-speech-1 h3 {
   position: absolute;
   width: 100%;
@@ -826,17 +836,17 @@ body {
   font-size: 1.7em;
   text-align: center;
 }
-/* line 806, sass/style.scss */
+/* line 814, sass/style.scss */
 #cheshire-9-speech-1 img {
   width: 62%;
 }
 
-/* line 811, sass/style.scss */
+/* line 819, sass/style.scss */
 #cheshire-9-speech-2 {
   bottom: 30%;
   left: 37%;
 }
-/* line 815, sass/style.scss */
+/* line 823, sass/style.scss */
 #cheshire-9-speech-2 h3 {
   position: absolute;
   width: 100%;
@@ -845,18 +855,18 @@ body {
   font-size: 1.7em;
   text-align: center;
 }
-/* line 824, sass/style.scss */
+/* line 832, sass/style.scss */
 #cheshire-9-speech-2 img {
   width: 62%;
 }
 
-/* line 829, sass/style.scss */
+/* line 837, sass/style.scss */
 #cheshire-9-choice-1 {
   display: none;
   top: -2%;
   left: 12%;
 }
-/* line 834, sass/style.scss */
+/* line 842, sass/style.scss */
 #cheshire-9-choice-1 h3 {
   position: absolute;
   width: 100%;
@@ -866,13 +876,13 @@ body {
   text-align: center;
 }
 
-/* line 844, sass/style.scss */
+/* line 852, sass/style.scss */
 #cheshire-9-choice-2 {
   display: none;
   top: 24%;
   left: 21%;
 }
-/* line 849, sass/style.scss */
+/* line 857, sass/style.scss */
 #cheshire-9-choice-2 h3 {
   position: absolute;
   width: 100%;
@@ -882,12 +892,12 @@ body {
   text-align: center;
 }
 
-/* line 859, sass/style.scss */
+/* line 867, sass/style.scss */
 #cheshire-10-speech-1 {
   bottom: 59%;
   left: 16%;
 }
-/* line 863, sass/style.scss */
+/* line 871, sass/style.scss */
 #cheshire-10-speech-1 h3 {
   position: absolute;
   width: 100%;
@@ -896,17 +906,17 @@ body {
   font-size: 1.7em;
   text-align: center;
 }
-/* line 872, sass/style.scss */
+/* line 880, sass/style.scss */
 #cheshire-10-speech-1 img {
   width: 62%;
 }
 
-/* line 877, sass/style.scss */
+/* line 885, sass/style.scss */
 #morpheus-1-speech-1 {
   bottom: 34%;
   left: 41%;
 }
-/* line 881, sass/style.scss */
+/* line 889, sass/style.scss */
 #morpheus-1-speech-1 h3 {
   position: absolute;
   top: 12%;
@@ -914,18 +924,18 @@ body {
   font-size: 2.2em;
   text-align: center;
 }
-/* line 889, sass/style.scss */
+/* line 897, sass/style.scss */
 #morpheus-1-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 895, sass/style.scss */
+/* line 903, sass/style.scss */
 #morpheus-2-speech-1 {
   bottom: 18%;
   left: 34%;
 }
-/* line 899, sass/style.scss */
+/* line 907, sass/style.scss */
 #morpheus-2-speech-1 h3 {
   position: absolute;
   top: 5%;
@@ -933,18 +943,18 @@ body {
   font-size: 2em;
   text-align: center;
 }
-/* line 907, sass/style.scss */
+/* line 915, sass/style.scss */
 #morpheus-2-speech-1 img {
   width: 93%;
   height: auto;
 }
 
-/* line 913, sass/style.scss */
+/* line 921, sass/style.scss */
 #morpheus-3-speech-1 {
   bottom: 77%;
   left: 17%;
 }
-/* line 917, sass/style.scss */
+/* line 925, sass/style.scss */
 #morpheus-3-speech-1 h3 {
   position: absolute;
   top: -12%;
@@ -952,23 +962,15 @@ body {
   font-size: 2.1em;
   text-align: center;
 }
-/* line 925, sass/style.scss */
+/* line 933, sass/style.scss */
 #morpheus-3-speech-1 img {
   width: 100%;
   height: auto;
 }
 
-/* line 932, sass/style.scss */
-#morpheus-4 h2 {
-  display: none;
-}
-/* line 936, sass/style.scss */
+/* line 940, sass/style.scss */
 #morpheus-4 .speech-bubble-wrapper {
   display: none;
-}
-/* line 940, sass/style.scss */
-#morpheus-4 h2.shown {
-  display: inline;
 }
 /* line 944, sass/style.scss */
 #morpheus-4 .speech-bubble-wrapper.shown {
@@ -1076,22 +1078,14 @@ body {
 }
 
 /* line 1045, sass/style.scss */
-#morpheus-6 h2 {
-  display: none;
-}
-/* line 1049, sass/style.scss */
 #morpheus-6 .speech-bubble-wrapper, #morpheus-6 .choice {
   display: none;
 }
-/* line 1053, sass/style.scss */
-#morpheus-6 h2.shown {
-  display: inline;
-}
-/* line 1057, sass/style.scss */
+/* line 1049, sass/style.scss */
 #morpheus-6 .speech-bubble-wrapper.shown, #morpheus-6 .choice.shown {
   display: inline;
 }
-/* line 1061, sass/style.scss */
+/* line 1053, sass/style.scss */
 #morpheus-6 #morpheus-6-choice-1 {
   background-color: blue;
   top: 52%;
@@ -1099,7 +1093,7 @@ body {
   width: 12%;
   height: 10%;
 }
-/* line 1069, sass/style.scss */
+/* line 1061, sass/style.scss */
 #morpheus-6 #morpheus-6-choice-2 {
   background-color: red;
   top: 47%;
@@ -1108,21 +1102,21 @@ body {
   height: 11%;
 }
 
-/* line 1079, sass/style.scss */
+/* line 1071, sass/style.scss */
 #queen-2 #area-one {
   top: 11%;
   left: 0%;
   width: 20%;
   height: 80%;
 }
-/* line 1086, sass/style.scss */
+/* line 1078, sass/style.scss */
 #queen-2 #area-two {
   top: 11%;
   left: 22%;
   width: 54%;
   height: 26%;
 }
-/* line 1093, sass/style.scss */
+/* line 1085, sass/style.scss */
 #queen-2 #area-three {
   top: 11%;
   right: 0%;
@@ -1130,12 +1124,12 @@ body {
   height: 86%;
 }
 
-/* line 1101, sass/style.scss */
+/* line 1093, sass/style.scss */
 #morpheus-8-speech-1 {
   bottom: 31%;
   left: 15%;
 }
-/* line 1105, sass/style.scss */
+/* line 1097, sass/style.scss */
 #morpheus-8-speech-1 h3 {
   position: absolute;
   top: 6%;
@@ -1143,51 +1137,51 @@ body {
   font-size: 2.5em;
   text-align: center;
 }
-/* line 1113, sass/style.scss */
+/* line 1105, sass/style.scss */
 #morpheus-8-speech-1 img {
   width: 80%;
   height: auto;
 }
 
-/* line 1120, sass/style.scss */
+/* line 1112, sass/style.scss */
 #queen-9 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 1126, sass/style.scss */
+/* line 1118, sass/style.scss */
 #queen-9 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 1130, sass/style.scss */
+/* line 1122, sass/style.scss */
 #queen-9 #queen-9-choice-1 {
   top: 20%;
   left: 0;
 }
-/* line 1135, sass/style.scss */
+/* line 1127, sass/style.scss */
 #queen-9 #queen-9-choice-2 {
   top: 20%;
   right: 0;
 }
 
-/* line 1142, sass/style.scss */
+/* line 1134, sass/style.scss */
 #queen-12 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 1148, sass/style.scss */
+/* line 1140, sass/style.scss */
 #queen-12 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 1152, sass/style.scss */
+/* line 1144, sass/style.scss */
 #queen-12 #queen-12-choice-1 {
   top: 10%;
   left: 0;
 }
-/* line 1157, sass/style.scss */
+/* line 1149, sass/style.scss */
 #queen-12 #queen-12-choice-2 {
   top: 10%;
   right: 0;
@@ -1201,7 +1195,7 @@ body {
     top: 90px;
   }
 }
-/* line 1173, sass/style.scss */
+/* line 1165, sass/style.scss */
 #cheshire-1 {
   animation: shaking 0.3s linear forwards;
 }

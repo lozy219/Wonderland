@@ -50,6 +50,14 @@ body {
   display: block;
 }
 
+.speech-bubble-wrapper {
+    display: none;
+  }
+
+  .speech-bubble-wrapper.shown {
+    display: inline;
+  }
+
 .choice {
   position: absolute;
 }
@@ -929,16 +937,8 @@ body {
 }
 
 #morpheus-4 {
-  h2 {
-    display: none;
-  }
-
   .speech-bubble-wrapper {
     display: none;
-  }
-
-  h2.shown {
-    display: inline;
   }
 
   .speech-bubble-wrapper.shown {
@@ -1042,16 +1042,8 @@ body {
   }
 }
 #morpheus-6 {
-  h2 {
-    display: none;
-  }
-
   .speech-bubble-wrapper, .choice {
     display: none;
-  }
-
-  h2.shown {
-    display: inline;
   }
 
   .speech-bubble-wrapper.shown, .choice.shown {
