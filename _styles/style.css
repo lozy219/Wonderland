@@ -8,6 +8,7 @@ body {
 .wonderland-wrapper {
   width: 100%;
   font-family: 'Laila', serif;
+  font-weight: 400;
 }
 
 /* line 12, sass/style.scss */
@@ -672,7 +673,7 @@ body {
 /* line 655, sass/style.scss */
 #cheshire-2-speech-1 {
   bottom: 47%;
-  right: -10%;
+  right: -4%;
 }
 /* line 659, sass/style.scss */
 #cheshire-2-speech-1 h3 {
