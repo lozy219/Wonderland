@@ -3,6 +3,8 @@ body {
   overflow: hidden;
 }
 
+
+
 .wonderland-wrapper {
   width: 100%;
   font-family: 'Laila', serif;
@@ -1203,4 +1205,14 @@ body {
 
 #cheshire-1 {
   animation: shaking 0.3s linear forwards;
+}
+
+.panel-wrapper h2{
+  top:-150px;
+  transition: 0.8s all;
+}
+
+.panel-wrapper:hover h2{
+  top: 0;
+  transition: 0.8s all;
 }
