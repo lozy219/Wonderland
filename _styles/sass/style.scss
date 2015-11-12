@@ -1174,6 +1174,12 @@ body {
   }
 }
 
+@keyframes scale-to-fill {
+  to {
+    transform: scale(1);
+  }
+}
+
 #queen-4 {
   .pokemon-overlay {
     width: 100%;
@@ -1184,6 +1190,21 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     display: none;
+
+    &.battle-start {
+      display: block;
+    }
+  }
+
+  .dark-overlay {
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    position: absolute;
+    background-color: black;
+    animation: scale-to-fill 1.4s steps(10, end) forwards;
+    display: none;
+    z-index: 3;
 
     &.battle-start {
       display: block;

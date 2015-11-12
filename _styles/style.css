@@ -1202,7 +1202,12 @@ body {
     -webkit-filter: brightness(0.2);
   }
 }
-/* line 1178, sass/style.scss */
+@keyframes scale-to-fill {
+  to {
+    transform: scale(1);
+  }
+}
+/* line 1184, sass/style.scss */
 #queen-4 .pokemon-overlay {
   width: 100%;
   height: 100%;
@@ -1213,54 +1218,69 @@ body {
   background-repeat: no-repeat;
   display: none;
 }
-/* line 1188, sass/style.scss */
+/* line 1194, sass/style.scss */
 #queen-4 .pokemon-overlay.battle-start {
   display: block;
 }
-/* line 1193, sass/style.scss */
+/* line 1199, sass/style.scss */
+#queen-4 .dark-overlay {
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  position: absolute;
+  background-color: black;
+  animation: scale-to-fill 1.4s steps(10, end) forwards;
+  display: none;
+  z-index: 3;
+}
+/* line 1209, sass/style.scss */
+#queen-4 .dark-overlay.battle-start {
+  display: block;
+}
+/* line 1214, sass/style.scss */
 #queen-4.battle-start {
   animation: battle 0.2s infinite alternate;
 }
 
-/* line 1199, sass/style.scss */
+/* line 1220, sass/style.scss */
 #queen-9 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 1205, sass/style.scss */
+/* line 1226, sass/style.scss */
 #queen-9 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 1209, sass/style.scss */
+/* line 1230, sass/style.scss */
 #queen-9 #queen-9-choice-1 {
   top: 20%;
   left: 0;
 }
-/* line 1214, sass/style.scss */
+/* line 1235, sass/style.scss */
 #queen-9 #queen-9-choice-2 {
   top: 20%;
   right: 0;
 }
 
-/* line 1221, sass/style.scss */
+/* line 1242, sass/style.scss */
 #queen-12 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 1227, sass/style.scss */
+/* line 1248, sass/style.scss */
 #queen-12 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 1231, sass/style.scss */
+/* line 1252, sass/style.scss */
 #queen-12 #queen-12-choice-1 {
   top: 10%;
   left: 0;
 }
-/* line 1236, sass/style.scss */
+/* line 1257, sass/style.scss */
 #queen-12 #queen-12-choice-2 {
   top: 10%;
   right: 0;
@@ -1274,18 +1294,18 @@ body {
     top: 90px;
   }
 }
-/* line 1252, sass/style.scss */
+/* line 1273, sass/style.scss */
 #cheshire-1 {
   animation: shaking 0.3s linear forwards;
 }
 
-/* line 1256, sass/style.scss */
+/* line 1277, sass/style.scss */
 .panel-wrapper h2 {
   top: -150px;
   transition: 0.8s all;
 }
 
-/* line 1261, sass/style.scss */
+/* line 1282, sass/style.scss */
 .panel-wrapper:hover h2 {
   top: 0;
   transition: 0.8s all;

@@ -352,6 +352,14 @@ $(document).ready(function() {
     if (queenFourIndex === 0) {
       $(this).addClass('battle-start');
       $('.pokemon-overlay').addClass('battle-start');
+
+      setTimeout(function() {
+        $('.dark-overlay').addClass('battle-start');
+      }, 500);
+
+      setTimeout(function() {
+        transitToNextPanel($('#queen-4'));
+      }, 2000);
       queenFourIndex ++;
     }
   });
