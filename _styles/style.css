@@ -1077,46 +1077,82 @@ body {
   height: auto;
 }
 
-/* line 1045, sass/style.scss */
+@keyframes morpheus-6-red-pill-animation {
+  from {
+    top: -1%;
+    left: 0%;
+  }
+  to {
+    top: -2%;
+    left: 0%;
+  }
+}
+@keyframes morpheus-6-blue-pill-animation {
+  from {
+    top: -1%;
+    right: 0%;
+  }
+  to {
+    top: -2%;
+    right: 0%;
+  }
+}
+/* line 1068, sass/style.scss */
 #morpheus-6 .speech-bubble-wrapper, #morpheus-6 .choice {
   display: none;
 }
-/* line 1049, sass/style.scss */
+/* line 1072, sass/style.scss */
 #morpheus-6 .speech-bubble-wrapper.shown, #morpheus-6 .choice.shown {
   display: inline;
 }
-/* line 1053, sass/style.scss */
+/* line 1076, sass/style.scss */
 #morpheus-6 #morpheus-6-choice-1 {
-  background-color: blue;
-  top: 52%;
-  left: 14%;
-  width: 12%;
-  height: 10%;
+  top: 0%;
+  left: 0%;
+  width: auto;
+  height: 100%;
 }
-/* line 1061, sass/style.scss */
+/* line 1083, sass/style.scss */
 #morpheus-6 #morpheus-6-choice-2 {
-  background-color: red;
-  top: 47%;
-  right: 15%;
-  width: 14%;
-  height: 11%;
+  top: 0%;
+  right: 0%;
+  height: 100%;
+}
+/* line 1089, sass/style.scss */
+#morpheus-6 #morpheus-6-choice-2 img {
+  height: 100%;
+  width: auto;
+}
+/* line 1094, sass/style.scss */
+#morpheus-6 #morpheus-6-choice-1:hover {
+  animation-name: morpheus-6-red-pill-animation;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* line 1101, sass/style.scss */
+#morpheus-6 #morpheus-6-choice-2:hover {
+  animation-name: morpheus-6-blue-pill-animation;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-/* line 1071, sass/style.scss */
+/* line 1110, sass/style.scss */
 #queen-2 #area-one {
   top: 11%;
   left: 0%;
   width: 20%;
   height: 80%;
 }
-/* line 1078, sass/style.scss */
+/* line 1117, sass/style.scss */
 #queen-2 #area-two {
   top: 11%;
   left: 22%;
   width: 54%;
   height: 26%;
 }
-/* line 1085, sass/style.scss */
+/* line 1124, sass/style.scss */
 #queen-2 #area-three {
   top: 11%;
   right: 0%;
@@ -1124,12 +1160,12 @@ body {
   height: 86%;
 }
 
-/* line 1093, sass/style.scss */
+/* line 1132, sass/style.scss */
 #morpheus-8-speech-1 {
   bottom: 31%;
   left: 15%;
 }
-/* line 1097, sass/style.scss */
+/* line 1136, sass/style.scss */
 #morpheus-8-speech-1 h3 {
   position: absolute;
   top: 6%;
@@ -1137,51 +1173,51 @@ body {
   font-size: 2.5em;
   text-align: center;
 }
-/* line 1105, sass/style.scss */
+/* line 1144, sass/style.scss */
 #morpheus-8-speech-1 img {
   width: 80%;
   height: auto;
 }
 
-/* line 1112, sass/style.scss */
+/* line 1151, sass/style.scss */
 #queen-9 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 1118, sass/style.scss */
+/* line 1157, sass/style.scss */
 #queen-9 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 1122, sass/style.scss */
+/* line 1161, sass/style.scss */
 #queen-9 #queen-9-choice-1 {
   top: 20%;
   left: 0;
 }
-/* line 1127, sass/style.scss */
+/* line 1166, sass/style.scss */
 #queen-9 #queen-9-choice-2 {
   top: 20%;
   right: 0;
 }
 
-/* line 1134, sass/style.scss */
+/* line 1173, sass/style.scss */
 #queen-12 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 1140, sass/style.scss */
+/* line 1179, sass/style.scss */
 #queen-12 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 1144, sass/style.scss */
+/* line 1183, sass/style.scss */
 #queen-12 #queen-12-choice-1 {
   top: 10%;
   left: 0;
 }
-/* line 1149, sass/style.scss */
+/* line 1188, sass/style.scss */
 #queen-12 #queen-12-choice-2 {
   top: 10%;
   right: 0;
@@ -1195,7 +1231,7 @@ body {
     top: 90px;
   }
 }
-/* line 1165, sass/style.scss */
+/* line 1204, sass/style.scss */
 #cheshire-1 {
   animation: shaking 0.3s linear forwards;
 }

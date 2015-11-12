@@ -1041,6 +1041,29 @@ body {
     height: auto;
   }
 }
+
+@keyframes morpheus-6-red-pill-animation {
+    from {
+      top: -1%;
+      left: 0%;
+    }
+    to {
+      top: -2%;
+      left: 0%;
+    }
+}
+
+@keyframes morpheus-6-blue-pill-animation {
+    from {
+      top: -1%;
+      right: 0%;
+    }
+    to {
+      top: -2%;
+      right: 0%;
+    }
+}
+
 #morpheus-6 {
   .speech-bubble-wrapper, .choice {
     display: none;
@@ -1051,19 +1074,35 @@ body {
   }
 
   #morpheus-6-choice-1 {
-    background-color: blue;
-    top: 52%;
-    left: 14%;
-    width: 12%;
-    height: 10%;
+    top: 0%;
+    left: 0%;
+    width: auto;
+    height: 100%;
   }
 
   #morpheus-6-choice-2 {
-    background-color: red;
-    top: 47%;
-    right: 15%;
-    width: 14%;
-    height: 11%;  
+    top: 0%;
+    right: 0%;
+    height: 100%;
+  }
+
+  #morpheus-6-choice-2 img {
+    height: 100%;
+    width: auto;
+  }
+
+  #morpheus-6-choice-1:hover {
+    animation-name: morpheus-6-red-pill-animation;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #morpheus-6-choice-2:hover {
+    animation-name: morpheus-6-blue-pill-animation;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 }
 
