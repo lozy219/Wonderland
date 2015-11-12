@@ -144,19 +144,18 @@ $(document).ready(function() {
   });
 
   if($('#hallway-1-map')) {
-        $('#hallway-1-map area').each(function() {
-            $(this).mouseover(function(e) {
-              e.stopImmediatePropagation();
-              var id = $(this).attr('id');
-              $('#'+id+'-arrow').addClass('shown');
-            });
+    $('#hallway-1-map area').each(function() {
+      $(this).mouseover(function(e) {
+        e.stopImmediatePropagation();
+        var id = $(this).attr('id');
+        $('#'+id+'-arrow').addClass('shown');
+      });
 
-            $(this).mouseout(function() {
-                var id = $(this).attr('id');
-                $('#'+id+'-arrow').removeClass('shown');
-            });
-
-        });
+      $(this).mouseout(function() {
+          var id = $(this).attr('id');
+          $('#'+id+'-arrow').removeClass('shown');
+      });
+    });
   }
 
   $('.hallway-arrow').mouseover(function(e) {
@@ -336,13 +335,29 @@ $(document).ready(function() {
     ++partyNineIndex;  
   });
 
+  var queenThreeIndex = 0;
+  $('#queen-3').click(function() {
+    if (queenThreeIndex === 0) {
+      $('#queen-3-queen-bubble').addClass('shown');
+      queenThreeIndex ++;
+    } else if (queenThreeIndex === 1) {
+      $(this).removeClass('contains-choices');
+      $(this).attr("data-value", "queen-4");
+      transitToNextPanel($(this));
+    }
+  });
+
+  var queenFourIndex = 0;
+  $('#queen-4').click(function() {
+    if (queenFourIndex === 0) {
+      $(this).addClass('battle-start');
+      $('.pokemon-overlay').addClass('battle-start');
+      queenFourIndex ++;
+    }
+  });
+
   $('.queen-cell-area').click(function(event) {
     event.stopImmediatePropagation();
-
-    var panelWrapper = $(this).parent();
-    panelWrapper.removeClass('contains-choices');
-
-    panelWrapper.attr("data-value", "queen-4");
   });
 
   $('.on-hover').mouseover(function() {

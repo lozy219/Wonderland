@@ -1162,12 +1162,25 @@ body {
   height: 86%;
 }
 
-/* line 1136, sass/style.scss */
+/* line 1137, sass/style.scss */
+#queen-3 #queen-3-queen-bubble {
+  display: none;
+  position: absolute;
+  top: 78%;
+  left: 6%;
+  width: 15%;
+}
+/* line 1144, sass/style.scss */
+#queen-3 #queen-3-queen-bubble.shown {
+  display: block;
+}
+
+/* line 1150, sass/style.scss */
 #morpheus-8-speech-1 {
   bottom: 31%;
   left: 15%;
 }
-/* line 1140, sass/style.scss */
+/* line 1154, sass/style.scss */
 #morpheus-8-speech-1 h3 {
   position: absolute;
   top: 6%;
@@ -1175,59 +1188,79 @@ body {
   font-size: 2.5em;
   text-align: center;
 }
-/* line 1148, sass/style.scss */
+/* line 1162, sass/style.scss */
 #morpheus-8-speech-1 img {
   width: 80%;
   height: auto;
 }
 
-/* line 1155, sass/style.scss */
-#queen-8 .pokemon-overlay {
+@keyframes battle {
+  from {
+    -webkit-filter: brightness(1.6);
+  }
+  to {
+    -webkit-filter: brightness(0.2);
+  }
+}
+/* line 1178, sass/style.scss */
+#queen-4 .pokemon-overlay {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(253, 148, 237, 0.4);
+  background-color: rgba(247, 95, 210, 0.8);
+  background-image: url("../_images/queen/pokemon-overlay.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+/* line 1188, sass/style.scss */
+#queen-4 .pokemon-overlay.battle-start {
+  display: block;
+}
+/* line 1193, sass/style.scss */
+#queen-4.battle-start {
+  animation: battle 0.2s infinite alternate;
 }
 
-/* line 1164, sass/style.scss */
+/* line 1199, sass/style.scss */
 #queen-9 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 1170, sass/style.scss */
+/* line 1205, sass/style.scss */
 #queen-9 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 1174, sass/style.scss */
+/* line 1209, sass/style.scss */
 #queen-9 #queen-9-choice-1 {
   top: 20%;
   left: 0;
 }
-/* line 1179, sass/style.scss */
+/* line 1214, sass/style.scss */
 #queen-9 #queen-9-choice-2 {
   top: 20%;
   right: 0;
 }
 
-/* line 1186, sass/style.scss */
+/* line 1221, sass/style.scss */
 #queen-12 .choice {
   background-color: white;
   border: 1px solid black;
   padding: 1%;
 }
-/* line 1192, sass/style.scss */
+/* line 1227, sass/style.scss */
 #queen-12 .choice:hover {
   background-color: black;
   color: white;
 }
-/* line 1196, sass/style.scss */
+/* line 1231, sass/style.scss */
 #queen-12 #queen-12-choice-1 {
   top: 10%;
   left: 0;
 }
-/* line 1201, sass/style.scss */
+/* line 1236, sass/style.scss */
 #queen-12 #queen-12-choice-2 {
   top: 10%;
   right: 0;
@@ -1241,18 +1274,18 @@ body {
     top: 90px;
   }
 }
-/* line 1217, sass/style.scss */
+/* line 1252, sass/style.scss */
 #cheshire-1 {
   animation: shaking 0.3s linear forwards;
 }
 
-/* line 1221, sass/style.scss */
+/* line 1256, sass/style.scss */
 .panel-wrapper h2 {
   top: -150px;
   transition: 0.8s all;
 }
 
-/* line 1226, sass/style.scss */
+/* line 1261, sass/style.scss */
 .panel-wrapper:hover h2 {
   top: 0;
   transition: 0.8s all;

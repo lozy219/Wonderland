@@ -1133,6 +1133,20 @@ body {
   }
 }
 
+#queen-3 {
+  #queen-3-queen-bubble {
+    display: none;
+    position: absolute;
+    top: 78%;
+    left: 6%;
+    width: 15%;
+
+    &.shown {
+      display: block;
+    }
+  }
+}
+
 #morpheus-8-speech-1 {
   bottom: 31%;
   left: 15%;
@@ -1151,12 +1165,33 @@ body {
   }
 }
 
-#queen-8 {
+@keyframes battle {
+  from {
+    -webkit-filter: brightness(1.6);
+  }
+  to {
+    -webkit-filter: brightness(0.2);
+  }
+}
+
+#queen-4 {
   .pokemon-overlay {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(253, 148, 237, 0.4);
+    background-color: rgba(247, 95, 210, 0.8);
+    background-image: url('../_images/queen/pokemon-overlay.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+
+    &.battle-start {
+      display: block;
+    }
+  }
+
+  &.battle-start {
+    animation: battle 0.2s infinite alternate;
   }
 }
 
