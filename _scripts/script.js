@@ -2,6 +2,8 @@ var audio;
 var debugMode = true;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
+var sequenceIndexObject = {};
+var containChoicesObject = {};
 
 var hideAndShow = function(wrapperToHide, wrapperToShow) {
   wrapperToHide.removeClass('shown');
@@ -43,6 +45,23 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   
 };
 
+var resetPanel = function (panel) {
+  var panelId = panel.attr('id');
+  if (sequenceIndexObject[panelId]) {
+    sequenceIndexObject[panelId] = 0;
+  }
+
+  // Add back class contain choices that were removed
+  if (containChoicesObject[panelId]) {
+    panel.addClass('contains-choices');
+  }
+
+  panel.find('*').each(function() {
+    $(this).removeClass('shown');
+    $(this).removeClass('enabled');
+  })
+} 
+
 var transitToNextPanel = function(currentPanelWrapper) {
   // In some cases, some panel transition doesnt occur sequentially, and a direct link is applied to it
   // so that on click, it jumps to the direct link as specified in the data-value attribute of the div
@@ -54,6 +73,7 @@ var transitToNextPanel = function(currentPanelWrapper) {
           var nextPanelWrapper = $('#' + directLink);
           hideAndShow(currentPanelWrapper, nextPanelWrapper);
         }
+        resetPanel(currentPanelWrapper);
       } else if ((!currentPanelWrapper.hasClass('contains-choices')) && (!currentPanelWrapper.hasClass('no-click'))) {
         var currentChapter = currentPanelWrapper.parent();
 
@@ -66,6 +86,7 @@ var transitToNextPanel = function(currentPanelWrapper) {
           } else {
             hideAndShow(currentPanelWrapper, nextPanelWrapper);
           }
+          resetPanel(currentPanelWrapper);
         } else { 
           // If it is the last panel in the chapter
           // alert("end of chapter!");
@@ -80,6 +101,7 @@ var transitToNextPanel = function(currentPanelWrapper) {
             } else {
               hideAndShow(currentPanelWrapper, nextPanelWrapper);
             }
+            resetPanel(currentPanelWrapper);
           } else { // If it is the last chapter and last panel, we can end the story
             // alert("End of story!");
           }
@@ -103,16 +125,20 @@ $(document).ready(function() {
     }
   });
 
-  $('.choice').click(function() {
+  $('.choice').click(function(e) {
     var currentPanelWrapper = $(this).parent();
     var panelIdOfLink = $(this).data('value');
 
     var nextPanelWrapper = $("#" + panelIdOfLink);
 
-    if (debugMode) {
-      location.hash = panelIdOfLink;
-    } else {
-      hideAndShow(currentPanelWrapper, nextPanelWrapper);
+    if (currentPanelWrapper.attr('id')!="morpheus-6" || $(this).hasClass('enabled')) {
+      if (debugMode) {
+        location.hash = panelIdOfLink;
+      } else {
+        hideAndShow(currentPanelWrapper, nextPanelWrapper);
+      }
+      resetPanel(currentPanelWrapper);
+      e.stopImmediatePropagation();
     }
   });
 
@@ -160,11 +186,9 @@ $(document).ready(function() {
 
   $('.hallway-arrow').mouseover(function(e) {
     e.preventDefault();
-    console.log('haha');
 
     e = e.originalEvent;
   });
-
 
   $('#hallway-4-choice-1').mouseover(function() {
     var panelWrapper = $(this).parent();
@@ -218,138 +242,126 @@ $(document).ready(function() {
 
   //////////////////////////////////////////////////////////
 
-  var cheshireNineIndex = 0;
+  sequenceIndexObject['cheshire-9'] = 0;
   $('#cheshire-9').click(function() {
-    if (cheshireNineIndex == 0) {
+    if (sequenceIndexObject['cheshire-9'] == 0) {
       $('#cheshire-9-speech-1').addClass('shown');
-    }
-
-    if (cheshireNineIndex == 1) {
+      sequenceIndexObject['cheshire-9']++;
+    } else if (sequenceIndexObject['cheshire-9'] == 1) {
       $('#cheshire-9-speech-1').removeClass('shown');
       $('#cheshire-9-speech-2').addClass('shown');
-    } 
-
-    if (cheshireNineIndex == 2) {
+      sequenceIndexObject['cheshire-9']++;
+    } else if (sequenceIndexObject['cheshire-9'] == 2) {
       $('#cheshire-9-speech-2').removeClass('shown');
       $(this).find('.choice').each(function() {
         $(this).addClass('shown');
         
       });
     }
-    ++cheshireNineIndex; 
   });
 
-  var morpheusFourIndex = 0;
+  sequenceIndexObject['morpheus-4'] = 0;
   $('#morpheus-4').click(function() {
-    if (morpheusFourIndex == 0) {
+    if (sequenceIndexObject['morpheus-4'] == 0) {
       $('#morpheus-4-speech-1').addClass('shown');
-    }
-
-    if (morpheusFourIndex == 1) {
+      ++sequenceIndexObject['morpheus-4'];
+    } else if (sequenceIndexObject['morpheus-4'] == 1) {
       $('#morpheus-4-speech-1').removeClass('shown');
       $('#morpheus-4-speech-2').addClass('shown');
-    } 
-
-    if (morpheusFourIndex == 2) {
+      ++sequenceIndexObject['morpheus-4'];
+    } else if (sequenceIndexObject['morpheus-4'] == 2) {
       // $('#morpheus-4-speech-2').removeClass('shown');
       $(this).removeClass('contains-choices');
+      containChoicesObject['morpheus-4'] = true;
       transitToNextPanel($(this));
     }
-    ++morpheusFourIndex;  
   });
 
-  var morpheusSixIndex = 0;
+  sequenceIndexObject['morpheus-6'] = 0;
   $('#morpheus-6').click(function() {
-    if (morpheusSixIndex == 0) {
+    if (sequenceIndexObject['morpheus-6'] == 0) {
       $('#morpheus-6-speech-1').addClass('shown');
-    }
-
-    if (morpheusSixIndex == 1) {
+      ++sequenceIndexObject['morpheus-6'];
+    } else if (sequenceIndexObject['morpheus-6'] == 1) {
       $('#morpheus-6-speech-1').removeClass('shown');
       $('#morpheus-6-speech-2').addClass('shown');
-    } 
-
-    if (morpheusSixIndex == 2) {
+      ++sequenceIndexObject['morpheus-6'];
+    } else if (sequenceIndexObject['morpheus-6'] == 2) {
       $('#morpheus-6-speech-2').removeClass('shown');
       $(this).find('.choice').each(function() {
-        $(this).addClass('shown');
+        $(this).addClass('enabled');
       });
-    }
-    ++morpheusSixIndex;  
+    }  
   });
 
-  var partyOneIndex = 0;
+  sequenceIndexObject['party-1'] = 0;
   $('#party-1').click(function() {
-    if (partyOneIndex == 0) {
+    if (sequenceIndexObject['party-1'] == 0) {
       $('#party-1-speech-1').addClass('shown');
-    }
-
-    if (partyOneIndex == 1) {
+      ++sequenceIndexObject['party-1'];
+    } else if (sequenceIndexObject['party-1'] == 1) {
       $('#party-1-speech-1').removeClass('shown');
       $('#party-1-speech-2').addClass('shown');
-    }
-
-    if (partyOneIndex == 2) {
+      ++sequenceIndexObject['party-1'];
+    } else if (sequenceIndexObject['party-1'] == 2) {
       // $('#party-1-speech-2').removeClass('shown');
       $(this).removeClass('contains-choices');
+      containChoicesObject['party-1'] = true;
       transitToNextPanel($(this));
-    }
-    ++partyOneIndex;  
+    }  
   });
 
-  var partyFiveIndex = 0;
+  sequenceIndexObject['party-5'] = 0;
   $('#party-5').click(function() {
-    if (partyFiveIndex == 0) {
+    if (sequenceIndexObject['party-5'] == 0) {
       $('#party-5-speech-1').addClass('shown');
-    }
-
-    if (partyFiveIndex == 1) {
+      ++sequenceIndexObject['party-5'];
+    } else if (sequenceIndexObject['party-5'] == 1) {
       $('#party-5-speech-1').removeClass('shown');
       $('#party-5-speech-2').addClass('shown');
-    }
-
-    if (partyFiveIndex == 2) {
+      ++sequenceIndexObject['party-5'];
+    } else if (sequenceIndexObject['party-5'] == 2) {
       // $('#party-5-speech-2').removeClass('shown');
       $(this).removeClass('contains-choices');
+      containChoicesObject['party-5'] = true;
       transitToNextPanel($(this));
-    }
-    ++partyFiveIndex;  
+    }  
   });
 
-  var partyNineIndex = 0;
+  sequenceIndexObject['party-9'] = 0;
   $('#party-9').click(function() {
-    if (partyNineIndex == 0) {
+    if (sequenceIndexObject['party-9'] == 0) {
       $('#party-9-speech-1').addClass('shown');
-    }
-
-    if (partyNineIndex == 1) {
+      ++sequenceIndexObject['party-9']; 
+    } else if (sequenceIndexObject['party-9'] == 1) {
       $('#party-9-speech-1').removeClass('shown');
       $('#party-9-speech-2').addClass('shown');
-    }
-
-    if (partyNineIndex == 2) {
+      ++sequenceIndexObject['party-9']; 
+    } else if (sequenceIndexObject['party-9'] == 2) {
       // $('#party-9-speech-2').removeClass('shown');
       $(this).removeClass('contains-choices');
+      containChoicesObject['party-9'] = true;
       transitToNextPanel($(this));
-    }
-    ++partyNineIndex;  
+    } 
   });
 
-  var queenThreeIndex = 0;
+
+  sequenceIndexObject['queen-3'] = 0;
   $('#queen-3').click(function() {
-    if (queenThreeIndex === 0) {
+    if (sequenceIndexObject['queen-3'] === 0) {
       $('#queen-3-queen-bubble').addClass('shown');
-      queenThreeIndex ++;
+      sequenceIndexObject['queen-3'] ++;
     } else if (queenThreeIndex === 1) {
       $(this).removeClass('contains-choices');
+      containChoicesObject['queen-3'] = true;
       $(this).attr("data-value", "queen-4");
       transitToNextPanel($(this));
     }
   });
 
-  var queenFourIndex = 0;
+  sequenceIndexObject['queen-4'] = 0;
   $('#queen-4').click(function() {
-    if (queenFourIndex === 0) {
+    if (sequenceIndexObject['queen-4'] === 0) {
       $(this).addClass('battle-start');
       $('.pokemon-overlay').addClass('battle-start');
 
@@ -360,7 +372,7 @@ $(document).ready(function() {
       setTimeout(function() {
         transitToNextPanel($('#queen-4'));
       }, 2000);
-      queenFourIndex ++;
+      sequenceIndexObject['queen-4'] ++;
     }
   });
 

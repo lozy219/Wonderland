@@ -1069,11 +1069,11 @@ body {
 }
 
 #morpheus-6 {
-  .speech-bubble-wrapper, .choice {
+  .speech-bubble-wrapper {
     display: none;
   }
 
-  .speech-bubble-wrapper.shown, .choice.shown {
+  .speech-bubble-wrapper.shown {
     display: inline;
   }
 
@@ -1095,14 +1095,14 @@ body {
     width: auto;
   }
 
-  #morpheus-6-choice-1:hover {
+  .enabled#morpheus-6-choice-1:hover {
     animation-name: morpheus-6-red-pill-animation;
     animation-duration: 0.4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
 
-  #morpheus-6-choice-2:hover {
+  .enabled#morpheus-6-choice-2:hover {
     animation-name: morpheus-6-blue-pill-animation;
     animation-duration: 0.4s;
     animation-iteration-count: infinite;

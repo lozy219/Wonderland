@@ -1100,11 +1100,11 @@ body {
   }
 }
 /* line 1072, sass/style.scss */
-#morpheus-6 .speech-bubble-wrapper, #morpheus-6 .choice {
+#morpheus-6 .speech-bubble-wrapper {
   display: none;
 }
 /* line 1076, sass/style.scss */
-#morpheus-6 .speech-bubble-wrapper.shown, #morpheus-6 .choice.shown {
+#morpheus-6 .speech-bubble-wrapper.shown {
   display: inline;
 }
 /* line 1080, sass/style.scss */
@@ -1126,14 +1126,14 @@ body {
   width: auto;
 }
 /* line 1098, sass/style.scss */
-#morpheus-6 #morpheus-6-choice-1:hover {
+#morpheus-6 .enabled#morpheus-6-choice-1:hover {
   animation-name: morpheus-6-red-pill-animation;
   animation-duration: 0.4s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 /* line 1105, sass/style.scss */
-#morpheus-6 #morpheus-6-choice-2:hover {
+#morpheus-6 .enabled#morpheus-6-choice-2:hover {
   animation-name: morpheus-6-blue-pill-animation;
   animation-duration: 0.4s;
   animation-iteration-count: infinite;
