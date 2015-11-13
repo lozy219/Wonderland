@@ -73,6 +73,11 @@ var transitToNextPanel = function(currentPanelWrapper) {
   // so that on click, it jumps to the direct link as specified in the data-value attribute of the div
   var directLink = currentPanelWrapper.data('value');
       if (directLink != null) { //Check if panel is directly linked into another panel
+          if (directLink == "party-11") {
+            $('#key').removeClass('obtained');
+            $('#second').removeClass('obtained');
+            $('#gear').removeClass('obtained');
+          }
         if (!currentPanelWrapper.hasClass('contains-choices')) {
           if (debugMode) {
             location.hash = directLink;
@@ -131,7 +136,7 @@ $(document).ready(function() {
     } else {
       if (currentPanelWrapper.attr('id') == "party-6") {
         if (haveGear && haveKey && haveKey) {
-          currentPanelWrapper.data('value', 'party-10');
+          currentPanelWrapper.data('value', 'party-11');
         } else {
           currentPanelWrapper.data('value', 'party-7');
         }
