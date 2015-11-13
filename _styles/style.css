@@ -1786,3 +1786,30 @@ body {
   top: 0;
   transition: 0.8s all;
 }
+
+/* line 1787, sass/style.scss */
+#gear {
+  display: none;
+  position: fixed;
+  top: 11%;
+  left: 26%;
+  height: auto;
+  width: 10%;
+  z-index: 100;
+}
+
+/* line 1797, sass/style.scss */
+#gear.obtained {
+  display: inline;
+  animation: moveGearToStash 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveGearToStash {
+  100% {
+    top: 11%;
+    left: 4%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

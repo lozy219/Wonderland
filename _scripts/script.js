@@ -2,6 +2,9 @@ var audio;
 var debugMode = true;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
+var haveGear = false;
+var haveSecondHand = false;
+var haveGear = false;
 var sequenceIndexObject = {};
 var containChoicesObject = {};
 
@@ -146,6 +149,22 @@ $(document).ready(function() {
       e.stopImmediatePropagation();
     }
   });
+
+  $("#rabbit-9-gear").mouseover(function(e) {
+    var image = $('#rabbit-9-panel-image');
+    image.attr('src', '_images/rabbit/rabbit-9-gear.png');
+  });
+
+  $("#rabbit-9-gear").mouseout(function() {
+    var image = $('#rabbit-9-panel-image');
+    image.attr('src', '_images/rabbit/rabbit-9.png');
+  });
+
+  $("#rabbit-9-gear").click(function() {
+    haveGear = true;
+    $('#gear').addClass('obtained');
+  });
+ 
 
   $('.hallway-forward').click(function() {
     countOfClicksInHallway++;
@@ -319,7 +338,7 @@ $(document).ready(function() {
   // END OF HALLWAY 4 SCENE CHOICES SCRIPT //
   $('#rabbit-16').bind('mousewheel DOMMouseScroll', function(event) {
     event.preventDefault();
-    
+
     var deltaY = -(event.originalEvent.deltaY * event.deltaFactor / 16);
     if (deltaY < 0) {
       var currentY = parseInt($('#rabbit-16').css('background-position-y'));
