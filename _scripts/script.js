@@ -434,6 +434,23 @@ $(document).ready(function() {
     }
   });
 
+  var rotateTrackerParty = 0;
+  $('#party-10').bind('mousewheel DOMMouseScroll', function(event) {
+    event.preventDefault();
+
+    var deltaY = -(event.originalEvent.deltaY * event.deltaFactor / 16);
+    if (deltaY < 0) {
+      rotateTrackerParty += deltaY;
+      if (rotateTrackerParty > -5000) {
+        $('#party-10-alice').css('transform', 'rotate(' + parseInt(-rotateTrackerParty / 5) + 'deg) scale(' + (1 - rotateTrackerParty / (-5000)) + ')');
+        $('#party-10-alice').css('-webkit-transform', 'rotate(' + parseInt(-rotateTrackerParty / 5) + 'deg) scale(' + (1 - rotateTrackerParty / (-5000)) + ')');
+        $('#party-10-alice').css('-ms-transform', 'rotate(' + parseInt(-rotateTrackerParty / 5) + 'deg) scale(' + (1 - rotateTrackerParty / (-5000)) + ')');
+      } else {
+        hideAndShow($('#party-10'), $('#cheshire-12'));
+      }
+    }
+  });
+
   //////////////////////////////////////////////////////////
 
   sequenceIndexObject['cheshire-9'] = 0;
