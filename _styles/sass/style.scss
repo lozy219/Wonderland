@@ -650,6 +650,116 @@ body {
 
 }
 
+@keyframes hallway-2-choice-1-arrow-anim {
+    from {
+      top: 30%;
+      left: 24%;
+      width: 16%;
+    }
+    to {
+      top: 38%;
+      left: 27%;
+      width: 20%;
+    }
+}
+
+@keyframes hallway-2-choice-2-arrow-anim {
+    from {
+      top: 15%;
+      left: 8%;
+    }
+    to {
+      top: 11%;
+      left: 12%;
+    }
+}
+
+@keyframes hallway-2-choice-3-arrow-anim {
+    from {
+      top: 16%;
+      left: 40%;
+    }
+    to {
+      top: 13%;
+      left: 37%;
+    }
+}
+
+@keyframes hallway-2-choice-5-arrow-anim {
+    from {
+      top: 13%;
+      left: 75%;
+    }
+    to {
+      top: 13%;
+      left: 71%;
+    }
+}
+
+// 
+
+#hallway-2 { 
+  .hallway-arrow.shown {
+    display:block;
+  }
+
+  .hallway-arrow {
+    pointer-events: none;
+    display: none;
+  }
+
+  #hallway-2-choice-1-arrow {
+    position: absolute;
+    top: 30%;
+    left: 24%;
+    width: 16%;
+    height: auto;
+    animation-name: hallway-2-choice-1-arrow-anim;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #hallway-2-choice-2-arrow {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    width: 16%;
+    height: auto;
+    animation-name: hallway-2-choice-2-arrow-anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #hallway-2-choice-3-arrow {
+    position: absolute;
+    top: 16%;
+    left: 40%;
+    width: 10%;
+    height: auto;
+    animation-name: hallway-2-choice-3-arrow-anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #hallway-2-choice-4-arrow {
+    position: absolute;
+    top: 13%;
+    left: 75%;
+    width: 22%;
+    height: auto;
+    animation-name: hallway-2-choice-5-arrow-anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+
+
+
 // 
 @keyframes hallway-2-2-choice-1-arrow-anim {
     from {

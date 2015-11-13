@@ -227,6 +227,21 @@ $(document).ready(function() {
     });
   }
 
+  if($('#hallway-2-map')) {
+    $('#hallway-2-map area').each(function() {
+      $(this).mouseover(function(e) {
+        e.stopImmediatePropagation();
+        var id = $(this).attr('id');
+        $('#'+id+'-arrow').addClass('shown');
+      });
+
+      $(this).mouseout(function() {
+          var id = $(this).attr('id');
+          $('#'+id+'-arrow').removeClass('shown');
+      });
+    });
+  }
+
   if($('#hallway-2-2-map')) {
     $('#hallway-2-2-map area').each(function() {
       $(this).mouseover(function(e) {
