@@ -135,7 +135,7 @@ $(document).ready(function() {
       speechBubbleWrapper.addClass('shown');
     } else {
       if (currentPanelWrapper.attr('id') == "party-6") {
-        if (haveGear && haveKey && haveKey) {
+        if (haveGear && haveKey && haveSecondHand) {
           currentPanelWrapper.data('value', 'party-11');
         } else {
           currentPanelWrapper.data('value', 'party-7');
@@ -609,4 +609,16 @@ $(document).ready(function() {
       $(jumpToId).addClass('shown');
     }
   }
+
+  $('#queen-14').click(function () {
+    $(this).find('#queen-14-dark-overlay').show();
+  }); 
+
+  $('#queen-19').click(function () {
+    $(this).find('#queen-19-dark-overlay').show();
+  }); 
+
+  $('.replay').click(function() {
+    window.location.replace("./index.html");
+  });
 });
