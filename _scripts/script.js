@@ -148,23 +148,51 @@ $(document).ready(function() {
   });
 
   // HALLWAY 4 SCENE CHOICES SCRIPT //
-  $('#hallway-1-choice-1').click(function() {
-    if (countOfClicksInHallway > 0) {
-      if (debugMode) {
-        location.hash = "hallway-3";
-      } else {
-        var currentPanelWrapper = $(this).parent().parent();
-        var nextPanelWrapper = $('#hallway-3');
-        hideAndShow(currentPanelWrapper, nextPanelWrapper);
-      }
-    }
+  // $('#hallway-1-choice-1').click(function() {
+  //   if (countOfClicksInHallway > 0) {
+  //     if (debugMode) {
+  //       location.hash = "hallway-3";
+  //     } else {
+  //       var currentPanelWrapper = $(this).parent().parent();
+  //       var nextPanelWrapper = $('#hallway-3');
+  //       hideAndShow(currentPanelWrapper, nextPanelWrapper);
+  //     }
+  //   }
 
-    countOfClicksInHallway++;
-    var image = $(this).parent().parent().children('img').first();
-    image.attr('src', '_images/hallway/hallway-1-2.png');
+  //   countOfClicksInHallway++;
+  // });
+
+  // $('.hallway-door').click(function() {
+  //   if (debugMode) {
+  //     location.hash = "hallway-2";
+  //   } else {
+  //     var currentPanelWrapper = $(this).parent().parent();
+  //     var nextPanelWrapper = $('#hallway-2');
+  //     hideAndShow(currentPanelWrapper, nextPanelWrapper);
+  //   }
+  // });
+
+  $('.hallway-1-3').click(function() {
+    if (debugMode) {
+      location.hash = "hallway-1-3";
+    } else {
+      var currentPanelWrapper = $(this).parent().parent();
+      var nextPanelWrapper = $('#hallway-1-3');
+      hideAndShow(currentPanelWrapper, nextPanelWrapper);
+    }
   });
 
-  $('.hallway-door').click(function() {
+  $('.hallway-1-4').click(function() {
+    if (debugMode) {
+      location.hash = "hallway-1-4";
+    } else {
+      var currentPanelWrapper = $(this).parent().parent();
+      var nextPanelWrapper = $('#hallway-1-4');
+      hideAndShow(currentPanelWrapper, nextPanelWrapper);
+    }
+  });
+
+  $('.hallway-2').click(function() {
     if (debugMode) {
       location.hash = "hallway-2";
     } else {
@@ -174,8 +202,48 @@ $(document).ready(function() {
     }
   });
 
+  $('.hallway-2-2').click(function() {
+    if (debugMode) {
+      location.hash = "hallway-2-2";
+    } else {
+      var currentPanelWrapper = $(this).parent().parent();
+      var nextPanelWrapper = $('#hallway-2-2');
+      hideAndShow(currentPanelWrapper, nextPanelWrapper);
+    }
+  });
+
   if($('#hallway-1-map')) {
     $('#hallway-1-map area').each(function() {
+      $(this).mouseover(function(e) {
+        e.stopImmediatePropagation();
+        var id = $(this).attr('id');
+        $('#'+id+'-arrow').addClass('shown');
+      });
+
+      $(this).mouseout(function() {
+          var id = $(this).attr('id');
+          $('#'+id+'-arrow').removeClass('shown');
+      });
+    });
+  }
+
+  if($('#hallway-2-2-map')) {
+    $('#hallway-2-2-map area').each(function() {
+      $(this).mouseover(function(e) {
+        e.stopImmediatePropagation();
+        var id = $(this).attr('id');
+        $('#'+id+'-arrow').addClass('shown');
+      });
+
+      $(this).mouseout(function() {
+          var id = $(this).attr('id');
+          $('#'+id+'-arrow').removeClass('shown');
+      });
+    });
+  }
+
+  if($('#hallway-1-3-map')) {
+    $('#hallway-1-3-map area').each(function() {
       $(this).mouseover(function(e) {
         e.stopImmediatePropagation();
         var id = $(this).attr('id');
