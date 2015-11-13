@@ -647,9 +647,119 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
-
 }
 
+// Hallway 1-4
+
+@keyframes hallway-1-4-choice-1-arrow-anim {
+    from {
+      top: 40%;
+      left: 49%;
+      width: 25%;
+    }
+    to {
+      top: 30%;
+      left: 60%;
+      width: 17%;
+    }
+}
+
+@keyframes hallway-1-4-choice-2-arrow-anim {
+    from {
+      top: 41%;
+      left: 6%;
+    }
+    to {
+      top: 46%;
+      left: 10%;
+    }
+}
+
+@keyframes hallway-1-4-choice-3-arrow-anim {
+    from {
+      top: 25%;
+      left: 52%;
+    }
+    to {
+      top: 28%;
+      left: 55%;
+    }
+}
+
+@keyframes hallway-1-4-choice-5-arrow-anim {
+    from {
+      top: 49%;
+      left: 67%;
+    }
+    to {
+      top: 49%;
+      left: 63%;
+    }
+}
+
+#hallway-1-4 { 
+  .hallway-arrow.shown {
+    display:block;
+  }
+
+  .hallway-arrow {
+    pointer-events: none;
+    display: none;
+  }
+
+  #hallway-1-4-choice-1-arrow {
+    position: absolute;
+    top: 22%;
+    left: 49%;
+    width: 25%;
+    height: auto;
+    animation-name: hallway-1-4-choice-1-arrow-anim;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #hallway-1-4-choice-2-arrow {
+    position: absolute;
+    top: 41%;
+    left: 6%;
+    width: 16%;
+    height: auto;
+    animation-name: hallway-1-4-choice-2-arrow-anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #hallway-1-4-choice-3-arrow {
+    position: absolute;
+    top: 25%;
+    left: 52%;
+    width: 10%;
+    height: auto;
+    animation-name: hallway-1-4-choice-3-arrow-anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #hallway-1-4-choice-5-arrow {
+    position: absolute;
+    top: 49%;
+    left: 67%;
+    width: 22%;
+    height: auto;
+    animation-name: hallway-1-4-choice-5-arrow-anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+
+
+
+// END of Hallway 1-4
 @keyframes hallway-2-choice-1-arrow-anim {
     from {
       top: 30%;

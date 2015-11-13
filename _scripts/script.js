@@ -172,12 +172,22 @@ $(document).ready(function() {
   //   }
   // });
 
+  $('.hallway-forward').click(function() {
+    countOfClicksInHallway++;
+  });
+
   $('.hallway-1-3').click(function() {
+    var nextPanelID = "hallway-1-3";
+
+    if (countOfClicksInHallway > 2) {
+      nextPanelID = "hallway-3";
+    }
+
     if (debugMode) {
-      location.hash = "hallway-1-3";
+      location.hash = nextPanelID;
     } else {
       var currentPanelWrapper = $(this).parent().parent();
-      var nextPanelWrapper = $('#hallway-1-3');
+      var nextPanelWrapper = $('#' + nextPanelID);
       hideAndShow(currentPanelWrapper, nextPanelWrapper);
     }
   });
@@ -203,11 +213,17 @@ $(document).ready(function() {
   });
 
   $('.hallway-2-2').click(function() {
+    var nextPanelID = "hallway-2-2";
+
+    if (countOfClicksInHallway > 2) {
+      nextPanelID = "hallway-3";
+    }
+
     if (debugMode) {
-      location.hash = "hallway-2-2";
+      location.hash = nextPanelID;
     } else {
       var currentPanelWrapper = $(this).parent().parent();
-      var nextPanelWrapper = $('#hallway-2-2');
+      var nextPanelWrapper = $('#' + nextPanelID);
       hideAndShow(currentPanelWrapper, nextPanelWrapper);
     }
   });
@@ -259,6 +275,21 @@ $(document).ready(function() {
 
   if($('#hallway-1-3-map')) {
     $('#hallway-1-3-map area').each(function() {
+      $(this).mouseover(function(e) {
+        e.stopImmediatePropagation();
+        var id = $(this).attr('id');
+        $('#'+id+'-arrow').addClass('shown');
+      });
+
+      $(this).mouseout(function() {
+          var id = $(this).attr('id');
+          $('#'+id+'-arrow').removeClass('shown');
+      });
+    });
+  }
+
+  if($('#hallway-1-4-map')) {
+    $('#hallway-1-4-map area').each(function() {
       $(this).mouseover(function(e) {
         e.stopImmediatePropagation();
         var id = $(this).attr('id');
