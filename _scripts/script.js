@@ -400,19 +400,36 @@ $(document).ready(function() {
     }
   });
 
-  var rotateTracker = 0;
+  var rotateTrackerHallway = 0;
   $('#hallway-6-1').bind('mousewheel DOMMouseScroll', function(event) {
     event.preventDefault();
 
     var deltaY = -(event.originalEvent.deltaY * event.deltaFactor / 16);
     if (deltaY < 0) {
-      rotateTracker += deltaY;
-      if (rotateTracker > -5000) {
-        $('#hallway-6-1-alice').css('transform', 'rotate(' + parseInt(-rotateTracker / 5) + 'deg) scale(' + (1 - rotateTracker / (-5000)) + ')');
-        $('#hallway-6-1-alice').css('-webkit-transform', 'rotate(' + parseInt(-rotateTracker / 5) + 'deg) scale(' + (1 - rotateTracker / (-5000)) + ')');
-        $('#hallway-6-1-alice').css('-ms-transform', 'rotate(' + parseInt(-rotateTracker / 5) + 'deg) scale(' + (1 - rotateTracker / (-5000)) + ')');
+      rotateTrackerHallway += deltaY;
+      if (rotateTrackerHallway > -5000) {
+        $('#hallway-6-1-alice').css('transform', 'rotate(' + parseInt(-rotateTrackerHallway / 5) + 'deg) scale(' + (1 - rotateTrackerHallway / (-5000)) + ')');
+        $('#hallway-6-1-alice').css('-webkit-transform', 'rotate(' + parseInt(-rotateTrackerHallway / 5) + 'deg) scale(' + (1 - rotateTrackerHallway / (-5000)) + ')');
+        $('#hallway-6-1-alice').css('-ms-transform', 'rotate(' + parseInt(-rotateTrackerHallway / 5) + 'deg) scale(' + (1 - rotateTrackerHallway / (-5000)) + ')');
       } else {
         hideAndShow($('#hallway-6-1'), $('#party-1'));
+      }
+    }
+  });
+
+  var rotateTrackerMorpheus = 0;
+  $('#morpheus-8-1').bind('mousewheel DOMMouseScroll', function(event) {
+    event.preventDefault();
+
+    var deltaY = -(event.originalEvent.deltaY * event.deltaFactor / 16);
+    if (deltaY < 0) {
+      rotateTrackerMorpheus += deltaY;
+      if (rotateTrackerMorpheus > -5000) {
+        $('#morpheus-8-1-alice').css('transform', 'rotate(' + parseInt(-rotateTrackerMorpheus / 5) + 'deg) scale(' + (1 - rotateTrackerMorpheus / (-5000)) + ')');
+        $('#morpheus-8-1-alice').css('-webkit-transform', 'rotate(' + parseInt(-rotateTrackerMorpheus / 5) + 'deg) scale(' + (1 - rotateTrackerMorpheus / (-5000)) + ')');
+        $('#morpheus-8-1-alice').css('-ms-transform', 'rotate(' + parseInt(-rotateTrackerMorpheus / 5) + 'deg) scale(' + (1 - rotateTrackerMorpheus / (-5000)) + ')');
+      } else {
+        hideAndShow($('#morpheus-8-1'), $('#party-1'));
       }
     }
   });
