@@ -67,13 +67,15 @@ var transitToNextPanel = function(currentPanelWrapper) {
   // so that on click, it jumps to the direct link as specified in the data-value attribute of the div
   var directLink = currentPanelWrapper.data('value');
       if (directLink != null) { //Check if panel is directly linked into another panel
-        if (debugMode) {
-          location.hash = directLink;
-        } else {
-          var nextPanelWrapper = $('#' + directLink);
-          hideAndShow(currentPanelWrapper, nextPanelWrapper);
+        if (!currentPanelWrapper.hasClass('contains-choices')) {
+          if (debugMode) {
+            location.hash = directLink;
+          } else {
+            var nextPanelWrapper = $('#' + directLink);
+            hideAndShow(currentPanelWrapper, nextPanelWrapper);
+          }
+          resetPanel(currentPanelWrapper);
         }
-        resetPanel(currentPanelWrapper);
       } else if ((!currentPanelWrapper.hasClass('contains-choices')) && (!currentPanelWrapper.hasClass('no-click'))) {
         var currentChapter = currentPanelWrapper.parent();
 

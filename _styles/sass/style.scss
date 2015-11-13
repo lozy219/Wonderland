@@ -886,6 +886,29 @@ body {
   }
 }
 
+@keyframes cheshire-12-choice-1-animation {
+    from {
+      bottom: 41%;
+    }
+    to {
+      bottom: 43%;
+    }
+}
+
+#cheshire-12-choice-1 {
+  position: absolute;
+  bottom: 41%;
+  right: 5%;
+  width: 200px;
+}
+
+#cheshire-12-choice-1 {
+    animation-name: cheshire-12-choice-1-animation;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #morpheus-1-speech-1 {
   bottom: 34%;
   left: 41%;
