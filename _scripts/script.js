@@ -4,7 +4,7 @@ var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
 var haveGear = false;
 var haveSecondHand = false;
-var haveGear = false;
+var haveKey = false;
 var sequenceIndexObject = {};
 var containChoicesObject = {};
 
@@ -129,6 +129,13 @@ $(document).ready(function() {
     if (speechBubbleWrapper.length == 1 && !speechBubbleWrapper.hasClass('shown')) {
       speechBubbleWrapper.addClass('shown');
     } else {
+      if (currentPanelWrapper.attr('id') == "party-6") {
+        if (haveGear && haveKey && haveKey) {
+          currentPanelWrapper.data('value', 'party-10');
+        } else {
+          currentPanelWrapper.data('value', 'party-7');
+        }
+      }
       transitToNextPanel(currentPanelWrapper);
     }
   });
@@ -178,6 +185,21 @@ $(document).ready(function() {
   $("#morpheus-5-second").click(function() {
     haveSecondHand = true;
     $('#second').addClass('obtained');
+  });
+
+  $("#cheshire-8-key").mouseover(function(e) {
+    var image = $('#cheshire-8-panel-image');
+    image.attr('src', '_images/cheshire/cheshire-8-key.png');
+  });
+
+  $("#cheshire-8-key").mouseout(function() {
+    var image = $('#cheshire-8-panel-image');
+    image.attr('src', '_images/cheshire/cheshire-8.png');
+  });
+
+  $("#cheshire-8-key").click(function() {
+    haveKey = true;
+    $('#key').addClass('obtained');
   });
  
 
