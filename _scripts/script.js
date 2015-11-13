@@ -147,31 +147,6 @@ $(document).ready(function() {
     }
   });
 
-  // HALLWAY 4 SCENE CHOICES SCRIPT //
-  // $('#hallway-1-choice-1').click(function() {
-  //   if (countOfClicksInHallway > 0) {
-  //     if (debugMode) {
-  //       location.hash = "hallway-3";
-  //     } else {
-  //       var currentPanelWrapper = $(this).parent().parent();
-  //       var nextPanelWrapper = $('#hallway-3');
-  //       hideAndShow(currentPanelWrapper, nextPanelWrapper);
-  //     }
-  //   }
-
-  //   countOfClicksInHallway++;
-  // });
-
-  // $('.hallway-door').click(function() {
-  //   if (debugMode) {
-  //     location.hash = "hallway-2";
-  //   } else {
-  //     var currentPanelWrapper = $(this).parent().parent();
-  //     var nextPanelWrapper = $('#hallway-2');
-  //     hideAndShow(currentPanelWrapper, nextPanelWrapper);
-  //   }
-  // });
-
   $('.hallway-forward').click(function() {
     countOfClicksInHallway++;
   });
@@ -181,6 +156,9 @@ $(document).ready(function() {
 
     if (countOfClicksInHallway > 2) {
       nextPanelID = "hallway-3";
+
+      // reset this bitch
+      countOfClicksInHallway = 0;
     }
 
     if (debugMode) {
@@ -340,6 +318,8 @@ $(document).ready(function() {
 
   // END OF HALLWAY 4 SCENE CHOICES SCRIPT //
   $('#rabbit-16').bind('mousewheel DOMMouseScroll', function(event) {
+    event.preventDefault();
+    
     var deltaY = -(event.originalEvent.deltaY * event.deltaFactor / 16);
     if (deltaY < 0) {
       var currentY = parseInt($('#rabbit-16').css('background-position-y'));
