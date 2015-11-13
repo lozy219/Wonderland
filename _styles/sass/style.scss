@@ -219,7 +219,8 @@ body {
 
 #rabbit-16 {
   background-image: url('../_images/rabbit/rabbit-falling.png');
-  background-size: calc((100vh - 100px) / 0.68) auto;
+  // background-size: calc((100vh - 100px) / 0.68) auto;
+  background-size: 1000px, auto;
 }
 
 #hallway-5-speech-1 {
