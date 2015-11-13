@@ -1341,19 +1341,11 @@ body {
 }
 
 #morpheus-5-speech-1 {
-  bottom: 3%;
-  left: -1%;
-
-  h3 {
-    position: absolute;
-    top: 13%;
-    left: 6%;
-    font-size: 2em;
-    text-align: center;
-  }
+  bottom: 46%;
+  left: 18%;
 
   img {
-    width: 95%;
+    width: 60%;
     height: auto;
   }
 }
@@ -1808,3 +1800,30 @@ body {
     transform:rotate(360deg);
   } 
 }
+
+#second {
+  display: none;
+  position: fixed;
+  top: 74%;
+  left: 36%;
+  height: auto;
+  width: 6%;
+  z-index: 100;
+}
+
+#second.obtained {
+  display: inline;
+  animation: moveSecondToStash 0.5s linear;
+  animation-fill-mode: forwards;  
+}
+
+@keyframes moveSecondToStash { 
+  100% { 
+    top: 35%;
+    left: 4%;
+    width: 10%;
+    -webkit-transform: rotate(360deg); 
+    transform:rotate(360deg);
+  } 
+}
+

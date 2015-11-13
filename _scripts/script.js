@@ -164,6 +164,21 @@ $(document).ready(function() {
     haveGear = true;
     $('#gear').addClass('obtained');
   });
+
+  $("#morpheus-5-second").mouseover(function(e) {
+    var image = $('#morpheus-5-panel-image');
+    image.attr('src', '_images/morpheus/morpheus-5-second.png');
+  });
+
+  $("#morpheus-5-second").mouseout(function() {
+    var image = $('#morpheus-5-panel-image');
+    image.attr('src', '_images/morpheus/morpheus-5.png');
+  });
+
+  $("#morpheus-5-second").click(function() {
+    haveSecondHand = true;
+    $('#second').addClass('obtained');
+  });
  
 
   $('.hallway-forward').click(function() {
