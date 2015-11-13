@@ -56,6 +56,7 @@ body {
 
 .speech-bubble-wrapper {
     display: none;
+    // display: inline;
   }
 
   .speech-bubble-wrapper.shown {
@@ -1030,8 +1031,6 @@ body {
   .speech-bubble-wrapper {
     display: none;
   }
-
-
 }
 #morpheus-6-speech-1 {
   bottom: 65%;
@@ -1133,6 +1132,15 @@ body {
   }
 }
 
+#queen-1-speech-1 {
+  top: 10%;
+  left: 61%;
+
+  img {
+    width: 80%;
+  }
+}
+
 #queen-2 {
   #area-one {
     top: 11%;
@@ -1168,6 +1176,120 @@ body {
       display: block;
     }
   }
+
+  .speech-bubble-wrapper {
+    display: none;
+  }
+
+  .speech-bubble-wrapper.shown {
+    display: inline;
+  }
+
+  #queen-3-speech-1 {
+    top: 24%;
+    left: 51%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#queen-4 {
+  .speech-bubble-wrapper {
+    display: none;
+  }
+
+  .speech-bubble-wrapper.shown {
+    display: inline;
+  }
+
+  #queen-4-speech-1 {
+    top: 38%;
+    left: 51%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+  
+#queen-7-speech-1 {
+  top: 42%;
+  left: 31%;
+
+  img {
+    width: 100%;
+  }
+}
+
+#queen-8-speech-1 {
+  top: 40%;
+  left: 40%;
+
+  img {
+    width: 100%;
+  }
+}
+
+#queen-9 {
+  .speech-bubble-wrapper, .choice {
+    display: none;
+  }
+
+  .shown.speech-bubble-wrapper, .shown.shown {
+    display: block;
+  } 
+}
+
+#queen-9-speech-1 {
+  bottom: 66%;
+  left: 50%;
+
+  img {
+    width: 100%;
+  }
+}
+
+#queen-9-choice-1 {
+  top: -1%;
+  left: 12%;
+  img {
+    width: 90%;
+  }
+}
+
+#queen-9-choice-2 {
+  top: -4%;
+  left: 43%;
+}
+
+#queen-11 {
+  .speech-bubble-wrapper {
+    display: none;
+  }
+
+  .speech-bubble-wrapper.shown {
+    display: inline;
+  }
+
+  #queen-11-speech-1 {
+    top: 52%;
+    left: 15%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  #queen-11-speech-2 {
+    top: 9%;
+    left: 26%;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 #morpheus-8-speech-1 {
@@ -1185,6 +1307,15 @@ body {
   img {
     width: 80%;
     height: auto;
+  }
+}
+
+#queen-10-speech-1 {
+  top: 10%;
+  left: 30%;
+
+  img {
+    width: 100%;
   }
 }
 
@@ -1239,28 +1370,6 @@ body {
   }
 }
 
-#queen-9 {
-  .choice {
-    background-color: white;
-    border: 1px solid black;
-    padding: 1%;
-  }
-
-  .choice:hover {
-    background-color: black;
-    color: white;
-  }
-  #queen-9-choice-1 {
-    top: 20%;
-    left: 0;
-  }
-
-  #queen-9-choice-2 {
-    top: 20%;
-    right: 0;
-  }
-}
-
 #queen-12 {
   .choice {
     background-color: white;
@@ -1280,6 +1389,42 @@ body {
   #queen-12-choice-2 {
     top: 10%;
     right: 0;
+  }
+}
+
+#queen-13-speech-1 {
+  top: 44%;
+  left: 31%;
+
+  img {
+    width: 100%;
+  }
+}
+
+#queen-15-speech-1 {
+  top: 6%;
+  left: 24%;
+
+  img {
+    width: 100%;
+  }
+}
+
+#queen-16-speech-1 {
+  top: 0%;
+  left: 37%;
+
+  img {
+    width: 100%;
+  }
+}
+
+#queen-17-speech-1 {
+  top: 0%;
+  left: 33%;
+
+  img {
+    width: 100%;
   }
 }
 

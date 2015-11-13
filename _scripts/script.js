@@ -56,9 +56,12 @@ var resetPanel = function (panel) {
     panel.addClass('contains-choices');
   }
 
+  panel.removeClass('battle-start');
+
   panel.find('*').each(function() {
     $(this).removeClass('shown');
     $(this).removeClass('enabled');
+    $(this).removeClass('battle-start');
   })
 } 
 
@@ -350,10 +353,14 @@ $(document).ready(function() {
 
   sequenceIndexObject['queen-3'] = 0;
   $('#queen-3').click(function() {
-    if (sequenceIndexObject['queen-3'] === 0) {
+    if (sequenceIndexObject['queen-3'] === 0){
+      $('#queen-3-speech-1').addClass('shown');
+      sequenceIndexObject['queen-3']++;
+    } else if (sequenceIndexObject['queen-3'] === 1) {
+      $('#queen-3-speech-1').removeClass('shown');
       $('#queen-3-queen-bubble').addClass('shown');
-      sequenceIndexObject['queen-3'] ++;
-    } else if (queenThreeIndex === 1) {
+      sequenceIndexObject['queen-3']++;
+    } else if (sequenceIndexObject['queen-3'] === 2) {
       $(this).removeClass('contains-choices');
       containChoicesObject['queen-3'] = true;
       $(this).attr("data-value", "queen-4");
@@ -363,7 +370,11 @@ $(document).ready(function() {
 
   sequenceIndexObject['queen-4'] = 0;
   $('#queen-4').click(function() {
-    if (sequenceIndexObject['queen-4'] === 0) {
+    if (sequenceIndexObject['queen-4'] === 0){
+      $('#queen-4-speech-1').addClass('shown');
+      sequenceIndexObject['queen-4']++;
+    } else if (sequenceIndexObject['queen-4'] === 1) {
+      $('#queen-4-speech-1').removeClass('shown');
       $(this).addClass('battle-start');
       $('.pokemon-overlay').addClass('battle-start');
 
@@ -372,12 +383,42 @@ $(document).ready(function() {
       }, 500);
 
       setTimeout(function() {
+        $('#queen-4').removeClass('contains-choices');
+        containChoicesObject['queen-4'] = true;
         transitToNextPanel($('#queen-4'));
       }, 2000);
-      sequenceIndexObject['queen-4'] ++;
+      sequenceIndexObject['queen-4']++;
     }
   });
 
+  sequenceIndexObject['queen-9'] = 0;
+  $('#queen-9').click(function() {
+    if (sequenceIndexObject['queen-9'] == 0) {
+      $('#queen-9-speech-1').addClass('shown');
+      sequenceIndexObject['queen-9']++;
+    } else if (sequenceIndexObject['queen-9'] == 1) {
+      $('#queen-9-speech-1').removeClass('shown');
+      $(this).find('.choice').each(function() {
+        $(this).addClass('shown');  
+      });
+    }
+  });
+
+  sequenceIndexObject['queen-11'] = 0;
+  $('#queen-11').click(function() {
+    if (sequenceIndexObject['queen-11'] === 0){
+      $('#queen-11-speech-1').addClass('shown');
+      sequenceIndexObject['queen-11']++;
+    } else if (sequenceIndexObject['queen-11'] === 1) {
+      $('#queen-11-speech-1').removeClass('shown');
+      $('#queen-11-speech-2').addClass('shown');
+      sequenceIndexObject['queen-11']++;
+    } else if (sequenceIndexObject['queen-11'] === 2) {
+      $(this).removeClass('contains-choices');
+      containChoicesObject['queen-11'] = true;
+      transitToNextPanel($(this));
+    }
+  });
   $('.queen-cell-area').click(function(event) {
     event.stopImmediatePropagation();
   });
