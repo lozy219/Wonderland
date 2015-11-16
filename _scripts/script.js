@@ -1,5 +1,5 @@
 var audio;
-var debugMode = true;
+var debugMode = false;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
 var haveGear = false;
@@ -24,6 +24,18 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   if (wrapperToShow.id === 'rabbit-16') {
     // Reset the background position for rabbit-16 falling scene,
     $('#rabbit-16').css('background-position-y', '0px');
+  }
+
+  if (wrapperToShow.id === 'hallway-6-1') {
+    $('#hallway-6-1-alice').css('transform', 'rotate(0 deg) scale(1)');
+  }
+
+  if (wrapperToShow.id === 'morpheus-8-1') {
+    $('#morpheus-8-1-alice').css('transform', 'rotate(0 deg) scale(1)');
+  }
+
+  if (wrapperToShow.id === 'party-10') {
+    $('#party-10-alice').css('transform', 'rotate(0 deg) scale(1)');
   }
 
   if (wrapperToShow[0].id === 'cheshire-1') {
