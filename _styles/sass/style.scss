@@ -1543,6 +1543,140 @@ body {
     }
   }
 }
+
+@keyframes queen-6-1 {
+  0%, 7% {
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  20%, 100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes queen-6-2 {
+  0%, 7% {
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  20%, 100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes queen-6-2 {
+  0%, 18% {
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  32%, 100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes queen-6-3 {
+  0%, 27% {
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  37%, 100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes queen-6-4 {
+  0%, 37% {
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  55%, 100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes queen-6-5 {
+  0%, 57% {
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  70%, 100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes queen-6-6 {
+  0%, 79% {
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  80% {
+    transform: scale(4);
+    -moz-transform: scale(4);
+    -webkit-transform: scale(4);
+  }
+
+  90%, 100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+#queen-6 {
+  img:not(#queen-6-6) {
+    position: absolute;
+  }
+
+  #queen-6-1 {
+    animation: queen-6-1 3s forwards;
+  }
+
+  #queen-6-2 {
+    animation: queen-6-2 3s forwards;
+  }
+
+  #queen-6-3 {
+    animation: queen-6-3 3s forwards;
+  }
+
+  #queen-6-4 {
+    animation: queen-6-4 3s forwards;
+  }
+
+  #queen-6-5 {
+    animation: queen-6-5 3s forwards;
+  }
+
+  #queen-6-6 {
+    animation: queen-6-6 3s forwards;
+  }
+}
   
 #queen-7-speech-1 {
   top: 42%;

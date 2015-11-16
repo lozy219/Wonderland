@@ -45,6 +45,11 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     audio = new Audio('_sounds/rabbit-dragging-super-soft.mp3');
     audio.play();
   }
+
+  if (wrapperToShow[0].id === 'queen-6') {
+    audio = new Audio('_sounds/queen-6.mp3');
+    audio.play();
+  }
   
 };
 
@@ -125,6 +130,9 @@ var transitToNextPanel = function(currentPanelWrapper) {
 $(document).ready(function() {
   audio = new Audio('_sounds/alice-fireplace.m4a');
   audio.play();
+
+  // audio = new Audio('_sounds/queen-6.mp3');
+  // audio.play();
 
   $('.panel-wrapper').click(function() {
     // Panel shall only be clickable if there isnt any explicit choices in it
