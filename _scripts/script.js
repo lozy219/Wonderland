@@ -16,30 +16,50 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     audio.pause();
   }
 
+  if (wrapperToShow[0].id === 'alice-3') {
+    audio.pause();
+  }
+
   if ((wrapperToShow.parent()[0].id === 'alice') && (wrapperToHide.parent()[0].id !== 'alice')) {
     audio = new Audio('_sounds/fireplace.m4a');
     audio.play();
   }
 
-  if (wrapperToShow.id === 'rabbit-16') {
+  if (wrapperToShow[0].id === 'rabbit-16') {
     // Reset the background position for rabbit-16 falling scene,
     $('#rabbit-16').css('background-position-y', '0px');
   }
 
-  if (wrapperToShow.id === 'hallway-6-1') {
-    $('#hallway-6-1-alice').css('transform', 'rotate(0 deg) scale(1)');
+  if (wrapperToShow[0].id === 'hallway-6-1') {
+    $('#hallway-6-1-alice').css('transform', '');
+    $('#hallway-6-1-alice').css('-webkit-transform', '');
+    $('#hallway-6-1-alice').css('-ms-transform', '');
   }
 
-  if (wrapperToShow.id === 'morpheus-8-1') {
-    $('#morpheus-8-1-alice').css('transform', 'rotate(0 deg) scale(1)');
+  if (wrapperToShow[0].id === 'morpheus-8-1') {
+    $('#morpheus-8-1-alice').css('transform', '');
+    $('#morpheus-8-1-alice').css('-webkit-transform', '');
+    $('#morpheus-8-1-alice').css('-ms-transform', '');
   }
 
-  if (wrapperToShow.id === 'party-10') {
-    $('#party-10-alice').css('transform', 'rotate(0 deg) scale(1)');
+  if (wrapperToShow[0].id === 'party-10') {
+    $('#party-10-alice').css('transform', '');
+    $('#party-10-alice').css('-webkit-transform', '');
+    $('#party-10-alice').css('-ms-transform', '');
   }
 
   if (wrapperToShow[0].id === 'cheshire-1') {
     audio = new Audio('_sounds/cheshire-hitting.mp3');
+    audio.play();
+  }
+
+  if (wrapperToShow[0].id === 'hallway-5') {
+    audio = new Audio('_sounds/drink.mp3');
+    audio.play();
+  }
+
+  if ((wrapperToShow[0].id === 'hallway-7') || (wrapperToShow[0].id === 'morpheus-7')) {
+    audio = new Audio('_sounds/eat.wav');
     audio.play();
   }
 
@@ -48,6 +68,11 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     audio.play();
   }
 
+  if (wrapperToShow[0].id === 'rabbit-2') {
+    audio = new Audio('_sounds/break.wav');
+    audio.play();
+  }  
+
   if (wrapperToShow[0].id === 'rabbit-10') {
     audio = new Audio('_sounds/rabbit-dragging-soft.mp3');
     audio.play();
@@ -55,6 +80,11 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
 
   if (wrapperToShow[0].id === 'rabbit-11') {
     audio = new Audio('_sounds/rabbit-dragging-super-soft.mp3');
+    audio.play();
+  }
+
+  if (wrapperToShow[0].id === 'party-10') {
+    audio = new Audio('_sounds/transport.wav');
     audio.play();
   }
 
@@ -193,6 +223,11 @@ $(document).ready(function() {
   });
 
   $("#rabbit-9-gear").click(function() {
+    setTimeout(function() {
+      audio = new Audio('_sounds/ting.wav');
+      audio.play();   
+    }, 10);
+    
     haveGear = true;
     $('#gear').addClass('obtained');
   });
@@ -208,6 +243,11 @@ $(document).ready(function() {
   });
 
   $("#morpheus-5-second").click(function() {
+    setTimeout(function() {
+      audio = new Audio('_sounds/ting.wav');
+      audio.play();   
+    }, 10);
+
     haveSecondHand = true;
     $('#second').addClass('obtained');
   });
@@ -223,6 +263,11 @@ $(document).ready(function() {
   });
 
   $("#cheshire-8-key").click(function() {
+    setTimeout(function() {
+      audio = new Audio('_sounds/ting.wav');
+      audio.play();   
+    }, 10);
+
     haveKey = true;
     $('#key').addClass('obtained');
   });
