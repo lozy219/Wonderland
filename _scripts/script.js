@@ -2,9 +2,9 @@ var audio;
 var debugMode = false;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
-var haveGear = true;
-var haveSecondHand = true;
-var haveKey = true;
+var haveGear = false;
+var haveSecondHand = false;
+var haveKey = false;
 var sequenceIndexObject = {};
 var containChoicesObject = {};
 
