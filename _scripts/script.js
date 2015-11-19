@@ -2,9 +2,9 @@ var audio;
 var debugMode = false;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
-var haveGear = false;
-var haveSecondHand = false;
-var haveKey = false;
+var haveGear = true;
+var haveSecondHand = true;
+var haveKey = true;
 var sequenceIndexObject = {};
 var containChoicesObject = {};
 
@@ -53,12 +53,17 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     audio.play();
   }
 
+  if (wrapperToShow[0].id === 'cheshire-12') {
+    audio = new Audio('_sounds/alice-fireplace.m4a');
+    audio.play();
+  }
+
   if (wrapperToShow[0].id === 'hallway-5') {
     audio = new Audio('_sounds/drink.mp3');
     audio.play();
   }
 
-  if ((wrapperToShow[0].id === 'hallway-7') || (wrapperToShow[0].id === 'morpheus-7')) {
+  if ((wrapperToShow[0].id === 'hallway-7') || (wrapperToShow[0].id === 'morpheus-7') || (wrapperToShow[0].id === 'morpheus-9')) {
     audio = new Audio('_sounds/eat.wav');
     audio.play();
   }
@@ -88,7 +93,15 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     audio.play();
   }
 
+  if (wrapperToShow[0].id === 'queen-1') {
+    setTimeout(function() {
+      audio = new Audio('_sounds/queen-ambient.mp3');
+      audio.play();
+    }, 500);
+  }
+
   if (wrapperToShow[0].id === 'queen-6') {
+    audio.pause();
     audio = new Audio('_sounds/queen-6.mp3');
     audio.play();
   }
@@ -478,6 +491,7 @@ $(document).ready(function() {
         $('#hallway-6-1-alice').css('-ms-transform', 'rotate(' + parseInt(-rotateTrackerHallway / 5) + 'deg) scale(' + (1 - rotateTrackerHallway / (-5000)) + ')');
       } else {
         hideAndShow($('#hallway-6-1'), $('#party-1'));
+        rotateTrackerHallway = 0;
       }
     }
   });
@@ -495,6 +509,7 @@ $(document).ready(function() {
         $('#morpheus-8-1-alice').css('-ms-transform', 'rotate(' + parseInt(-rotateTrackerMorpheus / 5) + 'deg) scale(' + (1 - rotateTrackerMorpheus / (-5000)) + ')');
       } else {
         hideAndShow($('#morpheus-8-1'), $('#party-1'));
+        rotateTrackerMorpheus = 0;
       }
     }
   });
@@ -512,6 +527,7 @@ $(document).ready(function() {
         $('#party-10-alice').css('-ms-transform', 'rotate(' + parseInt(-rotateTrackerParty / 5) + 'deg) scale(' + (1 - rotateTrackerParty / (-5000)) + ')');
       } else {
         hideAndShow($('#party-10'), $('#cheshire-12'));
+        rotateTrackerParty = 0;
       }
     }
   });
@@ -645,6 +661,13 @@ $(document).ready(function() {
       $('#queen-4-speech-1').addClass('shown');
       sequenceIndexObject['queen-4']++;
     } else if (sequenceIndexObject['queen-4'] === 1) {
+      setTimeout(function() {
+        audio.pause();
+        
+        audio = new Audio('_sounds/pokemon.mp3');
+        audio.play();
+      }, 10);
+
       $('#queen-4-speech-1').removeClass('shown');
       $(this).addClass('battle-start');
       $('.pokemon-overlay').addClass('battle-start');
