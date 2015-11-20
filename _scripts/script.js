@@ -2,9 +2,9 @@ var sound = {};
 var debugMode = true;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
-var haveGear = false;
-var haveSecondHand = false;
-var haveKey = false;
+var haveGear = true;
+var haveSecondHand = true;
+var haveKey = true;
 var sequenceIndexObject = {};
 var containChoicesObject = {};
 
@@ -29,6 +29,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
 
   if (wrapperToShow[0].id === 'rabbit-16') {
     // Reset the background position for rabbit-16 falling scene,
+    fallingLock = true;
     $('#rabbit-16').css('background-position-y', '0px');
   }
 
@@ -57,7 +58,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     sound.audio.play();
 
     setTimeout(function() {
-      sound.cheshireAudio = new Audio('_sounds/cheshire.m4a');
+      sound.cheshireAudio = new Audio('_sounds/cave.mp3');
       sound.cheshireAudio.play();
     }, 200);
   }
@@ -67,8 +68,17 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'alice-2') {
+    if (typeof sound.forestAudio !== 'undefined') {
+      sound.forestAudio.pause();
+    }    
+
     sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
     sound.fireAudio.play();
+  }
+
+  if (wrapperToShow[0].id === 'queen-14') {
+    sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
+    sound.fireAudio.play(); 
   }
 
   if (wrapperToShow[0].id === 'hallway-1') {
@@ -130,7 +140,13 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'party-1') {
-    sound.cheshireAudio.pause();
+    if (typeof sound.cheshireAudio !== 'undefined') {
+      sound.cheshireAudio.pause();
+    }
+
+    if (typeof sound.forestAudio !== 'undefined') {
+      sound.forestAudio.pause();
+    }
 
     sound.partyAudio = new Audio('_sounds/tea.m4a');
     sound.partyAudio.play();
@@ -495,26 +511,29 @@ $(document).ready(function() {
     image.attr('src', '_images/hallway/hallway-4.png');
   });
 
-
+  var fallingLock = false;
   // END OF HALLWAY 4 SCENE CHOICES SCRIPT //
   $('#rabbit-16').bind('mousewheel DOMMouseScroll', function(event) {
     event.preventDefault();
 
-    var deltaY = -(event.originalEvent.deltaY * event.deltaFactor / 16);
-    if (deltaY < 0) {
-      var currentY = parseInt($('#rabbit-16').css('background-position-y'));
-      if (currentY > -600) {
-        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 3) + 'px');
-      } else if (currentY > -2000) {
-        $('#rabbit-16').css('background-position-y', (currentY + deltaY / 2) + 'px');
-      } else if (currentY > -6000) {
-        $('#rabbit-16').css('background-position-y', (currentY + deltaY) + 'px');
-      } else if (currentY > -15000) {
-        $('#rabbit-16').css('background-position-y', (currentY + deltaY * 3) + 'px');
-      } else if (currentY > -50000) {
-        $('#rabbit-16').css('background-position-y', (currentY + deltaY * 5) + 'px');
-      } else {
-        hideAndShow($('#rabbit-16'), $('#cheshire-1'));
+    if (!fallingLock) {
+      var deltaY = -(event.originalEvent.deltaY * event.deltaFactor / 16);
+      if (deltaY < 0) {
+        var currentY = parseInt($('#rabbit-16').css('background-position-y'));
+        if (currentY > -600) {
+          $('#rabbit-16').css('background-position-y', (currentY + deltaY / 3) + 'px');
+        } else if (currentY > -2000) {
+          $('#rabbit-16').css('background-position-y', (currentY + deltaY / 2) + 'px');
+        } else if (currentY > -6000) {
+          $('#rabbit-16').css('background-position-y', (currentY + deltaY) + 'px');
+        } else if (currentY > -15000) {
+          $('#rabbit-16').css('background-position-y', (currentY + deltaY * 3) + 'px');
+        } else if (currentY > -50000) {
+          $('#rabbit-16').css('background-position-y', (currentY + deltaY * 5) + 'px');
+        } else {
+          hideAndShow($('#rabbit-16'), $('#cheshire-1'));
+          fallingLock = true;
+        }
       }
     }
   });
