@@ -193,7 +193,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     sound.audio.play();
   }
 
-  if (wrapperToShow[0].id === 'queen-19') {
+  if ((wrapperToShow[0].id === 'queen-19') || (wrapperToShow[0].id === 'queen-14')) {
     stopPlayAmbient();
 
     sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
