@@ -1,10 +1,10 @@
 var sound = {};
-var debugMode = true;
+var debugMode = false;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
-var haveGear = true;
-var haveSecondHand = true;
-var haveKey = true;
+var haveGear = false;
+var haveSecondHand = false;
+var haveKey = false;
 var sequenceIndexObject = {};
 var containChoicesObject = {};
 
@@ -59,6 +59,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
 
     setTimeout(function() {
       sound.cheshireAudio = new Audio('_sounds/cave.mp3');
+      sound.cheshireAudio.loop = true;
       sound.cheshireAudio.play();
     }, 200);
   }
@@ -73,11 +74,13 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     }    
 
     sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
+    sound.fireAudio.loop = true;
     sound.fireAudio.play();
   }
 
   if (wrapperToShow[0].id === 'queen-14') {
     sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
+    sound.fireAudio.loop = true;
     sound.fireAudio.play(); 
   }
 
@@ -85,6 +88,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     sound.forestAudio.pause();
 
     sound.hallwayAudio = new Audio('_sounds/hallway.m4a');
+    sound.hallwayAudio.loop = true;
     sound.hallwayAudio.play();
   }
 
@@ -102,6 +106,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     sound.hallwayAudio.pause();
 
     sound.forestAudio = new Audio('_sounds/forest.m4a');
+    sound.forestAudio.loop = true;
     sound.forestAudio.play();
   }
 
@@ -129,6 +134,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     sound.forestAudio.pause();
 
     sound.windAudio = new Audio('_sounds/wind.mp3');
+    sound.windAudio.loop = true;
     sound.windAudio.play();
   }
 
@@ -149,6 +155,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     }
 
     sound.partyAudio = new Audio('_sounds/tea.m4a');
+    sound.partyAudio.loop = true;
     sound.partyAudio.play();
   }
 
