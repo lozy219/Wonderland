@@ -1,5 +1,5 @@
 var sound = {};
-var debugMode = true;
+var debugMode = false;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
 var haveGear = false;
