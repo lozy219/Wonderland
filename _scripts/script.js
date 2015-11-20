@@ -13,6 +13,32 @@ var rotateTrackerHallway = 0;
 var rotateTrackerMorpheus = 0;
 var rotateTrackerParty = 0;
 
+var stopPlayAmbient = function() {
+  if (typeof sound.forestAudio !== 'undefined') {
+    sound.forestAudio.pause();
+  }
+
+  if (typeof sound.fireAudio !== 'undefined') {
+    sound.fireAudio.pause();
+  }
+
+  if (typeof sound.windAudio !== 'undefined') {
+    sound.windAudio.pause();
+  }
+
+  if (typeof sound.cheshireAudio !== 'undefined') {
+    sound.cheshireAudio.pause();
+  }
+
+  if (typeof sound.hallwayAudio !== 'undefined') {
+    sound.hallwayAudio.pause();
+  }
+
+  if (typeof sound.partyAudio !== 'undefined') {
+    sound.partyAudio.pause();
+  }
+}
+
 var hideAndShow = function(wrapperToHide, wrapperToShow) {
   wrapperToHide.removeClass('shown');
   wrapperToShow.addClass('shown');
@@ -27,7 +53,8 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   // }
 
   if (wrapperToShow[0].id === 'alice-3') {
-    sound.fireAudio.pause();
+    stopPlayAmbient();
+
     sound.forestAudio = new Audio('_sounds/forest.m4a');
     sound.forestAudio.play();
   }
@@ -60,7 +87,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'cheshire-1') {
-    sound.windAudio.pause();
+    stopPlayAmbient();
 
     sound.audio = new Audio('_sounds/cheshire-hitting.mp3');
     sound.audio.play();
@@ -73,7 +100,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'cheshire-12') {
-    sound.cheshireAudio.pause();
+    stopPlayAmbient();
 
     sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
     sound.fireAudio.loop = true;
@@ -81,13 +108,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'alice-2') {
-    if (typeof sound.forestAudio !== 'undefined') {
-      sound.forestAudio.pause();
-    }
-
-    if (typeof sound.fireAudio !== 'undefined') {
-      sound.fireAudio.pause();
-    }
+    stopPlayAmbient();
 
     sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
     sound.fireAudio.loop = true;
@@ -101,7 +122,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'hallway-1') {
-    sound.forestAudio.pause();
+    stopPlayAmbient();
 
     sound.hallwayAudio = new Audio('_sounds/hallway.m4a');
     sound.hallwayAudio.loop = true;
@@ -119,7 +140,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   // }
 
   if (wrapperToShow[0].id === 'hallway-10') {
-    sound.hallwayAudio.pause();
+    stopPlayAmbient();
 
     sound.forestAudio = new Audio('_sounds/forest.m4a');
     sound.forestAudio.loop = true;
@@ -147,7 +168,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'rabbit-16') {
-    sound.forestAudio.pause();
+    stopPlayAmbient();
 
     sound.windAudio = new Audio('_sounds/wind.mp3');
     sound.windAudio.loop = true;
@@ -155,24 +176,14 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'party-10') {
-    sound.partyAudio.pause();
+    stopPlayAmbient();
 
     sound.audio = new Audio('_sounds/transport.wav');
     sound.audio.play();
   }
 
   if (wrapperToShow[0].id === 'party-1') {
-    if (typeof sound.cheshireAudio !== 'undefined') {
-      sound.cheshireAudio.pause();
-    }
-
-    if (typeof sound.forestAudio !== 'undefined') {
-      sound.forestAudio.pause();
-    }
-
-    if (typeof sound.hallwayAudio !== 'undefined') {
-      sound.hallwayAudio.pause();
-    }
+    stopPlayAmbient();
 
     sound.partyAudio = new Audio('_sounds/tea.m4a');
     sound.partyAudio.loop = true;
