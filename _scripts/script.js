@@ -56,6 +56,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     stopPlayAmbient();
 
     sound.forestAudio = new Audio('_sounds/forest.m4a');
+    sound.forestAudio.loop = true;
     sound.forestAudio.play();
   }
 
