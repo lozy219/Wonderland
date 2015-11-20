@@ -7,6 +7,7 @@ var haveSecondHand = false;
 var haveKey = false;
 var sequenceIndexObject = {};
 var containChoicesObject = {};
+var fallingLock = false;
 
 var hideAndShow = function(wrapperToHide, wrapperToShow) {
   wrapperToHide.removeClass('shown');
@@ -29,7 +30,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
 
   if (wrapperToShow[0].id === 'rabbit-16') {
     // Reset the background position for rabbit-16 falling scene,
-    fallingLock = true;
+    fallingLock = false;
     $('#rabbit-16').css('background-position-y', '0px');
   }
 
@@ -66,12 +67,20 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
 
   if (wrapperToShow[0].id === 'cheshire-12') {
     sound.cheshireAudio.pause();
+
+    sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
+    sound.fireAudio.loop = true;
+    sound.fireAudio.play();
   }
 
   if (wrapperToShow[0].id === 'alice-2') {
     if (typeof sound.forestAudio !== 'undefined') {
       sound.forestAudio.pause();
-    }    
+    }
+
+    if (typeof sound.fireAudio !== 'undefined') {
+      sound.fireAudio.pause();
+    }
 
     sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
     sound.fireAudio.loop = true;
@@ -152,6 +161,10 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
 
     if (typeof sound.forestAudio !== 'undefined') {
       sound.forestAudio.pause();
+    }
+
+    if (typeof sound.hallwayAudio !== 'undefined') {
+      sound.hallwayAudio.pause();
     }
 
     sound.partyAudio = new Audio('_sounds/tea.m4a');
@@ -518,7 +531,6 @@ $(document).ready(function() {
     image.attr('src', '_images/hallway/hallway-4.png');
   });
 
-  var fallingLock = false;
   // END OF HALLWAY 4 SCENE CHOICES SCRIPT //
   $('#rabbit-16').bind('mousewheel DOMMouseScroll', function(event) {
     event.preventDefault();
