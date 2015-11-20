@@ -1,5 +1,5 @@
 var sound = {};
-var debugMode = false;
+var debugMode = true;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
 var haveGear = false;
@@ -273,7 +273,8 @@ $(document).ready(function() {
     image.attr('src', '_images/rabbit/rabbit-9.png');
   });
 
-  $("#rabbit-9-gear").click(function() {
+  $("#rabbit-9-gear").click(function(e) {
+    e.stopImmediatePropagation();
     setTimeout(function() {
       sound.audio = new Audio('_sounds/ting.wav');
       sound.audio.play();   
@@ -293,7 +294,8 @@ $(document).ready(function() {
     image.attr('src', '_images/morpheus/morpheus-5.png');
   });
 
-  $("#morpheus-5-second").click(function() {
+  $("#morpheus-5-second").click(function(e) {
+    e.stopImmediatePropagation();
     setTimeout(function() {
       sound.audio = new Audio('_sounds/ting.wav');
       sound.audio.play();   
@@ -313,7 +315,8 @@ $(document).ready(function() {
     image.attr('src', '_images/cheshire/cheshire-8.png');
   });
 
-  $("#cheshire-8-key").click(function() {
+  $("#cheshire-8-key").click(function(e) {
+    e.stopImmediatePropagation();
     setTimeout(function() {
       sound.audio = new Audio('_sounds/ting.wav');
       sound.audio.play();   
