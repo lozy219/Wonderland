@@ -2,9 +2,9 @@ var sound = {};
 var debugMode = false;
 var countOfClicksInHallway = 0;
 var visitedCellInQueenTwo = false;
-var haveGear = false;
-var haveSecondHand = false;
-var haveKey = false;
+var haveGear = true;
+var haveSecondHand = true;
+var haveKey = true;
 var sequenceIndexObject = {};
 var containChoicesObject = {};
 var fallingLock = false;
@@ -129,16 +129,6 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     sound.hallwayAudio.play();
   }
 
-  // if (wrapperToShow[0].id === 'hallway-5') {
-  //   sound.audio = new Audio('_sounds/drink.mp3');
-  //   sound.audio.play();
-  // }
-
-  // if ((wrapperToShow[0].id === 'hallway-7')) {
-  //   sound.audio = new Audio('_sounds/eat.wav');
-  //   sound.audio.play();
-  // }
-
   if (wrapperToShow[0].id === 'hallway-10') {
     stopPlayAmbient();
 
@@ -201,6 +191,14 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
     sound.audio.pause();
     sound.audio = new Audio('_sounds/queen-6.mp3');
     sound.audio.play();
+  }
+
+  if (wrapperToShow[0].id === 'queen-19') {
+    stopPlayAmbient();
+
+    sound.fireAudio = new Audio('_sounds/alice-fireplace.m4a');
+    sound.fireAudio.loop = true;
+    sound.fireAudio.play(); 
   }
   
 };
