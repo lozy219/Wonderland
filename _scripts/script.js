@@ -88,7 +88,7 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   //   sound.audio.play();
   // }
 
-  if (wrapperToShow[0].id === 'morpheus-1') {
+  if (wrapperToShow[0].id === 'hallway-10') {
     sound.hallwayAudio.pause();
 
     sound.forestAudio = new Audio('_sounds/forest.m4a');
