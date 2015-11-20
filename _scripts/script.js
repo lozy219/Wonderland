@@ -9,6 +9,10 @@ var sequenceIndexObject = {};
 var containChoicesObject = {};
 var fallingLock = false;
 
+var rotateTrackerHallway = 0;
+var rotateTrackerMorpheus = 0;
+var rotateTrackerParty = 0;
+
 var hideAndShow = function(wrapperToHide, wrapperToShow) {
   wrapperToHide.removeClass('shown');
   wrapperToShow.addClass('shown');
@@ -35,18 +39,21 @@ var hideAndShow = function(wrapperToHide, wrapperToShow) {
   }
 
   if (wrapperToShow[0].id === 'hallway-6-1') {
+    rotateTrackerHallway = 0;
     $('#hallway-6-1-alice').css('transform', '');
     $('#hallway-6-1-alice').css('-webkit-transform', '');
     $('#hallway-6-1-alice').css('-ms-transform', '');
   }
 
   if (wrapperToShow[0].id === 'morpheus-8-1') {
+    rotateTrackerMorpheus = 0;
     $('#morpheus-8-1-alice').css('transform', '');
     $('#morpheus-8-1-alice').css('-webkit-transform', '');
     $('#morpheus-8-1-alice').css('-ms-transform', '');
   }
 
   if (wrapperToShow[0].id === 'party-10') {
+    rotateTrackerParty = 0;
     $('#party-10-alice').css('transform', '');
     $('#party-10-alice').css('-webkit-transform', '');
     $('#party-10-alice').css('-ms-transform', '');
@@ -557,7 +564,6 @@ $(document).ready(function() {
     }
   });
 
-  var rotateTrackerHallway = 0;
   $('#hallway-6-1').bind('mousewheel DOMMouseScroll', function(event) {
     event.preventDefault();
 
@@ -575,7 +581,6 @@ $(document).ready(function() {
     }
   });
 
-  var rotateTrackerMorpheus = 0;
   $('#morpheus-8-1').bind('mousewheel DOMMouseScroll', function(event) {
     event.preventDefault();
 
@@ -595,7 +600,6 @@ $(document).ready(function() {
     }
   });
 
-  var rotateTrackerParty = 0;
   $('#party-10').bind('mousewheel DOMMouseScroll', function(event) {
     event.preventDefault();
 
